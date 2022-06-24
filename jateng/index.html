@@ -145,12 +145,65 @@
       <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
         <i class="bi bi-arrow-up-circle"></i>
       </button>
-      
-      
-      
+
+      <!-- container content list -->
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus aspernatur optio voluptatum illum! Magnam, dignissimos?</p>
+                    </div>
+                </div>
+                <h5>Sejarah</h5>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum explicabo nemo neque natus totam.</p>
+                    </div>
+                </div>
+                <h5>Geografi</h5>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi, ullam at facilis corrupti non!</p>
+                    </div>
+                </div>
+                <h5>Ragam Budaya</h5>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus aspernatur optio voluptatum illum! Magnam, dignissimos?</p>
+                    </div>
+                </div>
+                <h5>Filosofi</h5>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum explicabo nemo neque natus totam.</p>
+                    </div>
+                </div>
+                <h5>Funcfact</h5>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi, ullam at facilis corrupti non!</p>
+                    </div>
+                </div>
+                <h5>Destinasi</h5>
+            </div>
+        </div>
+      </div>
   
       <!-- about us -->
-      <div class="container bg-secondary" id="about-us">
+      <div class="container-fluid" id="about-us">
         <h2 style="margin-top: 50px; margin-bottom: 80px; font-weight: bold; text-align: center">About Us</h2>
         <div class="row justify-content-center mb-3">
           <div class="col-md-6">
@@ -172,23 +225,23 @@
               </a>
             </div>
           </div>
-        </div>
-        <div class="row mx-5 disable" id="container-feedback">
-          <form >
-            <div class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
-            </div>
-            <div class="mb-3">
-              <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder" style="height: 100px"></textarea>
-                <label for="feedback-placeholder">Comments</label>
+          <div class="row my-5 disable text-start" id="container-feedback">
+            <form >
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
               </div>
-            </div>
-            <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
-          </form>
+              <div class="mb-3">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder" style="height: 100px"></textarea>
+                  <label for="feedback-placeholder">Comments</label>
+                </div>
+              </div>
+              <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+            </form>
+          </div>
         </div>
-      </div>
+        </div>
   
       <footer class="mt-auto">
         <div class="p-5 align-content-center" style="background-color: #475284;">

@@ -4,9 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page kalimantan</title>
+    <meta name="theme-color" content="#0dcaf0">
+    <title>Pustaka Budaya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body>
-    <h1>Its landing page kalimantan</h1>
-</body>
+  <body data-aos-easing="ease" data-aos-duration="400">
+    <!-- navbar -->
+    <nav class="navbar shadow p-3 mb-5 bg-info bg-gradient  navbar-dark navbar-expand-lg sticky-top rounded ">
+      <div class="container">
+        <a class="navbar-brand" href="../">Pustaka Budaya</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+          </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2" >
+              <a class="nav-link active" aria-current="page" href="../" >Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link active" href="#about-us">Galery</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link active" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link active" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-2">
+              <a class="nav-link active waves-effect waves-light" id="theme-changer">
+                  <i class="bi bi-cloud-moon" id="icon"></i>
+                  <span>Dark</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+
+    <!-- home -->
+    <div class="container" id="home">
+      <div class="row align-items-center justify-content-center" >
+        <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" >
+          <h2>KALIMANTAN</h2>
+          <p class="fw-light text-md-center" style="font-weight: lighter;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quas assumenda sapiente pariatur molestiae eum iste. Corrupti, impedit officiis voluptas iste non sunt delectus culpa totam perspiciatis in molestiae unde eos, optio aut corporis deleniti a? Eveniet deleniti velit, quibusdam nemo sunt id vitae quo placeat cupiditate hic. Tempore voluptatem dolorem quidem fugit, rerum repudiandae id reiciendis illo animi adipisci?</p>
+          <a href="#provinsi" id="cta" class="btn btn-primary rounded p-3 mt-2">Jelajah sekarang!</a>
+        </div>      
+      </div>
+    </div>
+    <!-- end home -->
+
+    <!-- this button will visivle if documen scolled down -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
+      <i class="bi bi-arrow-up-circle"></i>
+    </button>
+    
+    
+    
+
+    <!-- about us -->
+    <div class="container mt-15" id="about-us">
+      <h2 style="margin-top: 50px; margin-bottom: 80px; font-weight: bold; text-align: center">About Us</h2>
+      <div class="row justify-content-center mb-3">
+        <div class="col-md-6">
+          <p>Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-6">
+          <p>Apakah artikel ini membantu?</p>
+          <div class="reaction">
+            <a onclick="handleEmoji(this)" class="btn btn-secondary">
+              <i class="bi bi-emoji-frown-fill text-info"></i>
+            </a>
+            <a onclick="handleEmoji(this)" class="btn btn-secondary">
+              <i class="bi bi-emoji-neutral-fill text-info"></i>
+            </a>
+            <a onclick="handleEmoji(this)" class="btn btn-secondary" >
+              <i class="bi bi-emoji-smile-fill text-info"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-5 disable" id="container-feedback">
+        <form >
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder" style="height: 100px"></textarea>
+              <label for="feedback-placeholder">Comments</label>
+            </div>
+          </div>
+          <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+        </form>
+      </div>
+    </div>
+
+    <div class="container" id="footer">
+      <div class="row">
+        <img src=".. " class="img-thumbnail" alt="...">
+        <br>
+        <p>@2022 Pusataka Budaya, All Right Reserved</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+      AOS.init();
+      // var splide = new Splide( '.splide', {
+      //   type   : 'loop',
+      //   perPage: 3,
+      //   perMove: 1,
+      // } );
+
+      // splide.mount();
+    </script>
+  </body>
 </html>

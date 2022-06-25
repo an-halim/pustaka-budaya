@@ -54,10 +54,7 @@ const handleFeedback = () => {
     let btn = document.getElementById('send-feedback')
     let name = document.getElementById('name');
     let comment = document.getElementById('feedback-placeholder');
-    btn.href = `mailto:halimbla2@gmail.com?subject=${name.value} merasa ${choosedEmoji} dengan artikel&body=${comment.value}`;
-
-    let containerFeedback = document.getElementById('container-feedback');
-    containerFeedback.classList.toggle('disable')
+    btn.href = `mailto:halimbla2@gmail.com?subject=${name.value} merasa ${choosedEmoji} dengan artikel&body=${comment.value}`
 }
 
 const handleEmoji = (event) => {

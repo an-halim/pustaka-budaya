@@ -26,18 +26,6 @@ li:hover:after { transform: scaleX(1); }
 li.fromRight:after{ transform-origin:100% 50%; }
 li.fromLeft:after{  transform-origin:  0% 50%; }
 
-/* animated search */
-#search-container:after {
-  display:block;
-  content: '';
-  border-bottom: solid 3px #019fb6;  
-  transform: scaleX(0);  
-  transition: transform 5000ms ease-in-out;
-}
-#search-container:hover:after { transform: scaleX(1); }
-#search-container.fromRight:after{ transform-origin:100% 50%; }
-#search-container.fromLeft:after{  transform-origin:  0% 50%; }
-
 
 
 canvas{
@@ -76,7 +64,7 @@ canvas{
 }
 
 .img-darkmode {
-  width: 20px;
+  width: 30px;
 }
 
 #provinsi{
@@ -90,11 +78,8 @@ canvas{
 }
 
 .scrolled {
-  /* -webkit-backdrop-filter: blur(10px); Safari 9+ */
-  /* backdrop-filter: blur(10px); Chrome and Opera */
-  /* background-color: rgba(255, 255, 255, 0.3); */
-  /* transition: background-color 300ms linear;  */
   background-color: #0dcaf0 !important;
+  transition: background-color 300ms linear;
 }
 
 .mobile-navbar {
@@ -110,9 +95,7 @@ canvas{
   box-shadow: rgb(163, 163, 163) 10px 10px 5px;
 }
 
-@media screen and (max-width: 768px) {
-  nav {
-  background-color: #0dcaf0 !important;
-  }
-  
+.main-img:hover {
+  box-shadow: rgb(160, 148, 148) 8px 8px 8px 8px !important;
 }
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0dcaf0">
+    <title>Pustaka Budaya</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+  <body data-aos-easing="ease" data-aos-duration="400" >
+    <!-- navbar -->
+    <nav class="navbar p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom ">
+      <div class="container">
+        <a class="navbar-brand" href="../../">Pustaka Budaya</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+          </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-2" >
+              <a class="nav-link active" aria-current="page" href="#home" >Home</a>
+            </li>
+            <li class="nav-item mx-2 dropdown">
+              <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Provinsi</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./jateng/">Jawa Tengah</a></li>
+                <li><a class="dropdown-item" href="./bali/">Bali</a></li>
+                <li><a class="dropdown-item" href="./ntt/">NTT</a></li>
+                <li><a class="dropdown-item" href="./sulawesi/">Sulawesi</a></li>
+                <li><a class="dropdown-item" href="./kalimantan/">Kalimantan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link active" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link active" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-2">
+              <a class="nav-link active waves-effect waves-light" id="theme-changer">
+                <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
+              </a>
+            </li>
+            <li class="nav-item ms-2">
+                <input class="form-control me-2 disable" type="search" placeholder="Search" id="search-container" aria-label="Search">
+                <span id="btn-search" class="btn"><i class="bi bi-search"></i></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+    <script>
+        document.getElementById('btn-search').addEventListener('click', (e) =>{
+            document.querySelector('input').classList.toggle('disable')
+            document.getElementById('btn-search').classList.toggle('disable');
+            document.querySelector('input').focus();
+        })
+        document.getElementById('search-container').addEventListener('input', (e) =>{
+            let searchValue = e.target.value;
+            let paragrafContainer = document.querySelectorAll('p');
+            for(p of paragrafContainer){
+                console.log(p.innerHTML.includes(searchValue))
+            }
+        }, true)
+        document.querySelector('input').addEventListener('keypress', (e) => {
+            if(e.key == 'Enter'){
+                document.getElementById('search-container').classList.toggle('disable')
+                document.getElementById('btn-search').classList.toggle('disable');
+            }
+
+        })
+    </script>
+
+    <div id="main">
+        <!-- home -->
+        <div class="container vh-100 mb-5" id="home">
+          <a href="../" class="btn bg-secondary my-4">
+            <i class="bi bi-arrow-left-circle"></i> <span>BACK</span>
+          </a>
+          <h3>AKSARA JAWA</h3>
+          <p class="lead fs-6 fw-lighter">
+            <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" class="img-fluid" width="25" alt="avatar">
+            <span>Ahmad Nur Halim | Juni 24, 2022</span>
+          </p>
+            <img src="assets/img/hanacaraka.jpg" alt="hanacaraka" class="img-fluid rounded my-5 start-50 shadow main-img">
+            <div class="content-fill" style="text-align: justify;">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolores praesentium a incidunt excepturi nulla illo, quae amet ex dolorem mollitia quis. Accusamus, ducimus! Ipsum consequuntur distinctio, architecto eveniet atque a quos esse harum adipisci dignissimos pariatur facere cum libero sapiente rem qui, omnis ullam magnam! Nisi voluptates quia voluptatibus ipsam iste optio neque blanditiis, ad quibusdam natus, vero aliquid nostrum tempora temporibus facilis cupiditate fuga libero doloribus? Vitae, vero eius corporis minima officiis ipsam libero voluptate commodi odio quos doloremque. Ab voluptas facere quae culpa voluptatem ex odio sapiente maxime commodi? Voluptates sequi expedita provident amet dicta, perferendis dolores.
+                </p>        
+            </div>
+        </div>
+        <!-- end home -->
+
+        <!-- this button will visivle if documen scolled down -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
+        <i class="bi bi-arrow-up-circle"></i>
+        </button>
+        
+        
+        <!-- end provinsi -->
+
+        <!-- about us -->
+    </div id="main">
+    
+    <footer class="mt-5">
+      <div class="p-5 align-content-center" style="background-color: #475284;">
+          <div class="row ">
+              <div class="col-lg-4">
+                  <h2>LOGO</h2>
+                  <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+              </div>
+              <div class="col-lg-4">
+                  <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+              </div>
+              <div class="col-lg-4">
+                  <h5>Sortcut</h5>
+                  <br>
+                  <p ><a href="./">Home</a></p>
+                  <p ><a href="#">Provinsi</a></p>
+                  <p ><a href="#">About us</a></p>
+                  <p ><a href="#">Contact</a></p>
+              </div>
+          </div>
+      </div>
+      <div class="bg-black p-4 text-white">
+          <p>powered by <a href="https://getbootstrap.com/" class="text-primary">Bootstrap</a>.</p>
+      </div>
+    </footer>
+
+
+    <!-- alert for notifcation -->
+    
+    <noscript>
+      <div id="myModal" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog text-center text-dark ">
+          <div class="modal-content">
+            <div class="modal-body p-5">
+              <h5 class="modal-title" id="staticBackdropLabel">Alert</h5>
+              <img src="https://media.istockphoto.com/photos/barrier-under-construction-picture-id1139968862?k=20&m=1139968862&s=612x612&w=0&h=QXAvHsIYHG5MLxMIgIkICw8-n31R3sQvup2d6LGd3eQ=" alt="image under construction" width="500" class="img-fluid">
+              This page is under development, please stay tune.
+              <br>
+              <button type="button" class="btn btn-primary rounded-pill mt-4" data-bs-dismiss="modal">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </noscript>
+
+    <script>
+      $(document).ready(function(){
+          $("#myModal").modal('show');
+      });
+      $(document).scroll(function () {
+        var $nav = $(".sticky-top");
+        if(localStorage.getItem('theme') != 'dark')
+          $nav.toggleClass('scrolled shadow', $(this).scrollTop() > $nav.height());
+        else
+          $nav.toggleClass('shadow', $(this).scrollTop() > $nav.height());
+      });
+  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      AOS.init();
+      // var splide = new Splide( '.splide', {
+      //   type   : 'loop',
+      //   perPage: 3,
+      //   perMove: 1,
+      // } );
+
+      // splide.mount();
+    </script>
+  </body>
+</html>

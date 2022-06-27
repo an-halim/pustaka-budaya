@@ -11,110 +11,366 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        .carousel-control-prev-icon > span{
+            position: absolute;
+            bottom: 20px;
+            left: 100px;
+        }
+
+        .carousel-control-next-icon > span{
+            position: absolute;
+            bottom: 20px;
+            right: 100px;
+        }
+    </style>
 </head>
   <body data-aos-easing="ease" data-aos-duration="400">
-    <!-- navbar -->
-    <nav class="navbar shadow p-3 mb-5 bg-info bg-gradient  navbar-dark navbar-expand-lg sticky-top rounded ">
-      <div class="container">
-        <a class="navbar-brand" href="../">Pustaka Budaya</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
-          </button>
-        <div class="collapse navbar-collapse " id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item mx-2" >
-              <a class="nav-link active" aria-current="page" href="../" >Home</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#about-us">Galery</a>
-            </li>
-            <li class="nav-item mx-2">
-                <a class="nav-link active" href="#about-us">About Us</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item ms-2">
-              <a class="nav-link active waves-effect waves-light" id="theme-changer">
-                  <i class="bi bi-cloud-moon" id="icon"></i>
-                  <span>Dark</span>
-              </a>
-            </li>
-          </ul>
+     <!-- navbar -->
+     <nav class="navbar shadow p-3 mb-5 bg-info bg-gradient  navbar-dark navbar-expand-lg sticky-top rounded ">
+        <div class="container">
+          <a class="navbar-brand" href="../">Pustaka Budaya</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+            </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item mx-2" >
+                <a class="nav-link active" aria-current="page" href="../" >Home</a>
+              </li>
+              <li class="nav-item mx-2 dropdown">
+                  <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      Budaya
+                    </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown">
+                    <li><a class="dropdown-item" href="#">Suku</a></li>
+                    <li><a class="dropdown-item" href="#">Rumah Adat</a></li>
+                    <li><a class="dropdown-item" href="#">Tarian Adat</a></li>
+                    <li><a class="dropdown-item" href="#">Baju Adat</a></li>
+                    <li><a class="dropdown-item" href="#">Kuliner</a></li>
+                    <li><a class="dropdown-item" href="#">Bahasa</a></li>
+                    <li><a class="dropdown-item" href="#">Senjata Tradisional</a></li>
+                    <li><a class="dropdown-item" href="#">Tradisi Pasar Terapung</a></li>
+                    <li><a class="dropdown-item" href="#">Tradisi Lisan</a></li>
+                    <li><a class="dropdown-item" href="#">Upacara Adat Ba'ayun Mulud</a></li>
+                  </ul>
+                </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link active" href="#galery">Galery</a>
+              </li>
+              <li class="nav-item mx-2">
+                  <a class="nav-link active" href="#about-us">About Us</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link active" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item ms-2">
+                <a class="nav-link active waves-effect waves-light" id="theme-changer">
+                  <img src="./foto/mode malam.png" class="img-darkmode" alt="ligth mode">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- end navbar -->
+      </nav>
+      <!-- end navbar -->
+  
 
-
-    <!-- home -->
-    <div class="container" id="home">
-      <div class="row align-items-center justify-content-center" >
-        <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" >
-          <h2>KALIMANTAN</h2>
-          <p class="fw-light text-md-center" style="font-weight: lighter;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quas assumenda sapiente pariatur molestiae eum iste. Corrupti, impedit officiis voluptas iste non sunt delectus culpa totam perspiciatis in molestiae unde eos, optio aut corporis deleniti a? Eveniet deleniti velit, quibusdam nemo sunt id vitae quo placeat cupiditate hic. Tempore voluptatem dolorem quidem fugit, rerum repudiandae id reiciendis illo animi adipisci?</p>
-          <a href="#provinsi" id="cta" class="btn btn-primary rounded p-3 mt-2">Jelajah sekarang!</a>
-        </div>      
-      </div>
-    </div>
-    <!-- end home -->
-
-    <!-- this button will visivle if documen scolled down -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
-      <i class="bi bi-arrow-up-circle"></i>
-    </button>
-    
-    
-    
-
-    <!-- about us -->
-    <div class="container mt-15" id="about-us">
-      <h2 style="margin-top: 50px; margin-bottom: 80px; font-weight: bold; text-align: center">About Us</h2>
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-6">
-          <p>Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
-        </div>
-      </div>
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-6">
-          <p>Apakah artikel ini membantu?</p>
-          <div class="reaction">
-            <a onclick="handleEmoji(this)" class="btn btn-secondary">
-              <i class="bi bi-emoji-frown-fill text-info"></i>
-            </a>
-            <a onclick="handleEmoji(this)" class="btn btn-secondary">
-              <i class="bi bi-emoji-neutral-fill text-info"></i>
-            </a>
-            <a onclick="handleEmoji(this)" class="btn btn-secondary" >
-              <i class="bi bi-emoji-smile-fill text-info"></i>
-            </a>
+      <!-- home -->
+      <div class="container vh-100" id="home">
+          <div class="row align-items-center justify-content-center" >
+            <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" >
+              <h3>Kalimantan Selatan</h3>
+              <p>Bagi Kalimantan Selatan, tanggal 1 Januari 1957 benar-benar merupakan momentum penting dalam sejarahnya, mengingat pada tanggal itu Kalimantan Selatan resmi menjadi Provinsi yang berdiri sendiri di Pulau Kalimantan, bersama-sama dengan Provinsi Kalimantan Timur dan Provinsi Kalimantan Barat. Sebelumnya ketiga Provinsi tersebut berada dalam satu Provinsi, yaitu Provinsi Kalimantan.</p>
+              <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-primary">Jelajah Sekarang!</a>
           </div>
         </div>
       </div>
-      <div class="row mx-5 disable" id="container-feedback">
-        <form >
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+      <!-- end home -->
+
+      <!-- budaya -->
+      <div class="text-center py-2 vh-100" id="galery">
+        <h1 class="my-4">Galery</h1>
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="8" aria-label="Slide 9" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="9" aria-label="Slide 10" class="active" aria-current="true"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="./foto/Suku Kalimantan Selatan.jpg" alt="" class="img-fluid">
+                <div class="container">
+                <div class="carousel-caption text-center">
+                    <h1>Suku</h1>
+                    <p>Budaya Kalimantan Selatan sangat erat dengan suku.<br> Urang banjar masih terbagi menjadi 3 sub suku, <br> yakni ada banjar pahuluan, banjar kuala, dan banjar batang banyu.</p>
+                    <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                    <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./foto/Rumah Adat Kalimantan Selatan.jpg" alt="" class="img-fluid">
+                <div class="container">
+                <div class="carousel-caption text-center">
+                    <h1>Rumah Adat</h1>
+                    <p>Banjar mempunyai rumah adat yang bernama bubungan tinggi,<br> zaman dulu rumah ini merupakan rumah khusus keluarga <br> kerajaan,untuk bentuk rumahnya bagian <br> atap menjulang lancip keatas.</p>
+                    <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                    <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./foto/Tarian Adat Kalimantan Selatan.jpg" alt="" class="img-fluid">
+                <div class="container">
+                <div class="carousel-caption text-center">
+                    <h1>Tarian Adat</h1>
+                    <p>Budaya Kalimantan Selatan menyimpan banyak sejarah tarian.<br> Banjar mempunyai 2 kelompok tarian ada yang dari tarian <br> lingkungan kerajaan keratin dan dari tarian <br> yang berkembang di masyarakat.</p>
+                    <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                    <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+                </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./foto/Baju Adat Kalimantan Selatan.jpg" alt="" class="img-fluid">
+              <div class="container">
+              <div class="carousel-caption text-center">
+                  <h1>Baju Adat</h1>
+                  <p>Pakaian adat Kalimantan Selatan Baamar Galung Pancar Matahari <br> merupakan pakaian adat yang juga digunakan untuk acara <br> pernikahan, dimana baju tradisional ini sudah ada sejak abad ke-17. </p>
+                  <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                  <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+              </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./foto/Kuliner Kalimantan Selatan.jpg" alt="" class="img-fluid">
+              <div class="container">
+              <div class="carousel-caption text-center">
+                  <h1>Kuliner</h1>
+                  <p>Makanan Khas Kalimantan Selatan ialah soto banjar, <br> makanan paling terkenal di Kalimantan Selatan ini banyak juga <br> disuguhkan untuk menu andalan restoran- restoran besar.</p>
+                  <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                  <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+              </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./foto/Bahasa Kalimantan Selatan.jpg" alt="" class="img-fluid">
+              <div class="container">
+              <div class="carousel-caption text-center">
+                  <h1>Bahasa</h1>
+                  <p>Budaya Kalimantan Selatan ada hubungan erat dengan Bahasa <br> daerah. Masyarakat biasanya menggunakan Bahasa daerah <br> banjar, Bahasa daerah Kalimantan Selatan ini hampir <br> mirip seperti Bahasa melayu.</p>
+                  <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                  <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+              </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./foto/Senjata Tradisional Kalimantan Selatan.jpg" alt="" class="img-fluid">
+              <div class="container">
+              <div class="carousel-caption text-center">
+                  <h1>Senjata Tradisional</h1>
+                  <p>Mandau merupakan salah satu senjata tradisional yang <br> umumnya digunakan oleh para raja ataupun kepala suku <br> yang berasal dari masyarakat Dayak.</p>
+                  <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                  <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+              </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./foto/pasar terapung.jpg" alt="" class="img-fluid">
+              <div class="container">
+              <div class="carousel-caption text-center">
+                  <h1>Tradisi Pasar Terapung</h1>
+                  <p>Sebuah budaya Kalimantan Selatan yang sangat terkenal, melalui cara perdangan <br> paling berbeda diseluruh nusantara, bertransaksi jual beli menggunakan perahu <br> yang sudah turun menurun dan berlokasi di sungai besar barito.</p>
+                  <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                  <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+              </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./foto/Tradisi Lisan Kalimantan Selatan.jpg" alt="" class="img-fluid">
+              <div class="container">
+              <div class="carousel-caption text-center">
+                  <h1>Tradisi Lisan</h1>
+                  <p>Budaya Kalimantan selatan yang dikenal dengan istilah madihin. <br> Tradisi lisan merupakan ciri khas Kalimantan Selatan yang <br> Berasal dari Bahasa arab, artinya nasihat, jadi seni ini berisi <br> pantun atau syair yang berisi nasihat kehidupan.</p>
+                  <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                  <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+              </div>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <img src="./foto/Upacara Adat Ba'ayun Mulud Kalimantan Selatan.jpg" alt="" class="img-fluid">
+              <div class="container">
+              <div class="carousel-caption text-center">
+                  <h1>Upacara Ba'ayun Mulud</h1>
+                  <p>Upacara seputar kelahiran dalam masyarakat Kalimantan Selatan <br> disebut Upacara adat Ba’ayun Mulud. Pelaksanaan upacaranya <br> dengan meletakkan bayi yang berusia <br> empat puluh hari di atas ayunan.</p>
+                  <!-- <img src="../assets/gamelan.jpg" alt=""> -->
+                  <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+              </div>
+              </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span><i class="bi bi-arrow-left-circle-fill text-info "></i></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span><i class="bi bi-arrow-right-circle-fill text-info "></i></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+      </div>
+      <!-- end budaya -->
+  
+      <!-- this button will visivle if documen scolled down -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
+        <i class="bi bi-arrow-up-circle"></i>
+      </button>
+
+      <!-- container content list -->
+      <div class="container mt-5">
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-6">
+                <div class="card mb-2 card-content rounded-top">
+                    <div class="card-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus aspernatur optio voluptatum illum! Magnam, dignissimos?</p>
+                    </div>
+                </div>
+                <h5>Budaya</h5>
+            </div>
+            <div class="col-lg-6">
+                <div class="card mb-2 card-content">
+                    <div class="card-body">
+                        <p >Secara geografis Kalimantan Selatan berada di bagian tenggara pulau Kalimantan, memiliki kawasan dataran rendah di bagian barat dan pantai timur, serta dataran tinggi yang dibentuk oleh Pegunungan Meratus di tengah.</p>
+                    </div>
+                </div>
+                <h5>Geografi</h5>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card mb-2 card-content">
+                    <div class="card-body">
+                        <p>Bagi Kalimantan Selatan, tanggal 1 Januari 1957 benar-benar merupakan momentum penting dalam sejarahnya, mengingat pada tanggal itu Kalimantan Selatan resmi menjadi Provinsi yang berdiri sendiri di Pulau Kalimantan, bersama-sama dengan Provinsi Kalimantan Timur dan Provinsi Kalimantan Barat. Sebelumnya ketiga Provinsi tersebut berada dalam satu Provinsi, yaitu Provinsi Kalimantan.</p>
+                    </div>
+                </div>
+                <h5>Sejarah</h5>
+            </div>
+            <div class="col-lg-6">
+                <div class="card mb-2 card-content">
+                    <div class="card-body">
+                      <div class="badge bg-secondary fs-6">
+                        <i class="bi bi-geo-fill"></i>
+                      </div>
+                      <p >Terletak di jalan Kapten Pierre Tendean, Patung Bekantan menjadi spot kebanggaan warga Banjarmasin. Dengan tinggi 6,5 meter, Patung Bekantan menghabiskan dana mencapai Rp2,6 miliar selama pembangunannya.</p>
+                    </div>
+                </div>
+                <h5>Landmark</h5>
+            </div>
+        </div>
+      </div>
+  
+      <!-- about us -->
+      <div class="container" id="about-us">
+        <h2 style="margin-top: 50px; margin-bottom: 80px; font-weight: bold; text-align: center">About Us</h2>
+        <div class="row justify-content-center mb-3">
+          <div class="col-md-6">
+            <p>Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
           </div>
-          <div class="mb-3">
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder" style="height: 100px"></textarea>
-              <label for="feedback-placeholder">Comments</label>
+        </div>
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-6">
+            <div class="row justify-content-center text-center">
+              <div class="col-md-6">
+                <p>Apakah artikel ini membantu?</p>
+                <div class="reaction">
+                  <a onclick="handleEmoji(this)" >
+                    😒
+                  </a>
+                  <a onclick="handleEmoji(this)" >
+                    😑
+                  </a>
+                  <a onclick="handleEmoji(this)" >
+                    🙂
+                  </a>
+                  <a onclick="handleEmoji(this)"  >
+                    😀
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="disable text-center mb-5" id="container-feedback">
+              <form class="">
+                <div class="mb-3">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                    <label for="name">Full Name</label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder" style="height: 100px"></textarea>
+                    <label for="feedback-placeholder">Comments</label>
+                  </div>
+                </div>
+                <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+              </form>
             </div>
           </div>
-          <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
-        </form>
-      </div>
-    </div>
 
-    <div class="container" id="footer">
-      <div class="row">
-        <img src=".. " class="img-thumbnail" alt="...">
-        <br>
-        <p>@2022 Pusataka Budaya, All Right Reserved</p>
-      </div>
-    </div>
+          <!-- container for writer -->
+          <div class="col-lg-6">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h2>Writers Profile</h2>
+                  <div class="alert alert-secondary">
+                    <div class="row ">
+                      <div class="col-lg-6">
+                        <img class="img-fluid rounded-circle w-50" src="./foto/SY.jpeg" alt="avatar">
+                      </div>
+                      <div class="col-lg-6 text-start">
+                        <h5>Okta Eka Pratama</h5>
+                        <i class="bi bi-envelope-check-fill"></i> <span class="fs-6">oktapratama@students.amikom.ac.id</span> <br>
+                        <i class="bi bi-facebook"></i> <span>Okta Pratama</span> <i class="bi bi-instagram"></i> <span>bocahpedalaman</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+  
+      <footer class="mt-auto">
+        <div class="p-5 align-content-center" style="background-color: #475284;">
+            <div class="row ">
+                <div class="col-lg-4">
+                    <h2>LOGO</h2>
+                    <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Sortcut</h5>
+                    <br>
+                    <p ><a href="../">Home</a></p>
+                    <p ><a href="#">Provinsi</a></p>
+                    <p ><a href="#">About us</a></p>
+                    <p ><a href="#">Contact</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black p-4 text-white">
+            <p>powered by <a href="https://getbootstrap.com/" class="text-primary">Bootstrap</a>.</p>
+        </div>
+      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

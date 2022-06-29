@@ -16,7 +16,7 @@ body {
 }
 
 li:after {
-  display:block;
+  display:auto;
   content: '';
   border-bottom: solid 3px #019fb6;  
   transform: scaleX(0);  

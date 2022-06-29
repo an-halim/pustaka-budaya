@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0dcaf0">
     <title>Pustaka Budaya</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">  
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -27,7 +28,7 @@
 </head>
   <body data-aos-easing="ease" data-aos-duration="400">
      <!-- navbar -->
-     <nav class="navbar shadow p-3 mb-5 bg-info bg-gradient  navbar-dark navbar-expand-lg sticky-top rounded ">
+     <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom ">
         <div class="container">
           <a class="navbar-brand" href="../">Pustaka Budaya</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -144,7 +145,7 @@
       <!-- end budaya -->
   
       <!-- this button will visivle if documen scolled down -->
-      <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
+      <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
         <i class="bi bi-arrow-up-circle"></i>
       </button>
 
@@ -260,7 +261,7 @@
               </div>
           </div>
         </div>
-        </div>
+      </div>
   
       <footer class="mt-auto">
         <div class="p-5 align-content-center" style="background-color: #475284;">
@@ -290,7 +291,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script>
       AOS.init();
       // var splide = new Splide( '.splide', {

@@ -12,43 +12,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <style type="text/css">
-      .preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background-color: #fff;
-      }
-      .preloader .loading {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        font: 14px arial;
-      }
-      </style>
-    <script>
-        $(window).ready(function(){
-          $(".preloader").fadeOut();
-        })
-    </script>
 </head>
-<body data-aos-easing="ease" data-aos-duration="400" >
+<body>
     
     <div class="preloader">
       <div class="loading">
-        <img src="poi.gif" width="80">
-        <p>Harap Tunggu</p>
+        <img src="./assets/img/preloader.gif" width="80">
       </div>
     </div>
 
     <!-- navbar -->
-    <nav class="navbar p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom ">
+    <nav class="navbar p-3 mb-5 bg-transparent navbar-expand-lg navbar-expand-md fixed-top rounded-bottom ">
       <div class="container">
-        <a class="navbar-brand" href="#">Pustaka Budaya</a>
+        <a class="navbar-brand" href="./">Pustaka Budaya</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
           </button>
@@ -79,131 +55,123 @@
               </a>
             </li>
             <li class="nav-item ms-2">
-              <span id="btn-search" class="btn"><i class="bi bi-search"></i></span>
+              <span id="btn-search" class="btn"><i class="bi bi-search text-white bg-info rounded p-2"></i></span>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- end navbar -->
-  <script>
-      document.getElementById('btn-search').addEventListener('click', (e) =>{
-          $("#search-modal").modal('show');
-          document.querySelector('input').focus();
-      })
-
-      document.querySelector("#search-container").addEventListener('input', (e) =>{
-          let searchValue = e.target.value;
-          let paragrafContainer = document.querySelectorAll('p');
-          for(p of paragrafContainer){
-              if(p.innerHTML.includes(searchValue)){
-                console.log('Got it!')
-                document.body.prepend(p)
-              }
-          }
-      }, true)
-
-      document.querySelector('input').addEventListener('keypress', (e) => {
-          if(e.key == 'Enter'){
-              document.getElementById('search-container').classList.toggle('disable')
-              document.getElementById('btn-search').classList.toggle('disable');
-          }
-
-      })
-  </script>
-    <!-- end navbar -->
 
     <!-- search modal -->
-    <div id="search-modal" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog text-dark ">
+    <div id="search-modal" class="modal fade" tabindex="-1"  aria-hidden="true">
+      <div class="modal-dialog text-dark modal-dialog-scrollable pt-5">
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-header shadow">
+            <input class="form-control me-2" type="search" placeholder="Search" id="search-container" aria-label="Search">
           </div>
           <div class="modal-body">
-            <h5 class="modal-title" id="staticBackdropLabel">Search here!</h5>
-            <input class="form-control me-2" type="search" placeholder="Search" id="search-container" aria-label="Search">
-            <hr>
-            <div class="alert">
-              <h3>Hasil</h3>
-              <div class="hasil">
-                disini nanti hasilnya
-              </div>
-            </div>
+            <div class="search-result p-3"></div>
+          </div>
+          <div class="modal-footer p-2">
+            <span class="badge bg-secondary">ESC to close</span>
           </div>
         </div>
       </div>
     </div>
     <!-- end of search modal -->
+
     <!-- home -->
+    <div class="bg-img "></div>
     <div class="container vh-100" id="home">
       <div class="row align-items-center justify-content-center" >
-        <div class="position-absolute start-50 translate-middle text-center" style="top: 75%;">
-          <h3>Pustaka budaya <br>Jelajah kebudayaan indonesia </h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa animi magnam soluta nihil eaque deserunt earum harum a ex officiis?</p>
-          <a href="#provinsis" id="cta" class="btn btn-primary rounded p-2 bg-gradient">Jelajah sekarang!</a>
+        <div class="position-absolute start-50 translate-middle text-center text-white content-home" style="top: 82%;">
+          <h3 id="title-home">Pustaka budaya <br>Jelajah kebudayaan indonesia </h3>
+          <p class="text-white-50" id="deskripsi-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa animi magnam soluta nihil eaque deserunt earum harum a ex officiis?</p>
+          <a href="#provinsi" id="cta" class="btn btn-primary rounded p-2 bg-gradient">Jelajah sekarang!</a>
         </div>
-        <canvas class="position-absolute top-50 start-50 translate-middle"></canvas>
+        <canvas class="position-absolute translate-middle"></canvas>
       </div>
     </div>
     <!-- end home -->
 
     <!-- this button will visivle if documen scolled down -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
+    <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
       <i class="bi bi-arrow-up-circle"></i>
     </button>
     
     
     <!-- provinsi -->
-    <h2 class="text-center my-3" id="provinsis">Provinsi</h2>
-    <div class="container-fluid mb-15 vh-100" id="provinsi" >
-      <div class="container">
-        <div class="row text-white align-items-center">
-          <div class="col-md-6 ">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="container-fluid vh-100 pt-5" id="provinsi" >
+      <h2 class="text-center text-white mb-5" id="provinsis" style="top: 0;">Provinsi</h2>
+        
+        <div class="container">
+          <div class="row text-white">            
+            <div class="col col-lg-6 col-12 mb-2" data-aos="fade-down-right" data-aos-duration="1500">
+              <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <p class="display-6">JAWA TENGAH</p> 
+                    <div class="card" >
+                      <img src="./assets/img/labuhan-bajo.jpg"  class="img-thumbnail" alt="...">
+                      <div class="card-body text-black">
+                        This is some text within a card body.
+                        <div class="d-none">
+                          <h1 class="display-1">JAWA TENGAH</h1>
+                          <p class="display-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, nemo.</p>
+                          <a href="./jateng/" class="btn btn-primary">LIHAT SEKARANG!</a>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="carousel-item">
+                    <p class="display-6 text-uppercase">SULAWESI</p>
+                    <div class="card">
+                      <img src="./assets/img/ketoprak.jpg"  class="img-thumbnail" alt="...">
+                      <div class="card-body text-dark">
+                        This is some text within a card body.
+                        <div class="d-none">
+                          <h1 class="display-1 text-uppercase">SULAWESI</h1>
+                          <p class="display-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, nemo.</p>
+                          <a href="./sulawesi/" class="btn btn-primary">LIHAT SEKARANG!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <p class="display-6">NTT</p>
+                    <div class="card">
+                      <img src="./assets/img/gamelan.jpg"  class="img-thumbnail" alt="...">
+                      <div class="card-body text-dark">
+                        This is some text within a card body.
+                        <div class="d-none">
+                          <h1 class="display-1">NTT</h1>
+                          <p class="display-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, nemo.</p>
+                          <a href="./ntt/" class="btn btn-primary">LIHAT SEKARANG!</a>
+                        </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev carousel-btn" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                  </svg>
+                </button>
+                <button class="carousel-control-next carousel-btn" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                  </svg>
+                </button>
+                </button>
               </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="./assets/img/kuda lumping.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/img/kuda lumping.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./assets/img/kuda lumping.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
-          </div>
-          <div class="col-md-6 ">
-            <h3>BOROBUDUR</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates similique nam voluptatibus totam ipsam omnis voluptatum vero assumenda necessitatibus consequuntur? Quibusdam consectetur quae architecto corporis dolores similique nesciunt ratione beatae?</p>
-            <a href="#" class="btn btn-primary rounded-pill p-2">Jelajah sekarang!</a>
-          </div>
+            <div class="col col-lg-6 col-12 mb-2" data-aos="fade-up-left" data-aos-duration="1500">
+              <h1 class="display-1 title-provinsi">INDONESIA</h1>
+              <p class="deskripsi-provinsi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt provident debitis sint aliquid obcaecati at earum, doloremque deleniti nemo hic.</p>
+              <a href="#" class="btn btn-primary btn-provinsi">LIHAT SEKARANG!</a>
+            </div>
+          </div> 
         </div>
       </div>
     </div>
@@ -213,8 +181,8 @@
     <div class="container mt-15 vh-auto" id="about-us">
       <h2 style="margin-top: 50px; margin-bottom: 80px; font-weight: bold; text-align: center">About Us</h2>
       <div class="row justify-content-center text-center mb-3">
-        <div class="col-md-6">
-          <p>Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
+        <div class="col-md-8">
+          <p class="lead">Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
         </div>
       </div>
       <div class="row justify-content-center text-center mb-5">
@@ -236,6 +204,9 @@
           </div>
         </div>
       </div>
+      <p class="lead text-center disable fw-light feedback-response mb-4">
+        Terima kasih atas masukannya. Kami sangat senang bisa membantu!
+      </p>
       <div class="disable text-center mb-5" id="container-feedback">
         <form class="">
           <div class="mb-3">
@@ -275,8 +246,9 @@
               </div>
           </div>
       </div>
-      <div class="bg-black p-4 text-white">
-          <p>powered by <a href="https://getbootstrap.com/" class="text-primary">Bootstrap</a>.</p>
+      <div class="bg-dark p-4 text-white d-flex justify-content-around">
+          <p class="fs-6 fw-lighter">powered by <a href="https://getbootstrap.com/" class="text-primary">Bootstrap</a>.</p>
+          <p class="fs-6 fw-lighter">Make with <i class="bi bi-heart text-danger"></i> and a cup of <i class="bi bi-cup text-warning"></i></p>
       </div>
     </footer>
 
@@ -288,9 +260,8 @@
         <div class="modal-dialog text-center text-dark ">
           <div class="modal-content">
             <div class="modal-body p-5">
-              <h5 class="modal-title" id="staticBackdropLabel">Alert</h5>
               <img src="https://media.istockphoto.com/photos/barrier-under-construction-picture-id1139968862?k=20&m=1139968862&s=612x612&w=0&h=QXAvHsIYHG5MLxMIgIkICw8-n31R3sQvup2d6LGd3eQ=" alt="image under construction" width="500" class="img-fluid">
-              This page is under development, please stay tune.
+              please enable javascript for the website to run properly
               <br>
               <button type="button" class="btn btn-primary rounded-pill mt-4" data-bs-dismiss="modal">Understood</button>
             </div>
@@ -299,19 +270,7 @@
       </div>
     </noscript>
 
-    <script>
-      $(document).ready(function(){
-          $("#myModal").modal('show');
-      });
-      $(document).scroll(function () {
-        var $nav = $(".sticky-top");
-        if(localStorage.getItem('theme') != 'dark')
-          $nav.toggleClass('scrolled shadow', $(this).scrollTop() > $nav.height());
-        else
-          $nav.toggleClass('shadow', $(this).scrollTop() > $nav.height());
-      });
-  
-    </script>
+    <script src="./assets/js/gsap/gsap.min.js"></script>
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
     <script type="importmap">
       {

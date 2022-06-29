@@ -25,7 +25,7 @@ const renderGlobe = () => {
     );
 
     console.log(
-        innerWidth-(innerWidth/5), innerHeight-(innerHeight/5)
+        innerWidth-(innerWidth/3), innerHeight-(innerHeight/3)
     )
     renderer.setPixelRatio(window.devicePixelRatio)
 
@@ -48,7 +48,12 @@ const renderGlobe = () => {
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
         sphere.rotation.y += 0.002
-        group.rotation.y = mouse.x * 0.6
+        // group.rotation.y = mouse.x * 0.6
+        gsap.to(group.rotation, {
+            x: -mouse.y * 0.6,
+            y: mouse.x * 0.6,
+            duration: 2
+        })
     }
     
     animate();
@@ -64,4 +69,4 @@ addEventListener('mousemove', (e) => {
 window.addEventListener('resize', (e) => {
     console.log('Render new globe');
     renderGlobe();
-  }, true)
+}, true)

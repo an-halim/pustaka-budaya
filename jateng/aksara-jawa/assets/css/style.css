@@ -99,3 +99,7 @@ canvas{
   box-shadow: rgb(160, 148, 148) 8px 8px 8px 8px !important;
 }
 
+.share-to {
+  top: 70%;
+  left: calc(50% - 100px);
+}

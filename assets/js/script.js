@@ -2,13 +2,8 @@ const themeBtn = document.getElementById('theme-changer');
 const mobileNav = document.querySelector('.bi-list-nested');
 let choosedEmoji = "";
 
-document.querySelector('canvas').addEventListener('load', (e) => {
-  e.target.classList.add('canvas-animation')
-})
-
 window.addEventListener('load', () =>{
     let state = localStorage.getItem('theme');
-    console.log(state)
     let body = document.body;
     let nav = document.querySelector('nav')
     let headColor = document.querySelector("head > meta:nth-child(4)");
@@ -17,17 +12,47 @@ window.addEventListener('load', () =>{
     if(state == 'dark'){
         body.classList.toggle("dark-mode");
         nav.classList.toggle("dark-mode")
-        nav.classList.toggle("navbar-dark")
         form.classList.toggle("dark-mode")
         headColor.content = '#1d1d1d'
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
     }
 })
 
+function scrollProgressBar() {
+  var getMax = function () {
+    return $(document).height() - $(window).height();
+  };
+
+  var getValue = function () {
+    return $(window).scrollTop();
+  };
+
+  var progressBar = $(".progress-bar"),
+    max = getMax(),
+    value,
+    width;
+
+  var getWidth = function () {
+    // Calculate width in percentage
+    value = getValue();
+    width = (value / max) * 100;
+    width = width + "%";
+    return width;
+  };
+
+  var setWidth = function () {
+    progressBar.css({ width: getWidth() });
+  };
+
+  $(document).on("scroll", setWidth);
+  $(window).on("resize", function () {
+    // Need to reset max
+    max = getMax();
+    setWidth();
+  });
+}
+
 mobileNav.addEventListener('click', () => {
-  console.log('hai im clicked!')
-  let $nav = $(".fixed-top");
-  console.log($nav.height())
   let navContainer = document.querySelector('.navbar');
   navContainer.classList.toggle('bg-transparent')
 })
@@ -49,12 +74,12 @@ themeBtn.addEventListener('click', () => {
     }
     body.classList.toggle("dark-mode");
     nav.classList.toggle("dark-mode");
-    nav.classList.toggle("navbar-dark");
     form.classList.toggle("dark-mode")
 })
 
 // search modal
 document.getElementById('btn-search').addEventListener('click', (e) =>{
+  $('.navbar-toggler').click()
   $("#search-modal").modal('show');
   $('.search-result').empty();
   document.querySelector("#search-container").value = ''
@@ -75,7 +100,7 @@ $('#search-modal').on('click', () =>{
         let i = 0;
         paragrafContainer.forEach(p =>{
           p.innerHTML.split(' ').forEach(el => {
-            if(el.toLowerCase() == searchValue){
+            if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
               let searchId = `searchid-${i}`
               p.parentElement.parentElement.setAttribute('id', searchId);
 
@@ -105,17 +130,6 @@ document.querySelector('input').addEventListener('keypress', (e) => {
   }
 
 })
-
-// close nabar if click outside
-$(document).ready( () => {
-  $(document).click( (e) => {
-      let clickPos = $(e.target);
-      let _opened = $(".navbar-collapse").hasClass("show");
-      if (_opened === true && !clickPos.hasClass("navbar-toggler")) {
-          $("button.navbar-toggler").click();
-      }
-  });
-});
 
 const handleFeedback = () => {
     let btn = document.getElementById('send-feedback')
@@ -149,8 +163,7 @@ const handleEmoji = (event) => {
     default:
       choosedEmoji = '';
   }
-
-  console.log(choosedEmoji)
+  
   let containerFeedback = document.getElementById('container-feedback');
   containerFeedback.classList.toggle('disable')
 }
@@ -174,10 +187,15 @@ const topFunction = () => {
 
 $(window).ready(() => {
   $(".preloader").fadeOut();
+  
 })
 
 $(document).ready(() => {
-  $("#myModal").modal('show');
+  $('.carousel').carousel({
+    interval: true,
+  });
+
+  scrollProgressBar();
 });
 
 $(document).scroll(() => {
@@ -207,42 +225,83 @@ let parentUrl = window.parent.location.origin;
 let prevBtn = document.querySelector('.carousel-control-prev');
 let nextBtn = document.querySelector('.carousel-control-next');
 
-let updateBg = (clasName) => {
+nextBtn.addEventListener('click', (e) => {
+
   let activeCarousel;
   let contentDisabled;
+  let carouselTittle = document.querySelectorAll('#carousel-tittle');
+  let titel = document.querySelector('.title-provinsi');
+  let deskripsi = document.querySelector('.deskripsi-provinsi')
   let bg = document.getElementById('provinsi');
   let itemCarousel = document.querySelectorAll('.carousel-item');
 
-  let clasList = [
-    'carousel-item-next',
-    'carousel-item-prev',
-    'active'
+  itemCarousel.forEach((e) => {
+    if(e.classList.contains('carousel-item-next')){
+      
+      activeCarousel = e.querySelector('img').src
+      contentDisabled = e.querySelector('.d-none')
+      titel.innerHTML = contentDisabled.querySelector('.display-1').innerHTML
+      deskripsi.innerHTML = contentDisabled.querySelector('.display-3').innerHTML
+      document.querySelector('.btn-provinsi').href = contentDisabled.querySelector('a').href;
+      bg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('${activeCarousel.replace(parentUrl, '.')}')`  
+    }
+  })
+
+  carouselTittle.forEach(e => e.classList.add('bounce-left'))
+  titel.classList.add('slideUp')
+  deskripsi.classList.add('slideUp')
+  e.target.style.pointerEvents = "none";
+  setTimeout(() => {
+    carouselTittle.forEach(e => e.classList.remove('bounce-left'))
+    titel.classList.remove('slideUp')
+    deskripsi.classList.remove('slideUp')
+    e.target.style.pointerEvents = "auto";
+  }, 1000)
+
+})
+
+prevBtn.addEventListener('click', (e) => {
+
+  let activeCarousel;
+  let contentDisabled;
+  let titel = document.querySelector('.title-provinsi');
+  let deskripsi = document.querySelector('.deskripsi-provinsi')
+  let bg = document.getElementById('provinsi');
+  let itemCarousel = document.querySelectorAll('.carousel-item');
+
+  itemCarousel.forEach((e) => {
+    if(e.classList.contains('carousel-item-prev')){
+      
+      activeCarousel = e.querySelector('img').src
+      contentDisabled = e.querySelector('.d-none')
+      titel.innerHTML = contentDisabled.querySelector('.display-1').innerHTML
+      deskripsi.innerHTML = contentDisabled.querySelector('.display-3').innerHTML
+      document.querySelector('.btn-provinsi').href = contentDisabled.querySelector('a').href;
+      bg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('${activeCarousel.replace(parentUrl, '.')}')`  
+    }
+  })
+  
+  titel.classList.add('slideUp')
+  deskripsi.classList.add('slideUp')
+  e.target.style.pointerEvents = "none";
+  setTimeout(() => {
+    deskripsi.classList.remove('slideUp')
+    e.target.style.pointerEvents = "auto";
+    titel.classList.remove('slideUp')
+  }, 1000)
+  
+})
+
+setInterval(() => {
+  let bgHome = document.querySelector('.bg-img');
+
+  let bgList = [
+    './assets/img/rizknas-2MOnt5BQEkE-unsplash.jpg',
+    './assets/img/kilarov-zaneit-_387q_NwPLg-unsplash.jpg',
+    './assets/img/labuhan-bajo.jpg'
   ]
 
-  for(c of clasList) {
-    
-    itemCarousel.forEach((e) => {
-      if(e.classList.contains(c)){
-        
-        activeCarousel = e.querySelector('img').src
-        contentDisabled = e.querySelector('.d-none')
-        document.querySelector('.title-provinsi').innerHTML = contentDisabled.querySelector('.display-1').innerHTML
-        document.querySelector('.deskripsi-provinsi').innerHTML = contentDisabled.querySelector('.display-3').innerHTML
-        document.querySelector('.btn-provinsi').href = contentDisabled.querySelector('a').href;
-        bg.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('${activeCarousel.replace(parentUrl, '.')}')`
-        bg.classList.add('animate')
-  
-      }
-    })
-
-  }
- 
-  
-  let t = setTimeout(bg.classList.remove('animate'), 10000)
-  clearTimeout(500)
-}
-
-nextBtn.addEventListener('click', updateBg)
-prevBtn.addEventListener('click', updateBg)
-
-setInterval(updateBg, 2000)
+  let randomize = Math.floor(Math.random() * bgList.length)
+  bgHome.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(${bgList[randomize]})`
+  nextBtn.click();
+}, 5000)

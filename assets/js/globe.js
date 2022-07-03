@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-let globeContainer = document.querySelector("canvas")
+let lastWidth;
 
 let mouse = {
     x: undefined,
@@ -8,6 +8,7 @@ let mouse = {
 }
 
 const renderGlobe = () => {
+    lastWidth = window.innerWidth;
     const scene = new THREE.Scene();
     //scene.background = new THREE.Color( 0x000000 );
     const camera = new THREE.PerspectiveCamera(
@@ -67,6 +68,8 @@ addEventListener('mousemove', (e) => {
 })
 
 window.addEventListener('resize', (e) => {
-    console.log('Render new globe');
-    renderGlobe();
+    if(window.innerWidth !== lastWidth){
+        console.log('Render new globe');
+        renderGlobe();
+    }
 }, true)

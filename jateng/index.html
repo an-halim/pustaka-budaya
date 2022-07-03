@@ -1,299 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0dcaf0">
-    <title>Pustaka Budaya</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">  
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <style>
-        .carousel-control-prev-icon > span{
-            position: absolute;
-            bottom: 20px;
-            left: 100px;
-        }
-
-        .carousel-control-next-icon > span{
-            position: absolute;
-            bottom: 20px;
-            right: 100px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0dcaf0">
+  <title>Pustaka Budaya</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
+    integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-  <body data-aos-easing="ease" data-aos-duration="400">
-     <!-- navbar -->
-     <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom ">
-        <div class="container">
-          <a class="navbar-brand" href="../">Pustaka Budaya</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+
+<body data-aos-easing="ease" data-aos-duration="400">
+
+  <div class="preloader">
+    <div class="loading">
+      <img src="./assets/img/preloader.gif" width="80">
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom ">
+    <div class="container">
+      <a class="navbar-brand" href="../">Pustaka Budaya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="../">Home</a>
+          </li>
+          <li class="nav-item mx-2 dropdown">
+            <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Budaya
             </button>
-          <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item mx-2" >
-                <a class="nav-link active" aria-current="page" href="../" >Home</a>
-              </li>
-              <li class="nav-item mx-2 dropdown">
-                  <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      Budaya
-                    </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown">
-                    <li><a class="dropdown-item" href="./aksara-jawa/">Aksara Jawa</a></li>
-                    <li><a class="dropdown-item" href="./borobudur/">Borobudur</a></li>
-                    <li><a class="dropdown-item" href="#">Batik Jawa</a></li>
-                    <li><a class="dropdown-item" href="#">Gamelan</a></li>
-                    <li><a class="dropdown-item" href="#">Kethoprak</a></li>
-                    <li><a class="dropdown-item" href="./keris/">Keris</a></li>
-                    <li><a class="dropdown-item" href="#">Kuda Lumping</a></li>
-                    <li><a class="dropdown-item" href="#">Rumah Joglo</a></li>
-                    <li><a class="dropdown-item" href="#">Wayang kulit</a></li>
-                  </ul>
-                </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link active" href="#galery">Galery</a>
-              </li>
-              <li class="nav-item mx-2">
-                  <a class="nav-link active" href="#about-us">About Us</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link active" href="#contact">Contact</a>
-              </li>
-              <li class="nav-item ms-2">
-                <a class="nav-link active waves-effect waves-light" id="theme-changer">
-                  <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
-                </a>
-              </li>
+            <ul class="dropdown-menu" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="./aksara-jawa/">Aksara Jawa</a></li>
+              <li><a class="dropdown-item" href="./borobudur/">Borobudur</a></li>
+              <li><a class="dropdown-item" href="#">Batik Jawa</a></li>
+              <li><a class="dropdown-item" href="#">Gamelan</a></li>
+              <li><a class="dropdown-item" href="#">Kethoprak</a></li>
+              <li><a class="dropdown-item" href="./keris/">Keris</a></li>
+              <li><a class="dropdown-item" href="#">Kuda Lumping</a></li>
+              <li><a class="dropdown-item" href="#">Rumah Joglo</a></li>
+              <li><a class="dropdown-item" href="#">Wayang kulit</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- end navbar -->
-  
-
-      <!-- home -->
-      <div class="container vh-100" id="home">
-          <div class="row align-items-center justify-content-center" >
-            <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" >
-              <h3>JAWA TENGAH</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa animi magnam soluta nihil eaque deserunt earum harum a ex officiis?</p>
-              <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-primary">Jelajah Sekarang!</a>
-          </div>
-        </div>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#galery">Galery</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link active waves-effect waves-light" id="theme-changer">
+              <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
+            </a>
+          </li>
+        </ul>
       </div>
-      <!-- end home -->
+    </div>
+  </nav>
+  <!-- end navbar -->
 
-      <!-- budaya -->
-      <div class="text-center py-2 vh-100" id="galery">
-        <h1 class="my-4">Galery</h1>
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- home -->
+  <div class="container vh-100" id="home">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center">
+        <h3>JAWA TENGAH</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa animi magnam soluta nihil eaque deserunt earum
+          harum a ex officiis?</p>
+        <a href="#galery" class="btn btn-lg btn-secondary fw-bold border-white bg-primary">Jelajah Sekarang!</a>
+      </div>
+    </div>
+  </div>
+  <!-- end home -->
+
+  <!-- budaya -->
+  <div class="container-fluid vh-auto" style="background-color: #475284;">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="text-center py-2 vh-100" id="galery">
+          <h1 class="my-4">Galery</h1>
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-            <div class="carousel-item">
-                <img src="./assets/img/borobudur.jpg" alt="" class="img-fluid">
-                <div class="container">
-                <div class="carousel-caption text-center">
-                    <h1>Example headline.</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <!-- <img src="../assets/gamelan.jpg" alt=""> -->
-                    <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
+              <div class="carousel-item active">
+                <img src="./aksara-jawa/assets/img/hanacaraka.jpg" class="d-block rounded card-img" width="100%"
+                  height="600" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Hanacaraka</h5>
                 </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/batik.jpg" class="d-block rounded card-img" width="100%" height="600" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Batik</h5>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/img/borobudur.jpg" alt="" class="img-fluid">
-                <div class="container">
-                <div class="carousel-caption text-center">
-                    <h1>Example headline.</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <!-- <img src="../assets/gamelan.jpg" alt=""> -->
-                    <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
-                </div>
-                </div>
-            </div>
-            <div class="carousel-item active">
-                <img src="./assets/img/borobudur.jpg" alt="" class="img-fluid">
-                <div class="container">
-                <div class="carousel-caption text-center">
-                    <h1>Example headline.</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <!-- <img src="../assets/gamelan.jpg" alt=""> -->
-                    <p><a class="btn btn-lg btn-primary" href="#">Lihat Sekarang</a></p>
-                </div>
-                </div>
-            </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span><i class="bi bi-arrow-left-circle-fill text-info "></i></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span><i class="bi bi-arrow-right-circle-fill text-info "></i></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-      </div>
-      <!-- end budaya -->
-  
-      <!-- this button will visivle if documen scolled down -->
-      <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
-        <i class="bi bi-arrow-up-circle"></i>
-      </button>
-
-      <!-- container content list -->
-      <div class="container mt-5">
-        <div class="row justify-content-center mb-4">
-            <div class="col-lg-6">
-                <div class="card mb-2 card-content rounded-top">
-                    <div class="card-body">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus aspernatur optio voluptatum illum! Magnam, dignissimos?</p>
-                    </div>
-                </div>
-                <h5>Budaya</h5>
-            </div>
-            <div class="col-lg-6">
-                <div class="card mb-2 card-content">
-                    <div class="card-body">
-                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum explicabo nemo neque natus totam.</p>
-                    </div>
-                </div>
-                <h5>Geografi</h5>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="card mb-2 card-content">
-                    <div class="card-body">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus aspernatur optio voluptatum illum! Magnam, dignissimos?</p>
-                    </div>
-                </div>
-                <h5>Sejarah</h5>
-            </div>
-            <div class="col-lg-6">
-                <div class="card mb-2 card-content">
-                    <div class="card-body">
-                      <div class="badge bg-secondary fs-6">
-                        <i class="bi bi-geo-fill"></i>
-                      </div>
-                      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi earum explicabo nemo neque natus totam.</p>
-                    </div>
-                </div>
-                <h5>Landmark</h5>
-            </div>
-        </div>
-      </div>
-  
-      <!-- about us -->
-      <div class="container" id="about-us">
-        <h2 style="margin-top: 50px; margin-bottom: 80px; font-weight: bold; text-align: center">About Us</h2>
-        <div class="row justify-content-center mb-3">
-          <div class="col-md-6">
-            <p>Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
-          </div>
-        </div>
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-6">
-            <div class="row justify-content-center text-center">
-              <div class="col-md-6">
-                <p>Apakah artikel ini membantu?</p>
-                <div class="reaction">
-                  <a onclick="handleEmoji(this)" >
-                    😒
-                  </a>
-                  <a onclick="handleEmoji(this)" >
-                    😑
-                  </a>
-                  <a onclick="handleEmoji(this)" >
-                    🙂
-                  </a>
-                  <a onclick="handleEmoji(this)"  >
-                    😀
-                  </a>
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/borobudur.jpg" class="d-block rounded card-img" width="100%" height="600"
+                  alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Borobudur</h5>
                 </div>
               </div>
             </div>
-            <div class="disable text-center mb-5" id="container-feedback">
-              <form class="">
-                <div class="mb-3">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
-                    <label for="name">Full Name</label>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder" style="height: 100px"></textarea>
-                    <label for="feedback-placeholder">Comments</label>
-                  </div>
-                </div>
-                <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
-              </form>
-            </div>
-          </div>
-
-          <!-- container for writer -->
-          <div class="col-lg-6">
-              <div class="card shadow">
-                <div class="card-body">
-                  <h2>Writers Profile</h2>
-                  <div class="alert alert-secondary">
-                    <div class="row ">
-                      <div class="col-lg-6">
-                        <img class="img-fluid rounded-circle w-50" src="data:image/png;base64,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" alt="avatar">
-                      </div>
-                      <div class="col-lg-6 text-start">
-                        <h5>Ahmad Nur Halim</h5>
-                        <i class="bi bi-envelope-check-fill"></i> <span class="fs-6">halimbla2@gmail.com</span> <br>
-                        <i class="bi bi-facebook"></i> <span>anhalim</span> <i class="bi bi-twitter"></i> <span>anhalim</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
       </div>
-  
-      <footer class="mt-auto">
-        <div class="p-5 align-content-center" style="background-color: #475284;">
-            <div class="row ">
-                <div class="col-lg-4">
-                    <h2>LOGO</h2>
-                    <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
-                </div>
-                <div class="col-lg-4">
-                    <h5>Sortcut</h5>
-                    <br>
-                    <p ><a href="../">Home</a></p>
-                    <p ><a href="#">Provinsi</a></p>
-                    <p ><a href="#">About us</a></p>
-                    <p ><a href="#">Contact</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="bg-black p-4 text-white">
-            <p>powered by <a href="https://getbootstrap.com/" class="text-primary">Bootstrap</a>.</p>
-        </div>
-      </footer>
+    </div>
+  </div>
+  <!-- end budaya -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
-    <script>
-      AOS.init();
+  <!-- this button will visivle if documen scolled down -->
+  <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+  <!-- container content list -->
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <a href="#" class="text-decoration-none text-black">
+          <div class="card mb-2 card-content" style="height: 10rem;">
+            <div class="card-body bg-info rounded">
+            </div>
+            <h5 class="bg-white p-2">Budaya</h5>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a href="#" class="text-decoration-none text-black">
+          <div class="card mb-2 card-content" style="height: 10rem;">
+            <div class="card-body bg-info rounded">
+            </div>
+            <h5 class="bg-white p-2">Geografi</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <a href="#" class="text-decoration-none text-black">
+          <div class="card mb-2 card-content" style="height: 10rem;">
+            <div class="card-body bg-info rounded">
+            </div>
+            <h5 class="bg-white p-2">Sejarah</h5>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a href="#" class="text-decoration-none text-black">
+          <div class="card mb-2 card-content" style="height: 10rem;">
+            <div class="card-body bg-info rounded">
+            </div>
+            <h5 class="bg-white p-2">Landmark</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- about us -->
+  <div class="container" id="about-us">
+    <div class="row justify-content-center my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-5">
+          <div class="card card-content">
+            <div class="card-body">
+              <p>Apakah artikel ini membantu?</p>
+              <div class="reaction mb-2">
+                <a onclick="handleEmoji(this)">
+                  😒
+                </a>
+                <a onclick="handleEmoji(this)">
+                  😑
+                </a>
+                <a onclick="handleEmoji(this)">
+                  🙂
+                </a>
+                <a onclick="handleEmoji(this)">
+                  😀
+                </a>
+              </div>
+              <div class="text-center" id="container-feedback">
+                <form class="">
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                      <label for="name">Full Name</label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                        style="height: 100px"></textarea>
+                      <label for="feedback-placeholder">Comments</label>
+                    </div>
+                  </div>
+                  <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-5">
+          <div class="card mb-2 card-content">
+            <div class="card-body">
+              <h5>Contact Us</h5>
+              <p>Hubungi kami sekarang!</p>
+              <div id="container-feedback">
+                <form class="">
+                  <div class="mb-3">
+                    <div class="form">
+                      <label for="name">Full Name</label>
+                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form">
+                      <label for="email">Email Address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="email">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                        style="height: 100px"></textarea>
+                      <label for="feedback-placeholder">Comments</label>
+                    </div>
+                  </div>
+                  <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-auto fw-bold" style="background-color: #475284;">
+    <div class="p-5 container">
+      <div class="row justify-content-around">
+        <div class="col-lg-4">
+          <h2>LOGO</h2>
+          <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+        </div>
+        <div class="col-lg-4">
+          <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+        </div>
+        <div class="col-lg-4">
+          <h5>Sortcut</h5>
+          <br>
+          <p><a href="./" class="text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-decoration-none">Provinsi</a></p>
+          <p><a href="#" class="text-decoration-none">About us</a></p>
+          <p><a href="#" class="text-decoration-none">Contact</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark p-2 text-white d-flex justify-content-around">
+      <p class="fs-6 fw-lighter">Build with ❤️ using <a href="https://getbootstrap.com/"
+          class="text-white">Bootstrap</a>.</p>
+    </div>
+  </footer>
+
+      
+
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"
+        integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+      <script src="./assets/js/script.js"></script>
+      <script>
+        AOS.init();
       // var splide = new Splide( '.splide', {
       //   type   : 'loop',
       //   perPage: 3,
@@ -301,6 +315,7 @@
       // } );
 
       // splide.mount();
-    </script>
-  </body>
+      </script>
+</body>
+
 </html>

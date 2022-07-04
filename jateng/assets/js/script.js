@@ -2,10 +2,8 @@ const themeBtn = document.getElementById('theme-changer');
 const mobileNav = document.querySelector('.bi-list-nested');
 let choosedEmoji = "";
 
-
 window.addEventListener('load', () =>{
     let state = localStorage.getItem('theme');
-    console.log(state)
     let body = document.body;
     let nav = document.querySelector('nav')
     let headColor = document.querySelector("head > meta:nth-child(4)");

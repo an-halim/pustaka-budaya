@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root{
     --main-color: rgb(229 231 235);;
@@ -61,6 +61,7 @@ canvas{
 .dark-mode {
   background-color: var(--dark-mode-color) !important;
   color: var(--main-color) !important;
+  transition: 0.7s ease-in-out; 
 }
 
 .img-darkmode {
@@ -78,8 +79,13 @@ canvas{
 }
 
 .scrolled {
-  background-color: #0dcaf0 !important;
-  transition: background-color 300ms linear;
+  -webkit-backdrop-filter: blur(10px); 
+  /* Safari 9+ */ 
+  backdrop-filter: blur(10px); 
+  /* Chrome and Opera */
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 300ms linear; 
+  /* background-color: #0dcaf0 !important; */
 }
 
 .mobile-navbar {
@@ -95,11 +101,17 @@ canvas{
   box-shadow: rgb(163, 163, 163) 10px 10px 5px;
 }
 
-.main-img:hover {
+.main-img:hover, .main-img:focus {
   box-shadow: rgb(160, 148, 148) 8px 8px 8px 8px !important;
+  transform: scale(1.02);
+  opacity:0.6;
 }
 
 .share-to {
   top: 70%;
   left: calc(50% - 100px);
+}
+
+.recomendation-item {
+  cursor: pointer;
 }

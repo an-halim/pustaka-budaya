@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0dcaf0">
+  <title>Budaya Jateng</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+
+  <div class="preloader">
+    <div class="loading">
+      <img src="./assets/img/preloader.gif" width="80">
+    </div>
+  </div>
+
+  <!-- progres bar -->
+  <div class="progress-container fixed-top">
+    <span class="progress-bar"></span>
+  </div>
+
+  
+  <!-- navbar -->
+  <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom ">
+    <div class="container">
+      <a class="navbar-brand" href="../">Pustaka Budaya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="../">Home</a>
+          </li>
+          <li class="nav-item mx-2 dropdown">
+            <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Budaya
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="./aksara-jawa/">Aksara Jawa</a></li>
+              <li><a class="dropdown-item" href="./borobudur/">Borobudur</a></li>
+              <li><a class="dropdown-item" href="./batik-jawa/">Batik Jawa</a></li>
+              <li><a class="dropdown-item" href="./gamelan/">Gamelan</a></li>
+              <li><a class="dropdown-item" href="./kethoprak/">Kethoprak</a></li>
+              <li><a class="dropdown-item" href="./keris/">Keris</a></li>
+              <li><a class="dropdown-item" href="./kuda-lumping/">Kuda Lumping</a></li>
+              <li><a class="dropdown-item" href="./rumah-joglo/">Rumah Joglo</a></li>
+              <li><a class="dropdown-item" href="./wayang-kulit/">Wayang kulit</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#galery">Galery</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link active waves-effect waves-light" id="theme-changer">
+              <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- search modal -->
+  <div id="search-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog text-dark modal-dialog-scrollable pt-5">
+      <div class="modal-content">
+        <div class="modal-header shadow">
+          <input class="form-control me-2" type="search" placeholder="Search" id="search-container" aria-label="Search">
+        </div>
+        <div class="modal-body">
+          <div class="search-result p-3"></div>
+        </div>
+        <div class="modal-footer p-2">
+          <span class="badge bg-secondary">ESC to close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of search modal -->
+
+  <!-- home -->
+  <div class="container vh-100" id="home">
+  </div>
+  <!-- end home -->
+
+  <!-- this button will visivle if documen scolled down -->
+  <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info p-2 shadow text-white rounded">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+    <div class="row justify-content-center text-center mb-3">
+      <div class="col-md-8">
+        <p class="text-sm">Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-md-6">
+        <p>Apakah artikel ini membantu?</p>
+        <div class="reaction">
+          <a onclick="handleEmoji(this)">
+            😒
+          </a>
+          <a onclick="handleEmoji(this)">
+            😑
+          </a>
+          <a onclick="handleEmoji(this)">
+            🙂
+          </a>
+          <a onclick="handleEmoji(this)">
+            😀
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="lead text-center disable fw-light feedback-response mb-4">
+      Terima kasih atas masukannya. Kami sangat senang bisa membantu!
+    </p>
+    <div class="disable text-center mb-5" id="container-feedback">
+      <form class="">
+        <div class="mb-3">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+            <label for="name">Full Name</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+              style="height: 100px"></textarea>
+            <label for="feedback-placeholder">Comments</label>
+          </div>
+        </div>
+        <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+      </form>
+    </div>
+  </div>
+
+  <footer class="mt-auto text-white fw-bold" style="background-color: #475284;">
+    <div class="p-5 container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
+          <img src="./assets/img/logo-light.png" alt="logo pustaka budaya" width="100px">
+          <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mx-auto">
+          <h5>Sortcut</h5>
+          <p><a href="./" class="text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-decoration-none">Provinsi</a></p>
+          <p><a href="#" class="text-decoration-none">About us</a></p>
+          <p><a href="#" class="text-decoration-none">Contact</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark p-2 text-white d-flex justify-content-around">
+      <p class="fw-lighter ">Build with ❤️ using 
+        <a href="https://getbootstrap.com/" class="text-white">
+          Bootstrap
+        </a>.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- alert for notifcation -->
+
+  <noscript>
+
+  </noscript>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js"></script>
+  <script>
+    AOS.init({
+      disable: function() {
+        var maxWidth = 800;
+        return window.innerWidth < maxWidth;
+      }
+    });
+  </script>
+</body>
+
+</html>

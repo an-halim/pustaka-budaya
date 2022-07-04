@@ -15,7 +15,6 @@ window.addEventListener('load', () =>{
         body.classList.toggle("dark-mode");
         nav.classList.toggle("dark-mode")
         nav.classList.toggle("navbar-dark")
-        form.classList.toggle("dark-mode")
         headColor.content = '#1d1d1d'
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
     }
@@ -46,7 +45,7 @@ themeBtn.addEventListener('click', () => {
     body.classList.toggle("dark-mode");
     nav.classList.toggle("dark-mode");
     nav.classList.toggle("navbar-dark");
-    form.classList.toggle("dark-mode")
+    
 })
 
 
@@ -101,3 +100,41 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+
+document.querySelector('.main-img').addEventListener('mouseover', () => {
+  document.querySelector('.share-to').classList.remove('disable')
+})
+document.querySelector('.main-img').addEventListener('mouseleave', () => {
+  document.querySelector('.share-to').classList.add('disable')
+})
+$(document).ready(function(){
+    $("#myModal").modal('show');
+});
+$(document).scroll(function () {
+  var $nav = $(".sticky-top");
+  if(localStorage.getItem('theme') != 'dark')
+    $nav.toggleClass('scrolled shadow', $(this).scrollTop() > $nav.height());
+  else
+    $nav.toggleClass('shadow', $(this).scrollTop() > $nav.height());
+});
+
+
+document.getElementById('btn-search').addEventListener('click', (e) =>{
+  document.querySelector('input').classList.toggle('disable')
+  document.getElementById('btn-search').classList.toggle('disable');
+  document.querySelector('input').focus();
+})
+document.getElementById('search-container').addEventListener('input', (e) =>{
+  let searchValue = e.target.value;
+  let paragrafContainer = document.querySelectorAll('p');
+  for(p of paragrafContainer){
+      console.log(p.innerHTML.includes(searchValue))
+  }
+}, true)
+document.querySelector('input').addEventListener('keypress', (e) => {
+  if(e.key == 'Enter'){
+      document.getElementById('search-container').classList.toggle('disable')
+      document.getElementById('btn-search').classList.toggle('disable');
+  }
+
+})

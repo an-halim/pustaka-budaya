@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root{
     --main-color: rgb(229 231 235);;
@@ -166,6 +166,12 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
   transition: opacity 0.8s 1.42s, transform 1s 2s;
 } */
 
+
+.img-budaya{
+  width: 80%;
+  height: 80%;
+}
+
 .card-img {
     object-fit: cover;
 }
@@ -190,6 +196,12 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
   .carousel-control-next {
     right: 20%;
   }
+
+  
+.img-budaya{
+  width: auto;
+  height: auto;
+}
   
 }
 

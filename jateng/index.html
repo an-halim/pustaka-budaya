@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0dcaf0">
+  <meta name="theme-color" content="#0dcaf0">  
+  <link rel="shortcut icon" href="./assets/img/logo-light.png" type="image/x-icon">
   <title>Pustaka Budaya</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,18 +18,28 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body data-aos-easing="ease" data-aos-duration="400">
-
+<body>
+  <!-- preloader -->
   <div class="preloader">
     <div class="loading">
       <img src="./assets/img/preloader.gif" width="80">
     </div>
   </div>
 
+  <!-- progres bar -->
+  <div class="progress-container fixed-top">
+    <span class="progress-bar"></span>
+  </div>
+
+
   <!-- navbar -->
-  <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom ">
+  <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom fw-bold">
     <div class="container">
-      <a class="navbar-brand" href="../">Pustaka Budaya</a>
+      <a class="navbar-brand" href="../">
+        <img src="./assets/img/logo-dark.png" alt="logo" width="40" height="30" class="d-inline-block logo-dark align-text-top">
+        <img src="./assets/img/logo-light.png" alt="logo" width="40" height="30" class="d-inline-block logo-light d-none align-text-top">
+        <span class="fw-bold fs-6">Pustaka Budaya</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
@@ -69,20 +80,41 @@
               <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
             </a>
           </li>
+          <li class="nav-item ms-2">
+            <span id="btn-search" class="btn"><i class="bi bi-search text-white bg-info rounded p-2"></i></span>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- end navbar -->
 
+  <!-- search modal -->
+  <div id="search-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog text-dark modal-dialog-scrollable pt-5">
+      <div class="modal-content">
+        <div class="modal-header shadow">
+          <input class="form-control me-2" type="search" placeholder="Search" id="search-container" aria-label="Search">
+        </div>
+        <div class="modal-body">
+          <div class="search-result p-3"></div>
+        </div>
+        <div class="modal-footer p-2">
+          <span class="badge bg-secondary">ESC to close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of search modal -->
 
   <!-- home -->
   <div class="container vh-100" id="home">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center">
-        <h3>JAWA TENGAH</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa animi magnam soluta nihil eaque deserunt earum
-          harum a ex officiis?</p>
+        <h3 class="fw-semibold">JAWA TENGAH</h3>
+        <p>
+          Jawa Tengah adalah sebuah provinsi Indonesia yang terletak di bagian tengah Pulau Jawa. Ibu kotanya adalah Semarang. Provinsi ini berbatasan dengan Provinsi Jawa Barat di sebelah barat, Samudra Hindia dan Daerah Istimewa Yogyakarta di sebelah selatan, Jawa Timur di sebelah timur, dan Laut Jawa di sebelah
+        </p>
         <a href="#galery" class="btn btn-lg btn-secondary fw-bold border-white bg-primary">Jelajah Sekarang!</a>
       </div>
     </div>
@@ -94,7 +126,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-8 col-sm-8">
         <div class="text-center py-2 vh-100" id="galery">
-          <h1 class="my-4">Galery</h1>
+          <h1 class="my-4 text-white">Galery</h1>
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -191,6 +223,13 @@
       </div>
     </div>
   </div>
+
+  <!-- budaya -->
+  <div class="container mt-5">
+    <h2 class="fw-bold mb-4">Budaya Jawa Tengah</h2>
+    
+  </div>
+  <!-- end of budaya -->
 
   <!-- about us -->
   <div class="container" id="about-us">
@@ -297,24 +336,13 @@
   </footer>
 
       
-
-      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"
-        integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
       <script src="./assets/js/script.js"></script>
-      <script src="./assets/js/getRecomendation.js"></script>
       <script>
         AOS.init();
-      // var splide = new Splide( '.splide', {
-      //   type   : 'loop',
-      //   perPage: 3,
-      //   perMove: 1,
-      // } );
-
-      // splide.mount();
       </script>
 </body>
 

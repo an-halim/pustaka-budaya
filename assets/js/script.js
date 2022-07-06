@@ -131,6 +131,20 @@ document.querySelector('input').addEventListener('keypress', (e) => {
 
 })
 
+window.onkeydown = keydown;
+
+function keydown(e){
+  if (!e) 
+  e = event;
+  if (e.ctrlKey && e.keyCode==75){ //CTRL+K
+    e.preventDefault();
+    $("#search-modal").modal('show');
+    setTimeout(() => {
+        $('#search-container').focus();
+    }, 500);
+  }
+}
+
 const handleFeedback = () => {
     let btn = document.getElementById('send-feedback')
     let name = document.getElementById('name');
@@ -185,16 +199,15 @@ const topFunction = () => {
 }
 
 
-$(window).ready(() => {
-  $(".preloader").fadeOut();
-  
-})
-
 $(document).ready(() => {
   $('.carousel').carousel({
     interval: true,
   });
 
+  // preloader
+  $(".preloader").fadeOut();
+
+  // scrollprogresbar
   scrollProgressBar();
 });
 
@@ -206,20 +219,6 @@ $(document).scroll(() => {
     $nav.toggleClass('shadow', $(this).scrollTop() > $nav.height());
 });
 
-
-window.onkeydown = keydown;
-
-function keydown(e){
-  if (!e) 
-  e = event;
-  if (e.ctrlKey && e.keyCode==75){ //CTRL+K
-    e.preventDefault();
-    $("#search-modal").modal('show');
-    setTimeout(() => {
-        $('#search-container').focus();
-    }, 500);
-  }
-}
 
 let parentUrl = window.parent.location.origin;
 let prevBtn = document.querySelector('.carousel-control-prev');

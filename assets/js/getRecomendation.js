@@ -7,47 +7,47 @@ let contentList = [
             {
                 articelPath: '/jateng/aksara-jawa',
                 tittle: 'Aksara Jawa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/hanacaraka.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/jateng/borobudur',
                 tittle: 'Borobudur',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/borobudur.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/jateng/batik-jawa',
                 tittle: 'Batik Jawa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/batik.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Rumah Joglo',
-                articlePhoto: '/assets/img/gamelan.jpg'
-            },
-            {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Keris',
-                articlePhoto: '/assets/img/gamelan.jpg'
-            },
-            {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/jateng/gamelan',
                 tittle: 'Gamelan',
                 articlePhoto: '/assets/img/gamelan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Kuda Lumping',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/jateng/keris',
+                tittle: 'Keris',
+                articlePhoto: '/assets/img/keris.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Wayang Kulit',
-                articlePhoto: '/assets/img/gamelan.jpg'
-            },
-            {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/jateng/kethoprak',
                 tittle: 'Kethoprak',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/ketoprak.jpg'
+            },
+            {
+                articelPath: '/jateng/kuda-lumping',
+                tittle: 'Kuda Lumping',
+                articlePhoto: '/assets/img/kuda-lumping.jpg'
+            },
+            {
+                articelPath: '/jateng/rumah-joglo',
+                tittle: 'Rumah Joglo',
+                articlePhoto: '/assets/img/joglo.jpg'
+            },
+            {
+                articelPath: '/jateng/wayang-kulit',
+                tittle: 'Wayang Kulit',
+                articlePhoto: '/assets/img/wayang.jpg'
             },
         ]
     },

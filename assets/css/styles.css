@@ -331,3 +331,12 @@ canvas{
   transform: scale(1.02);
   opacity:0.5;
 }
+
+#ic-reaction {
+  cursor: pointer;
+  font-size: larger;
+}
+
+#ic-reaction:hover {
+ font-size: x-large;
+}

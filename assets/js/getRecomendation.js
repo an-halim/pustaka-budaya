@@ -53,7 +53,7 @@ let contentList = [
     },
     {
         name: 'Betharia Prenesti Nur Pafitri',
-        photo: '/assets/img/AhmadNurHalim.jpg',
+        photo: '/assets/img/betha.jpg',
         province: 'Bali',
         articles : [
             {

@@ -1,134 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0dcaf0">
-    <title>Pustaka Budaya</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">  
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0dcaf0">  
+  <link rel="shortcut icon" href="./assets/img/logo-light.png" type="image/x-icon">
+  <title>Pustaka Budaya</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
+    integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/splide-4.0.7/dist/css/splide.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-  <body data-aos-easing="ease" data-aos-duration="400">
-    <!-- navbar -->
-    <nav class="navbar shadow p-3 mb-5 bg-info bg-gradient  navbar-dark navbar-expand-lg sticky-top rounded ">
-      <div class="container">
-        <a class="navbar-brand" href="../">Pustaka Budaya</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
-          </button>
-        <div class="collapse navbar-collapse " id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item mx-2" >
-              <a class="nav-link active" aria-current="page" href="../" >Home</a>
+
+<body>
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loading">
+      <img src="./assets/img/preloader.gif" width="80">
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom fw-bold">
+    <div class="container">
+      <a class="navbar-brand" href="../">
+        <img src="./assets/img/logo-dark.png" alt="logo" width="40" height="30" class="d-inline-block logo-dark align-text-top">
+        <img src="./assets/img/logo-light.png" alt="logo" width="40" height="30" class="d-inline-block logo-light d-none align-text-top">
+        <span class="fw-bold fs-6">Pustaka Budaya</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="../">Home</a>
+          </li>
+          <li class="nav-item mx-2 dropdown">
+            <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Budaya
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="./rumah-adat">Rumah Adat</a></li>
+              <li><a class="dropdown-item" href="./pakaian-adat/">Pakaian Adat</a></li>
+              <li><a class="dropdown-item" href="./tari-kecak/">Tari Kecak</a></li>
+              <li><a class="dropdown-item" href="./rindik/">Rindik</a></li>
+              <li><a class="dropdown-item" href="./bahasa-daerah/">Bahasa Daerah</a></li>
+              <li><a class="dropdown-item" href="./kapurusa/">Kapurasa</a></li>
+              <li><a class="dropdown-item" href="./perang-pandan/">Perang Pandan</a></li>
+              <li><a class="dropdown-item" href="./nyepi/">Nyepi</a></li>
+              <li><a class="dropdown-item" href="./nama-khas/">Nama Khas Bali</a></li>
+              <li><a class="dropdown-item" href="./lagu-daerah/">Lagu Daerah</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#galery">Galery</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link active waves-effect waves-light" id="theme-changer">
+              <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
+            </a>
+          </li>
+          <li class="nav-item ms-2">
+            <span id="btn-search" class="btn"><i class="bi bi-search text-white bg-info rounded p-2"></i></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  
+  <!-- progres bar -->
+  <div class="progress-container fixed-top">
+    <span class="progress-bar"></span>
+  </div>
+
+  <!-- search modal -->
+  <div id="search-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog text-dark modal-dialog-scrollable pt-5">
+      <div class="modal-content">
+        <div class="modal-header shadow">
+          <input class="form-control me-2" type="search" placeholder="Search" id="search-container" aria-label="Search">
+        </div>
+        <div class="modal-body">
+          <div class="search-result p-3"></div>
+        </div>
+        <div class="modal-footer p-2">
+          <span class="badge bg-secondary">ESC to close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of search modal -->
+
+  <!-- home -->
+  <div class="container vh-100" id="home" >
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center">
+        <h3 class="fw-semibold">JAWA TENGAH</h3>
+        <p>
+          Jawa Tengah adalah sebuah provinsi Indonesia yang terletak di bagian tengah Pulau Jawa. Ibu kotanya adalah Semarang. Provinsi ini berbatasan dengan Provinsi Jawa Barat di sebelah barat, Samudra Hindia dan Daerah Istimewa Yogyakarta di sebelah selatan, Jawa Timur di sebelah timur, dan Laut Jawa di sebelah
+        </p>
+        <a href="#galery" class="btn btn-lg btn-secondary fw-bold border-white bg-primary">Jelajah Sekarang!</a>
+      </div>
+    </div>
+  </div>
+  <!-- end home -->
+
+  <!-- budaya -->
+  <div class="container-fluid vh-100" style="background-color: #475284;">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="text-center vh-100" id="galery">
+          <h1 class="my-4 text-white">Galery</h1>
+
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="bukaModal()">
+      Test it
+    </button>
+  </div>
+  <!-- end budaya -->
+
+  <!-- Light Box -->
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modalku bg-black bg-opacity-75" id="modals">
+    <span class="close cursor" onclick="tutupModal()">&times;</span>
+    <div class="modal-content ">
+      <section id="main-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/hanacaraka.jpg" alt="" class="img-fluid rounded">
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#about-us">Galery</a>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/batik.jpg" alt="" class="img-fluid rounded">
             </li>
-            <li class="nav-item mx-2">
-                <a class="nav-link active" href="#about-us">About Us</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item ms-2">
-              <a class="nav-link active waves-effect waves-light" id="theme-changer">
-                  <i class="bi bi-cloud-moon" id="icon"></i>
-                  <span>Dark</span>
-              </a>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/joglo.jpg" alt="" class="img-fluid rounded">
             </li>
           </ul>
         </div>
+      </section>
+      
+      <section
+        id="thumbnail-carousel"
+        class="splide"
+        aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/hanacaraka.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/batik.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/joglo.jpg" alt="" class="img-fluid">
+            </li>
+          </ul>
+        </div>
+      </section>      
+    </div>
+  </div>
+  <!-- end of light box -->
+
+  <!-- this button will visivle if documen scolled down -->
+  <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+  <!-- container content list -->
+  <div class="container mt-5" >
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <a href="./budaya/" class="text-decoration-none text-black">
+          <div class="card mb-2 card-content" style="height: 10rem;">
+            <div class="card-body bg-info rounded">
+            </div>
+            <h5 class="bg-white p-2">Budaya</h5>
+          </div>
+        </a>
       </div>
-    </nav>
-    <!-- end navbar -->
-
-
-    <!-- home -->
-    <div class="container" id="home">
-      <div class="row align-items-center justify-content-center" >
-        <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" >
-          <h2>BALI</h2>
-          <p class="fw-light text-md-center" style="font-weight: lighter;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quas assumenda sapiente pariatur molestiae eum iste. Corrupti, impedit officiis voluptas iste non sunt delectus culpa totam perspiciatis in molestiae unde eos, optio aut corporis deleniti a? Eveniet deleniti velit, quibusdam nemo sunt id vitae quo placeat cupiditate hic. Tempore voluptatem dolorem quidem fugit, rerum repudiandae id reiciendis illo animi adipisci?</p>
-          <a href="#provinsi" id="cta" class="btn btn-primary rounded p-3 mt-2">Jelajah sekarang!</a>
-        </div>      
+      <div class="col-lg-6">
+        <a href="#" class="text-decoration-none text-black">
+          <div class="card mb-2 card-content" style="height: 10rem;">
+            <div class="card-body bg-info rounded">
+            </div>
+            <h5 class="bg-white p-2">Geografi</h5>
+          </div>
+        </a>
       </div>
     </div>
-    <!-- end home -->
-
-    <!-- this button will visivle if documen scolled down -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
-      <i class="bi bi-arrow-up-circle"></i>
-    </button>
-    
-    
-    
-
-    <!-- about us -->
-    <div class="container mt-15" id="about-us">
-      <h2 style="margin-top: 50px; margin-bottom: 80px; font-weight: bold; text-align: center">About Us</h2>
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-6">
-          <p>Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
-        </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <a href="#" class="text-decoration-none text-black">
+          <div class="card mb-2 card-content" style="height: 10rem;">
+            <div class="card-body bg-info rounded">
+            </div>
+            <h5 class="bg-white p-2">Sejarah</h5>
+          </div>
+        </a>
       </div>
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-6">
-          <p>Apakah artikel ini membantu?</p>
-          <div class="reaction">
-            <a onclick="handleEmoji(this)" class="btn btn-secondary">
-              <i class="bi bi-emoji-frown-fill text-info"></i>
-            </a>
-            <a onclick="handleEmoji(this)" class="btn btn-secondary">
-              <i class="bi bi-emoji-neutral-fill text-info"></i>
-            </a>
-            <a onclick="handleEmoji(this)" class="btn btn-secondary" >
-              <i class="bi bi-emoji-smile-fill text-info"></i>
-            </a>
+      <div class="col-lg-6">
+        <a href="#" class="text-decoration-none text-black">
+          <div class="card mb-2 card-content" style="height: 10rem;">
+            <div class="card-body bg-info rounded">
+            </div>
+            <h5 class="bg-white p-2">Landmark</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- budaya -->
+  <div class="container mt-5 vh-100">
+    <h2 class="fw-bold mb-4">Budaya Jawa Tengah</h2>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col col-lg-12">
+          <h3 class="fw-bold">BOROBUDUR</h3>
+          <p class="fw-semibold py-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam dolores assumenda maxime repudiandae similique aspernatur, reiciendis illo nobis delectus doloribus architecto sit obcaecati ad ipsa nulla perferendis amet nesciunt accusamus eveniet quaerat itaque, modi accusantium. Quibusdam velit veritatis est?
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+          <div class="bg text-end">
+            <img src="./assets/img/borobudur.jpg" alt="" class="text-end">
           </div>
         </div>
       </div>
-      <div class="row mx-5 disable" id="container-feedback">
-        <form >
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
-          </div>
-          <div class="mb-3">
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder" style="height: 100px"></textarea>
-              <label for="feedback-placeholder">Comments</label>
+    </div>
+  </div>
+  <!-- end of budaya -->
+
+  <!-- about us -->
+  <div class="container" id="about-us">
+    <div class="row justify-content-center my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-5">
+          <div class="card card-content">
+            <div class="card-body">
+              <p>Apakah artikel ini membantu?</p>
+              <div class="reaction mb-2">
+                <a onclick="handleEmoji(this)">
+                  😒
+                </a>
+                <a onclick="handleEmoji(this)">
+                  😑
+                </a>
+                <a onclick="handleEmoji(this)">
+                  🙂
+                </a>
+                <a onclick="handleEmoji(this)">
+                  😀
+                </a>
+              </div>
+              <div class="text-center" id="container-feedback">
+                <form class="">
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                      <label for="name">Full Name</label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                        style="height: 100px"></textarea>
+                      <label for="feedback-placeholder">Comments</label>
+                    </div>
+                  </div>
+                  <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+                </form>
+              </div>
             </div>
           </div>
-          <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
-        </form>
+        </div>
+        <div class="col-lg-6 mb-5">
+          <div class="card mb-2 card-content">
+            <div class="card-body">
+              <h5>Contact Us</h5>
+              <p>Hubungi kami sekarang!</p>
+              <div id="container-feedback">
+                <form class="">
+                  <div class="mb-3">
+                    <div class="form">
+                      <label for="name">Full Name</label>
+                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form">
+                      <label for="email">Email Address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="email">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                        style="height: 100px"></textarea>
+                      <label for="feedback-placeholder">Comments</label>
+                    </div>
+                  </div>
+                  <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="container" id="footer">
+  
+  <footer class="mt-auto text-white fw-bold" style="background-color: #475284;">
+    <div class="p-5 container">
       <div class="row">
-        <img src=".. " class="img-thumbnail" alt="...">
-        <br>
-        <p>@2022 Pusataka Budaya, All Right Reserved</p>
+        <div class="col-lg-6 mb-4 text-center">
+          <img src="./assets/img/logo-light.png" alt="logo pustaka budaya" width="100px">
+          <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+        </div>
+        <div class="col-lg-6 mb-4 text-center">
+          <p><a href="./" class="text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-decoration-none">Provinsi</a></p>
+          <p><a href="#" class="text-decoration-none">About us</a></p>
+          <p><a href="#" class="text-decoration-none">Contact</a></p>
+        </div>
       </div>
     </div>
+    <div class="bg-dark p-2 text-white d-flex justify-content-around">
+      <p class="fw-lighter ">Build with ❤️ using 
+        <a href="https://getbootstrap.com/" class="text-white">
+          Bootstrap
+        </a>.
+      </p>
+    </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../assets/js/script.js"></script>
-    <script>
-      AOS.init();
-      // var splide = new Splide( '.splide', {
-      //   type   : 'loop',
-      //   perPage: 3,
-      //   perMove: 1,
-      // } );
+      
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="../assets/splide-4.0.7/dist/js/splide.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+      <script src="./assets/js/script.js"></script>
+      <script>
+        AOS.init();
+        document.addEventListener( 'DOMContentLoaded', function () {
+          var main = new Splide( '#main-carousel', {
+            type      : 'fade',
+            rewind    : true,
+            pagination: false,
+            arrows    : true,
+          } );
 
-      // splide.mount();
-    </script>
-  </body>
+          var thumbnails = new Splide( '#thumbnail-carousel', {
+            fixedWidth  : 100,
+            fixedHeight : 60,
+            gap         : 10,
+            rewind      : true,
+            pagination  : false,
+            isNavigation: true,
+            breakpoints : {
+              600: {
+                fixedWidth : 60,
+                fixedHeight: 44,
+              },
+            },
+          } );
+
+          main.sync( thumbnails );
+          main.mount();
+          thumbnails.mount();
+        } );
+
+        function bukaModal() {
+          document.getElementById("modals").style.display = "block";
+          document.querySelector('nav').classList.toggle('d-none')
+          document.querySelector('#go-top').classList.toggle('d-none')
+        }
+        
+        function tutupModal() {
+          document.getElementById("modals").style.display = "none";
+          document.querySelector('nav').classList.toggle('d-none')
+          document.querySelector('#go-top').classList.toggle('d-none')
+        }
+      </script>
+</body>
+
 </html>

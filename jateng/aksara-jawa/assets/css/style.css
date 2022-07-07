@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 :root{
     --main-color: rgb(229 231 235);;
@@ -26,11 +26,17 @@ li:hover:after { transform: scaleX(1); }
 li.fromRight:after{ transform-origin:100% 50%; }
 li.fromLeft:after{  transform-origin:  0% 50%; }
 
-
-
-canvas{
-  z-index:-1;
-  cursor: grabbing;
+.progress-container {
+  width: 100%;
+  background-color: transparent;
+  height: 5px;
+  display: block;
+}
+.progress-bar {
+  background-color: #0dcaf0;
+  width: 0%;
+  display: block;
+  height: inherit;
 }
 
 #cta:hover { 
@@ -69,7 +75,7 @@ canvas{
 }
 
 #provinsi{
-    background-image: url('/assets/img/kuda\ lumping.jpg');
+    background-image: url('/assets/img/kuda-lumping.jpg');
     background-size: cover;
     
 }
@@ -93,23 +99,32 @@ canvas{
   transition: background-color 200ms linear;
 }
 
-.card-content {
-  border-radius: 12px 12px 0px 0px !important;
+
+
+.main-img{
+  width: 100%;
+  transition: transform 0.4s ease;
+  transform-origin: 50% 50%;
 }
 
-.card-content:hover {
-  box-shadow: rgb(163, 163, 163) 10px 10px 5px;
-}
-
-.main-img:hover, .main-img:focus {
-  box-shadow: rgb(160, 148, 148) 8px 8px 8px 8px !important;
-  transform: scale(1.02);
-  opacity:0.6;
+.main-img:hover{
+  transform: scale(1.2);
+  width: 100%;
 }
 
 .share-to {
   top: 70%;
   left: calc(50% - 100px);
+}
+
+/* 374151 */
+
+.article-tittle{
+  font-family: 'Lato', sans-serif;
+}
+
+.article {
+  font-family: 'Lato', sans-serif;
 }
 
 .recomendation-item {

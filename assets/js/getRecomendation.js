@@ -57,49 +57,54 @@ let contentList = [
         province: 'Bali',
         articles : [
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa1',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/bahasa-daerah',
+                tittle: 'Bahasa Daerah',
+                articlePhoto: '/assets/img/bahasa-daerah.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa2',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/kapurusa',
+                tittle: 'Kapurusa',
+                articlePhoto: '/assets/img/kapurusa.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa3',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/lagu-daerah',
+                tittle: 'Lagu Daerah',
+                articlePhoto: '/assets/img/lagu-daerah.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa4',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/nama-khas',
+                tittle: 'Nama Khas',
+                articlePhoto: '/assets/img/nama-khas.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa5',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/nyepi',
+                tittle: 'Nyepi',
+                articlePhoto: '/assets/img/Nyepi.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa6',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/pakaian-adat',
+                tittle: 'Pakaian Adat',
+                articlePhoto: '/assets/img/pakaian-adat.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa7',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/perang-pandan',
+                tittle: 'Perang Pandan',
+                articlePhoto: '/assets/img/perang-pandan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa8',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/rindik',
+                tittle: 'Rindik',
+                articlePhoto: '/assets/img/rindik.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa8',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/bali/rumah-adat',
+                tittle: 'Rumah Adat',
+                articlePhoto: '/assets/img/rumah-adat.jpg'
+            },
+            {
+                articelPath: '/bali/tari-kecak',
+                tittle: 'Tari Kecak',
+                articlePhoto: '/assets/img/tari-kecak.jpg'
             },
         ]
     },

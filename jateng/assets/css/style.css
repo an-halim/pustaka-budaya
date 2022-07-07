@@ -107,11 +107,12 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
 }
 
 .card-content {
-  border-radius: 12px 12px 12px 12px !important;
+  border-radius: 10px !important;
 }
 
 .card-content:hover {
-  box-shadow: rgb(163, 163, 163) 10px 10px 5px;
+  box-shadow: rgb(163, 163, 163) 5px 5px 5px 5px;
+  transform: scale(1.05)
 }
 
 /* preloader */
@@ -211,11 +212,14 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
   }
 
   
-.img-budaya{
-  width: auto;
-  height: auto;
-}
+  .img-budaya{
+    width: auto;
+    height: auto;
+  }
   
+  .hide-mobile {
+    display: none;
+  }
 }
 
 /* 

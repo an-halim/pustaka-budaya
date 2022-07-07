@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 :root{
     --main-color: rgb(229 231 235);;
@@ -282,4 +282,9 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
   color: #999;
   text-decoration: none;
   cursor: pointer;
+}
+
+.article {
+  text-align: justify;
+  font-family: 'Lato', sans-serif;
 }

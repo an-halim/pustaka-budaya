@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 :root{
-    --main-color: rgb(229 231 235);;
-    --dark-mode-color: #1d1d1d;
+    --main-color: rgb(241 245 249);
+    --dark-mode-color: rgb(15 23 42);
+    --dark-mode-sec: rgb(30 41 59);
 }
 
 html {
@@ -112,6 +113,7 @@ canvas{
   background-color: var(--dark-mode-color) !important;
   color: var(--main-color) !important;
   transition: 0.7s ease-in-out; 
+
 }
 
 .img-darkmode {
@@ -129,7 +131,7 @@ canvas{
 
 #provinsi{
   z-index: -999999999;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/assets/img/labuhan-bajo.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('/assets/img/joglo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -163,13 +165,14 @@ canvas{
 }
 
 .scrolled {
-  -webkit-backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(64px); 
   /* Safari 9+ */ 
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(20px); 
+  backdrop-filter: brightness(.0.1);
   /* Chrome and Opera */
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: background-color 300ms linear; 
-  /* background-color: #0dcaf0 !important; */
+  /* background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 300ms linear;  */
+  background-color: var(--dark-mode-color) !important;
 }
 
 .mobile-navbar {
@@ -326,8 +329,7 @@ canvas{
 
 
 .card:hover, .card:focus {
-  transform: scale(1.02);
-  opacity:0.5;
+  transform: scale(1.1);
 }
 
 #ic-reaction {

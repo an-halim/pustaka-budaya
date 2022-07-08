@@ -84,15 +84,36 @@ function scrollProgressBar() {
 }
 
 
+
+
 const handleFeedback = () => {
-    let btn = document.getElementById('send-feedback')
-    let name = document.getElementById('name');
-    let comment = document.getElementById('feedback-placeholder');
-    btn.href = `mailto:halimbla2@gmail.com?subject=${name.value} merasa ${choosedEmoji} dengan artikel&body=${comment.value}`
+  let emojies = document.querySelectorAll('#ic-reaction');
+  let btn = document.getElementById('send-feedback')
+  let name = document.getElementById('name');
+  let comment = document.getElementById('feedback-placeholder');
+  let feedbackRes = document.querySelector('.feedback-response');
+  
+
+  if(name.value.length > 0 && comment.value.length > 0){
+    emojies.forEach((e) => {
+      e.style.filter = 'grayscale(0%)'
+      e.style.fontSize = 'large'
+    })
+    btn.href = `mailto:halimbla2@gmail.com?subject=${name.value} merasa ${choosedEmoji} dengan artikel&body=${comment.value}`;
+    let containerFeedback = document.getElementById('container-feedback');
+    containerFeedback.classList.toggle('d-none')
+    feedbackRes.classList.toggle('d-none')
+  }
 }
 
 const handleEmoji = (event) => {
-  
+  let emojies = document.querySelectorAll('#ic-reaction');
+
+  emojies.forEach((e) => {
+    e.innerHTML !== event.innerHTML ? e.style.filter = 'grayscale(100%)' : e.style.filter = 'grayscale(0%)'
+    e.innerHTML === event.innerHTML ? e.style.fontSize = 'x-large' : e.style.fontSize = 'large' 
+  })
+
   switch(event.innerHTML.trim()){
     case '😒':
       choosedEmoji = 'tidak terbantu';
@@ -109,10 +130,9 @@ const handleEmoji = (event) => {
     default:
       choosedEmoji = '';
   }
-
-  console.log(choosedEmoji)
+  
   let containerFeedback = document.getElementById('container-feedback');
-  containerFeedback.classList.toggle('disable')
+  containerFeedback.classList.toggle('d-none')
 }
 
 //Get the button

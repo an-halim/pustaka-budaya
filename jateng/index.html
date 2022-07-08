@@ -111,7 +111,7 @@
   <!-- home -->
   <div class="container vh-100" id="home" >
     <div class="row align-items-center justify-content-center">
-      <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center">
+      <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" data-aos="fade-up">
         <h3 class="fw-semibold">JAWA TENGAH</h3>
         <p>
           Jawa Tengah adalah sebuah provinsi Indonesia yang terletak di bagian tengah Pulau Jawa. Ibu kotanya adalah Semarang. Provinsi ini berbatasan dengan Provinsi Jawa Barat di sebelah barat, Samudra Hindia dan Daerah Istimewa Yogyakarta di sebelah selatan, Jawa Timur di sebelah timur, dan Laut Jawa di sebelah
@@ -123,25 +123,25 @@
   <!-- end home -->
 
   <!-- budaya -->
-  <div class="container-fluid vh-auto py-5" style="background-color: #475284;">
-    <div class="row justify-content-center" >
+  <div class="container-fluid vh-100 py-5" id="galery" style="background-color: #475284;">
+    <div class="row justify-content-center align-content-center" >
       <div class="col-lg-8 col-md-8 col-sm-8 mx-5">
-        <h1 class="my-4 text-white text-start ps-5 fw-semibold" id="galery">Galery</h1>
+        <h1 class="my-4 text-white text-center fw-semibold py-5" >Galery</h1>
         <div class="row py-4 mx-5">
           <div class="col" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="400">
             <img src="./assets/img/borobudur.jpg" alt="borobudur" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 300px">
           </div>
           <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="450">
-            <img src="../assets/img/gamelan.jpg" alt="borobudur" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 3 00px">
+            <img src="../assets/img/gamelan.jpg" alt="gamelan" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 3 00px">
           </div>
           <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="500">
             <img src="../assets/img/joglo.jpg" alt="borobudur" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 3 00px">
           </div>
           <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="550">
-            <img src="../assets/img/ketoprak.jpg" alt="borobudur" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 300px">
+            <img src="../assets/img/ketoprak.jpg" alt="ketoprak" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 300px">
           </div>
         </div>
-        <span class="text-white ms-5" style="cursor: pointer;" onclick="bukaModal()" data-aos="zoom-out" data-aos-delay="500">
+        <span class="text-white ms-5" style="cursor: pointer;" onclick="bukaModal()" data-aos="zoom-out" data-aos-delay="400">
           Lihat lainnya <i class="bi bi-arrow-right"></i>
         </span>
       </div>
@@ -166,6 +166,24 @@
             <li class="splide__slide main__splide_image">
               <img src="../assets/img/joglo.jpg" alt="" class="img-fluid rounded">
             </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/keris.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/ketoprak.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/gamelan.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/kuda-lumping.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/wayang.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/borobudur.jpg" alt="" class="img-fluid rounded">
+            </li>
           </ul>
         </div>
       </section>
@@ -186,6 +204,23 @@
             <li class="splide__slide splide__thumbnail">
               <img src="../assets/img/joglo.jpg" alt="" class="img-fluid">
             </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/keris.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/ketoprak.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/gamelan.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/kuda-lumping.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/wayang.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/borobudur.jpg" alt="" class="img-fluid">
           </ul>
         </div>
       </section>      
@@ -199,39 +234,39 @@
   </button>
 
   <!-- container content list -->
-  <div class="container my-5" >
-    <div class="text-center">
-      <h2 class="fw-bold"  data-aos="fade-up" data-aos-dalay="200">CONTENT</h2>
+  <div class="container my-5 vh-auto" >
+    <div class="text-center pt-5">
+      <h2 class="fw-bold"  data-aos="fade-up" data-aos-dalay="200">KONTEN</h2>
       <p class="pb-5 article text-center" data-aos="fade-up" data-aos-dalay="350">Beberapa content unggulan kami</p>
     </div>
-    <div class="row ">
+    <div class="row align-content-center pt-4">
       <div class="col-10 mx-auto">
         <div class="row justify-content-center">
-          <div class="col-lg-6 mb-2" data-aos="zoom-in-up" data-aos-dalay="350">
+          <div class="col-lg-6 mb-2" data-aos="zoom-in-up" data-aos-dalay="500">
             <a href="#" class="text-decoration-none text-black">
-              <div class="card shadow-md mb-2 card-content text-center">
+              <div class="card shadow-sm mb-2 card-content text-center">
                 <div class="row p-4">
                   <div class="col">
                     <img src="../assets/img/budaya.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
                   </div>
-                  <div class="col ">
-                    <h5 class="bg-white fw-bold text-start">BUDAYA</h5>
+                  <div class="col">
+                    <h5 class="fw-bold text-start">BUDAYA</h5>
                     <p  class="text-start">Beberapa budaya yang kami angkat</p>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-6 mb-2"  data-aos="zoom-in-up" data-aos-dalay="450">
+          <div class="col-lg-6 mb-2"  >
             <a href="#" class="text-decoration-none text-black">
-              <div class="card shadow-md mb-2 card-content text-center">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="600">
                 <div class="row p-4">
                   <div class="col">
                     <img src="../assets/img/geografi.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
                   </div>
                   <div class="col ">
-                    <h5 class="bg-white fw-bold text-start">GEOGRAFI</h5>
-                    <p  class="text-start">Beberapa budaya kami angkat</p>
+                    <h5 class="fw-bold text-start">GEOGRAFI</h5>
+                    <p  class="text-start">Kondisi geografis pada provinsi</p>
                   </div>
                 </div>
               </div>
@@ -239,31 +274,31 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-lg-6" data-aos="zoom-in-up" data-aos-dalay="500" >
+          <div class="col-lg-6"  >
             <a href="#" class="text-decoration-none text-black">
-              <div class="card shadow-md mb-2 card-content text-center">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="700">
                 <div class="row p-4">
                   <div class="col">
                     <img src="../assets/img/sejarah.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
                   </div>
                   <div class="col ">
-                    <h5 class="bg-white fw-bold text-start">SEJARAH</h5>
-                    <p  class="text-start">Beberapa budaya kami angkat</p>
+                    <h5 class="fw-bold text-start">SEJARAH</h5>
+                    <p  class="text-start">Sejarah lahirnya atau terciptanya</p>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-6" data-aos="zoom-in-up" data-aos-dalay="550" >
+          <div class="col-lg-6"  >
             <a href="#" class="text-decoration-none text-black">
-              <div class="card shadow-md mb-2 card-content text-center">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="800">
                 <div class="row p-4">
                   <div class="col">
                     <img src="../assets/img/landmark.png" class="ms-4 me-0" width="150px" height="150px" alt="" srcset="">
                   </div>
                   <div class="col ">
-                    <h5 class="bg-white fw-bold text-start">LANDMARK</h5>
-                    <p  class="text-start">Beberapa budaya kami angkat</p>
+                    <h5 class="fw-bold text-start">LANDMARK</h5>
+                    <p  class="text-start">Landmark atau markah pada provinsi</p>
                   </div>
                 </div>
               </div>
@@ -274,9 +309,9 @@
     </div>
   </div>
   
-  <div class="p-4 text-white" style="background-color: #475284;">  
+  <div class="p-4 text-white main-content" style="background-color: #475284;">  
     <!-- sejarah -->
-    <div class="container mt-4 mb-5 px-5">
+    <div class="container mt-4 mb-5 px-lg-5">
       <h2 class="fw-bold">SEJARAH</h2>
       <div class="img-main text-center">
         <img src="../assets/img/borobudur.jpg" alt="borobudur" class="img-fluid rounded">
@@ -293,8 +328,8 @@
     </div>
     <!-- end of sejarah -->
 
-    <!-- sejarah -->
-    <div class="container mt-4 mb-5 px-5">
+    <!-- geografi -->
+    <div class="container mt-4 mb-5 px-lg-5">
       <h2 class="fw-bold">GEOGRAFIS</h2>
       <div class="img-main text-center">
         <img src="../assets/img/peta prov. jateng.jpg" alt="borobudur" class="img-fluid rounded">
@@ -313,10 +348,10 @@
         </p>
       </div>
     </div>
-    <!-- end of sejarah -->
+    <!-- end of geografi -->
 
-    <!-- sejarah -->
-    <div class="container mt-4 mb-5 px-5">
+    <!-- landmark -->
+    <div class="container mt-4 mb-5 px-lg-5">
       <h2 class="fw-bold">LANDMARK</h2>
       <div class="img-main text-center">
         <img src="../assets/img/borobudur.jpg" alt="borobudur" class="img-fluid rounded">
@@ -336,13 +371,14 @@
         </p>
       </div>
     </div>
-  <!-- end of sejarah -->
+  <!-- end of landmark -->
   </div>
 
-  <!-- budaya -->
+  <!-- list budaya -->
   <div class="container my-5">
     <h2 class="fw-bold mb-4 px-5">Budaya Jawa Tengah</h2>
-    <div class="container my-5 vh-100 overflow-auto">
+    <hr>
+    <div class="container my-5 vh-100 overflow-auto" id="list-budaya-dekstop">
       <div class="row  m-5">
         <div class="col col-lg-6">
           <h3 class="fw-bold">BOROBUDUR</h3>
@@ -414,12 +450,106 @@
         </div>
       </div>
     </div>
+    <div class="my-5 vh-100 overflow-auto d-none" id="list-budaya-mobile">
+      <div class="row d-flex flex-column justify-content-center">
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- end of budaya -->
+  <!-- end of list budaya -->
 
   <!-- about us -->
   <div class="container" id="about-us">
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-5 pt-5">
       <div class="row justify-content-center">
         <div class="col-lg-6 mb-5">
           <div class="card card-content">
@@ -443,13 +573,13 @@
                 <form class="">
                   <div class="mb-3">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                      <input type="text" class="form-control form" id="name" aria-describedby="nameHelp">
                       <label for="name">Full Name</label>
                     </div>
                   </div>
                   <div class="mb-3">
                     <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                      <textarea class="form-control form" placeholder="Leave a feedback here" id="feedback-placeholder"
                         style="height: 100px"></textarea>
                       <label for="feedback-placeholder">Comments</label>
                     </div>
@@ -470,18 +600,18 @@
                   <div class="mb-3">
                     <div class="form">
                       <label for="name">Full Name</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                      <input type="text" class="form-control form" id="name" aria-describedby="nameHelp">
                     </div>
                   </div>
                   <div class="mb-3">
                     <div class="form">
                       <label for="email">Email Address</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="email">
+                      <input type="email" class="form-control form" id="email" aria-describedby="email">
                     </div>
                   </div>
                   <div class="mb-3">
                     <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                      <textarea class="form-control form" placeholder="Leave a feedback here" id="feedback-placeholder"
                         style="height: 100px"></textarea>
                       <label for="feedback-placeholder">Comments</label>
                     </div>
@@ -499,15 +629,18 @@
   
   <footer class="mt-auto text-white fw-bold" style="background-color: #475284;">
     <div class="p-5 container">
-      <div class="row">
-        <div class="col-lg-6 mb-4 text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
           <img src="./assets/img/logo-light.png" alt="logo pustaka budaya" width="100px">
           <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
         </div>
-        <div class="col-lg-6 mb-4 text-center">
+        <div class="col-lg-4 mb-4">
+        </div>
+        <div class="col-lg-4 mb-4 mx-auto">
+          <h5>Navigasi</h5>
           <p><a href="./" class="text-decoration-none">Home</a></p>
           <p><a href="#" class="text-decoration-none">Provinsi</a></p>
-          <p><a href="#" class="text-decoration-none">About us</a></p>
+          <p><a href="../../index.html#tentangkami" class="text-decoration-none">About us</a></p>
           <p><a href="#" class="text-decoration-none">Contact</a></p>
         </div>
       </div>
@@ -516,7 +649,7 @@
       <p class="fw-lighter ">Build with ❤️ using 
         <a href="https://getbootstrap.com/" class="text-white">
           Bootstrap
-        </a>.
+        </a>
       </p>
     </div>
   </footer>
@@ -530,45 +663,6 @@
       <script src="./assets/js/script.js"></script>
       <script>
         AOS.init();
-        document.addEventListener( 'DOMContentLoaded', function () {
-          var main = new Splide( '#main-carousel', {
-            type      : 'fade',
-            rewind    : true,
-            pagination: false,
-            arrows    : true,
-          } );
-
-          var thumbnails = new Splide( '#thumbnail-carousel', {
-            fixedWidth  : 100,
-            fixedHeight : 60,
-            gap         : 10,
-            rewind      : true,
-            pagination  : false,
-            isNavigation: true,
-            breakpoints : {
-              600: {
-                fixedWidth : 60,
-                fixedHeight: 44,
-              },
-            },
-          } );
-
-          main.sync( thumbnails );
-          main.mount();
-          thumbnails.mount();
-        } );
-
-        function bukaModal() {
-          document.getElementById("modals").style.display = "block";
-          document.querySelector('nav').classList.toggle('d-none')
-          document.querySelector('#go-top').classList.toggle('d-none')
-        }
-        
-        function tutupModal() {
-          document.getElementById("modals").style.display = "none";
-          document.querySelector('nav').classList.toggle('d-none')
-          document.querySelector('#go-top').classList.toggle('d-none')
-        }
       </script>
 </body>
 

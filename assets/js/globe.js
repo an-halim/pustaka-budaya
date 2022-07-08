@@ -25,9 +25,6 @@ const renderGlobe = () => {
         innerWidth, innerHeight
     );
 
-    console.log(
-        innerWidth-(innerWidth/3), innerHeight-(innerHeight/3)
-    )
     renderer.setPixelRatio(window.devicePixelRatio)
 
     const sphere = new THREE.Mesh(

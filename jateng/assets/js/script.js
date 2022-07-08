@@ -9,18 +9,44 @@ window.addEventListener('load', () =>{
     let headColor = document.querySelector("head > meta:nth-child(4)");    
     let logoDark = document.querySelector('.logo-dark')
     let logoLight = document.querySelector('.logo-light')
-    
-    let form = document.querySelector('form')
+
     if(state == 'dark'){
         body.classList.toggle("dark-mode");
         nav.classList.toggle("dark-mode")
         nav.classList.toggle("navbar-dark")
-        form.classList.toggle("dark-mode")
         logoDark.classList.add('d-none')
         logoLight.classList.remove('d-none')
         headColor.content = '#1d1d1d'
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+        $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
     }
+
+
+    let main = new Splide( '#main-carousel', {
+      type      : 'fade',
+      rewind    : true,
+      pagination: false,
+      arrows    : true,
+    } );
+
+    let thumbnails = new Splide( '#thumbnail-carousel', {
+      fixedWidth  : 100,
+      fixedHeight : 60,
+      gap         : 10,
+      rewind      : true,
+      pagination  : false,
+      isNavigation: true,
+      breakpoints : {
+        600: {
+          fixedWidth : 60,
+          fixedHeight: 44,
+        },
+      },
+    } );
+
+    main.sync( thumbnails );
+    main.mount();
+    thumbnails.mount();
 })
 
 mobileNav.addEventListener('click', () => {
@@ -29,6 +55,7 @@ mobileNav.addEventListener('click', () => {
   navContainer.classList.toggle('bg-transparent')
 })
 
+
 themeBtn.addEventListener('click', () => {
     let headColor = document.querySelector("head > meta:nth-child(4)");
     let state = localStorage.getItem('theme');
@@ -36,19 +63,22 @@ themeBtn.addEventListener('click', () => {
     let nav = document.querySelector('nav')
     let logoDark = document.querySelector('.logo-dark')
     let logoLight = document.querySelector('.logo-light')
-    // let form = document.querySelector('form')
+    let isDarkMode = $('link[href="./assets/css/darkmode.css"]');
+    
     if(state == 'dark'){
         logoDark.classList.remove('d-none')
         logoLight.classList.add('d-none')
         localStorage.removeItem('theme');
         themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
         headColor.content = '#0dcaf0'
-      }else{
+        isDarkMode.remove();
+    }else{
       logoDark.classList.add('d-none')
       logoLight.classList.remove('d-none')
-        localStorage.setItem('theme', 'dark');
-        themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
-        headColor.content = '#1d1d1d'
+      localStorage.setItem('theme', 'dark');
+      themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+      headColor.content = '#1d1d1d'
+      $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
     }
     body.classList.toggle("dark-mode");
     nav.classList.toggle("dark-mode");
@@ -122,6 +152,18 @@ function keydown(e){
         $('#search-container').focus();
     }, 500);
   }
+}
+
+const bukaModal = () => {
+  document.getElementById("modals").style.display = "block";
+  document.querySelector('nav').classList.toggle('d-none')
+  document.querySelector('#go-top').classList.toggle('d-none')
+}
+
+const tutupModal = () => {
+  document.getElementById("modals").style.display = "none";
+  document.querySelector('nav').classList.toggle('d-none')
+  document.querySelector('#go-top').classList.toggle('d-none')
 }
 
 // function scroll bar

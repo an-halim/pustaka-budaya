@@ -4,17 +4,14 @@ let choosedEmoji = "";
 
 window.addEventListener('load', () =>{
     let state = localStorage.getItem('theme');
-    let body = document.body;
-    let nav = document.querySelector('nav')
     let headColor = document.querySelector("head > meta:nth-child(4)");
+    let nav = document.querySelector('nav')
     
-    let form = document.querySelector('form')
     if(state == 'dark'){
-        body.classList.toggle("dark-mode");
         nav.classList.toggle("dark-mode")
-        form.classList.toggle("dark-mode")
         headColor.content = '#1d1d1d'
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+        $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
     }
 })
 
@@ -59,108 +56,56 @@ mobileNav.addEventListener('click', () => {
 
 themeBtn.addEventListener('click', () => {
     let headColor = document.querySelector("head > meta:nth-child(4)");
-    let state = localStorage.getItem('theme');
-    let body = document.body;
     let nav = document.querySelector('nav')
-    let form = document.querySelector('form')
+    let state = localStorage.getItem('theme');
+    let isDarkMode = $('link[href="./assets/css/darkmode.css"]');
+
     if(state == 'dark'){
-        localStorage.removeItem('theme');
-        themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
-        headColor.content = '#0dcaf0'
+      nav.classList.toggle("dark-mode")
+      localStorage.removeItem('theme');
+      themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
+      headColor.content = '#0dcaf0'
+      isDarkMode.remove();
     }else{
-        localStorage.setItem('theme', 'dark');
-        themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
-        headColor.content = '#1d1d1d'
+      nav.classList.toggle("dark-mode")
+      localStorage.setItem('theme', 'dark');
+      themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+      headColor.content = '#1d1d1d'
+      $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
+
     }
-    body.classList.toggle("dark-mode");
-    nav.classList.toggle("dark-mode");
-    form.classList.toggle("dark-mode")
-})
-
-// search modal
-document.getElementById('btn-search').addEventListener('click', (e) =>{
-  $('.navbar-toggler').click()
-  $("#search-modal").modal('show');
-  $('.search-result').empty();
-  document.querySelector("#search-container").value = ''
-})
-
-
-$('#search-modal').on('click', () =>{
-  document.querySelector("#search-container").addEventListener('input', (e) =>{
-    let searchValue = e.target.value.toLowerCase();
-    let paragrafContainer = document.querySelectorAll('p');
     
-    
-    document.querySelector('input').addEventListener('keypress', (e) => {
-      if(e.key == 'Enter'){
-        // reset result container if used before
-        $('.search-result').empty();
-
-        let i = 0;
-        paragrafContainer.forEach(p =>{
-          p.innerHTML.split(' ').forEach(el => {
-            if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
-              let searchId = `searchid-${i}`
-              p.parentElement.parentElement.setAttribute('id', searchId);
-
-              let content = p.innerHTML
-              if(content.length > 40){
-                content = content.slice(0 , 40)
-              }
-              $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a></span>`)
-              $('.search-result').append('<hr>')
-              i++;
-            }
-          });
-        })
-
-      }
-    })
-
-  }, true)
 })
 
-const closeModal = () => {
-  $("#search-modal").modal('hide');
-}
-
-document.querySelector('input').addEventListener('keypress', (e) => {
-  if(e.key == 'Enter'){
-  }
-
-})
-
-window.onkeydown = keydown;
-
-function keydown(e){
-  if (!e) 
-  e = event;
-  if (e.ctrlKey && e.keyCode==75){ //CTRL+K
-    e.preventDefault();
-    $("#search-modal").modal('show');
-    setTimeout(() => {
-        $('#search-container').focus();
-    }, 500);
-  }
-}
 
 const handleFeedback = () => {
-    let btn = document.getElementById('send-feedback')
-    let name = document.getElementById('name');
-    let comment = document.getElementById('feedback-placeholder');
-    let feedbackRes = document.querySelector('.feedback-response');
+  let emojies = document.querySelectorAll('#ic-reaction');
+  let btn = document.getElementById('send-feedback')
+  let name = document.getElementById('name');
+  let comment = document.getElementById('feedback-placeholder');
+  let feedbackRes = document.querySelector('.feedback-response');
+  
 
-    if(name.value.length > 0 && comment.value.length > 0){
-      btn.href = `mailto:halimbla2@gmail.com?subject=${name.value} merasa ${choosedEmoji} dengan artikel&body=${comment.value}`;
-      let containerFeedback = document.getElementById('container-feedback');
-      containerFeedback.classList.toggle('disable')
-      feedbackRes.classList.toggle('disable')
-    }
+  if(name.value.length > 0 && comment.value.length > 0){
+    emojies.forEach((e) => {
+      e.style.filter = 'grayscale(0%)'
+      e.style.fontSize = 'large'
+    })
+    btn.href = `mailto:halimbla2@gmail.com?subject=${name.value} merasa ${choosedEmoji} dengan artikel&body=${comment.value}`;
+    let containerFeedback = document.getElementById('container-feedback');
+    containerFeedback.classList.toggle('disable')
+    feedbackRes.classList.toggle('disable')
+  }
 }
 
 const handleEmoji = (event) => {
-  
+  let emojies = document.querySelectorAll('#ic-reaction');
+
+  emojies.forEach((e) => {
+    e.innerHTML !== event.innerHTML ? e.style.filter = 'grayscale(100%)' : e.style.filter = 'grayscale(0%)'
+    e.innerHTML === event.innerHTML ? e.style.fontSize = 'x-large' : e.style.fontSize = 'large' 
+  })
+
   switch(event.innerHTML.trim()){
     case '😒':
       choosedEmoji = 'tidak terbantu';

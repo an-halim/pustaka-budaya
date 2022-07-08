@@ -74,7 +74,7 @@ let contentList = [
             {
                 articelPath: '/bali/nama-khas',
                 tittle: 'Nama Khas',
-                articlePhoto: '/assets/img/nama-khas.jpg'
+                articlePhoto: '/assets/img/nama-khas.png'
             },
             {
                 articelPath: '/bali/nyepi',
@@ -99,7 +99,7 @@ let contentList = [
             {
                 articelPath: '/bali/rumah-adat',
                 tittle: 'Rumah Adat',
-                articlePhoto: '/assets/img/rumah-adat.jpg'
+                articlePhoto: '/assets/img/rumah-adat.png'
             },
             {
                 articelPath: '/bali/tari-kecak',
@@ -111,52 +111,57 @@ let contentList = [
     {
         name: 'Okta Eka Pratama',
         photo: '/assets/img/okta.jpg',
-        province: 'Kalimantan Selatan',
+        province: 'Kalimantan',
         articles : [
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa12',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/bahasa',
+                tittle: 'Bahasa',
+                articlePhoto: '/assets/img/Bahasa Kalimantan Selatan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa31',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/baju-adat',
+                tittle: 'Baju Adat',
+                articlePhoto: '/assets/img/Baju Adat Kalimantan Selatan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa311',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/kuliner',
+                tittle: 'Kuliner',
+                articlePhoto: '/assets/img/Kuliner Kalimantan Selatan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa124',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/rumah-adat',
+                tittle: 'Rumah Adat',
+                articlePhoto: '/assets/img/Rumah Adat Kalimantan Selatan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa4124',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/senjata-tradisional',
+                tittle: 'Senjata Tradisional',
+                articlePhoto: '/assets/img/Senjata Tradisional Kalimantan Selatan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa4124',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/suku',
+                tittle: 'Suku',
+                articlePhoto: '/assets/img/Suku Kalimantan Selatan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa4125',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/tarian-adat',
+                tittle: 'Tarian Adat',
+                articlePhoto: '/assets/img/Tarian Adat Kalimantan Selatan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa215',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/tradisi-lisan',
+                tittle: 'Tradisi Lisan',
+                articlePhoto: '/assets/img/Tradisi Lisan Kalimantan Selatan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawa5215',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/kalimantan/tradisi-pasar-terapung',
+                tittle: 'Tradisi Pasar Terapung',
+                articlePhoto: '/assets/img/pasar terapung.jpg'
+            },
+            {
+                articelPath: '/kalimantan/upacara-adat-baayun-mulud',
+                tittle: "Upacara Adat Ba'ayun Mulud",
+                articlePhoto: "/assets/img/Upacara Adat Ba'ayun Mulud Kalimantan Selatan.jpg"
             },
         ]
     },

@@ -1,466 +1,928 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0dcaf0" />
-    <title>Pustaka Budaya</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
-      integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
 
-  <body data-aos-easing="ease" data-aos-duration="400">
-    <div class="preloader">
-      <div class="loading">
-        <img src="./assets/img/preloader.gif" width="80" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0dcaf0" />
+  <link rel="shortcut icon" href="./assets/img/logo-light.png" type="image/x-icon" />
+  <title>Pustaka Budaya</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
+    integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../assets/splide-4.0.7/dist/css/splide.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body class="bg-white">
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loading">
+      <img src="./assets/img/preloader.gif" width="80" />
+    </div>
+  </div>
+  <!-- end of preloader -->
+
+  <!-- navbar -->
+  <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom fw-bold">
+    <div class="container">
+      <a class="navbar-brand" href="../">
+        <img src="./assets/img/logo-dark.png" alt="logo" width="40" height="30"
+          class="d-inline-block logo-dark align-text-top" />
+        <img src="./assets/img/logo-light.png" alt="logo" width="40" height="30"
+          class="d-inline-block logo-light d-none align-text-top" />
+        <span class="fw-bold fs-6">Pustaka Budaya</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="../">Home</a>
+          </li>
+          <li class="nav-item mx-2 dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Budaya
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown">
+              <li>
+                <a class="dropdown-item" href="./Hewan/">Hewan Endemik</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./Upacara/">Upacara Adat</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./Tarian/">Tarian Adat</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./Rumah/">Rumah Adat</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./Makanan/">Makanan</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./Pakaian/">Pakaian Adat</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./Senjata/">Senjata Adat</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./Lagu/">Lagu Daerah</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./Alat-Musik/">Alat Musik</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#galery">Galery</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link active waves-effect waves-light" id="theme-changer">
+              <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode" />
+            </a>
+          </li>
+          <li class="nav-item ms-2">
+            <span id="btn-search" class="btn"><i class="bi bi-search text-white bg-info rounded p-2"></i></span>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
+  <!-- end navbar -->
 
-    <!-- navbar -->
-    <nav
-      class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="../">Pustaka Budaya</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i
-            class="bi bi-list-nested"
-            style="font-size: 20px; color: cornflowerblue"
-          ></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item mx-2">
-              <a class="nav-link active" aria-current="page" href="../">Home</a>
+  <!-- progres bar -->
+  <div class="progress-container fixed-top">
+    <span class="progress-bar"></span>
+  </div>
+
+  <!-- search modal -->
+  <div id="search-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog text-dark modal-dialog-scrollable pt-5">
+      <div class="modal-content">
+        <div class="modal-header shadow">
+          <input class="form-control me-2" type="search" placeholder="Search" id="search-container"
+            aria-label="Search" />
+        </div>
+        <div class="modal-body">
+          <div class="search-result p-3"></div>
+        </div>
+        <div class="modal-footer p-2">
+          <span class="badge bg-secondary">ESC to close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of search modal -->
+
+  <!-- home -->
+  <div class="container vh-100" id="home">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" data-aos="fade-up">
+        <h3 class="fw-semibold">Nusa Tenggara Timur</h3>
+        <p>
+          Nusa Tenggara Timur adalah provinsi paling selatan di Indonesia. Ini
+          terdiri dari bagian timur Kepulauan Sunda Kecil, menghadap Samudera
+          Hindia di selatan dan Laut Flores di utara. -Wikipedia
+        </p>
+        <a href="#galery" class="btn btn-lg btn-secondary fw-bold border-white bg-primary">Jelajah Sekarang!</a>
+      </div>
+    </div>
+  </div>
+  <!-- end home -->
+
+  <!-- budaya -->
+  <div class="container-fluid vh-100 py-5" id="galery" style="background-color: #475284">
+    <div class="row justify-content-center align-content-center">
+      <div class="col-lg-8 col-md-8 col-sm-8 mx-5">
+        <h1 class="my-4 text-white text-center fw-semibold py-5">Galery</h1>
+        <div class="row py-4 mx-5">
+          <div class="col" onclick="bukaModal()" style="cursor: pointer" data-aos="fade-up" data-aos-delay="400">
+            <img src="./assets/img/Komodo.jpg" alt="borobudur" class="img-fluid rounded"
+              style="height: 400px; object-fit: cover; width: 300px" />
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer" data-aos="fade-up"
+            data-aos-delay="450">
+            <img src="./assets/img/sasando.jpg" alt="gamelan" class="img-fluid rounded"
+              style="height: 400px; object-fit: cover; width: 3 00px" />
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer" data-aos="fade-up"
+            data-aos-delay="500">
+            <img src="./assets/img/sei.jpg" alt="borobudur" class="img-fluid rounded"
+              style="height: 400px; object-fit: cover; width: 3 00px" />
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer" data-aos="fade-up"
+            data-aos-delay="550">
+            <img src="../assets/img/tarikataga.jpg" alt="ketoprak" class="img-fluid rounded"
+              style="height: 400px; object-fit: cover; width: 300px" />
+          </div>
+        </div>
+        <span class="text-white ms-5" style="cursor: pointer" onclick="bukaModal()" data-aos="zoom-out"
+          data-aos-delay="400">
+          Lihat lainnya <i class="bi bi-arrow-right"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- end budaya -->
+
+  <!-- Light Box -->
+  <!-- Modal -->
+  <div class="modalku bg-black bg-opacity-75" id="modals">
+    <span class="close cursor" onclick="tutupModal()">&times;</span>
+    <div class="modal-content">
+      <section id="main-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/Komodo.jpg" alt="" class="img-fluid rounded" />
             </li>
-            <li class="nav-item mx-2 dropdown">
-              <button
-                class="btn btn-primary dropdown-toggle"
-                type="button"
-                id="dropdown"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Budaya
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdown">
-                <li>
-                  <a class="dropdown-item" href="./Hewan/">Hewan Endemik</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Upacara/">Upacara Adat</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Tarian/">Tarian Adat</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Rumah/">Rumah Adat</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Makanan/">Makanan</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Pakaian/">Pakaian Adat</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Senjata/">Senjata Adat</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Lagu/">Lagu Daerah</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Alat-Musik/">Alat Musik</a>
-                </li>
-              </ul>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/lagudesaku.png" alt="" class="img-fluid rounded" />
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#galery">Galery</a>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/pakaianrote.jpg" alt="" class="img-fluid rounded" />
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#about-us">About Us</a>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/rumahmusalaki.png" alt="" class="img-fluid rounded" />
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#contact">Contact</a>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/sasando.jpg" alt="" class="img-fluid rounded" />
             </li>
-            <li class="nav-item ms-2">
-              <a
-                class="nav-link active waves-effect waves-light"
-                id="theme-changer"
-              >
-                <img
-                  src="./assets/img/night-mode.png"
-                  class="img-darkmode"
-                  alt="ligth mode"
-                />
-              </a>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/sei.jpg" alt="" class="img-fluid rounded" />
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/senjataklewang.jpg" alt="" class="img-fluid rounded" />
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/tarikataga.jpg" alt="" class="img-fluid rounded" />
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/upacarareba.jpg" alt="" class="img-fluid rounded" />
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
-    <!-- end navbar -->
+      </section>
 
-    <!-- home -->
-    <div class="container vh-100" id="home">
-      <div class="row align-items-center justify-content-center">
-        <div
-          class="col-md-6 position-absolute top-50 start-50 translate-middle text-center"
-        >
-          <h3>Nusa Tenggara Timur</h3>
-          <p>
-            Nusa Tenggara Timur adalah provinsi paling selatan di Indonesia. Ini
-            terdiri dari bagian timur Kepulauan Sunda Kecil, menghadap Samudera
-            Hindia di selatan dan Laut Flores di utara. -Wikipedia
-          </p>
-          <a
-            href="#galery"
-            class="btn btn-lg btn-secondary fw-bold border-white bg-primary"
-            >Jelajah Sekarang!</a
-          >
+      <section id="thumbnail-carousel" class="splide"
+        aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/Komodo.jpg" alt="" class="img-fluid" />
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/lagudesaku.png" alt="" class="img-fluid" />
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/pakaianrote.jpg" alt="" class="img-fluid" />
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/rumahmusalaki.png" alt="" class="img-fluid" />
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/sasando.jpg" alt="" class="img-fluid" />
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/sei.jpg" alt="" class="img-fluid" />
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/senjataklewang.jpg" alt="" class="img-fluid" />
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/tarikataga.jpg" alt="" class="img-fluid" />
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/upacarareba.jpg" alt="" class="img-fluid" />
+            </li>
+          </ul>
         </div>
-      </div>
+      </section>
     </div>
-    <!-- end home -->
+  </div>
+  <!-- end of light box -->
 
-    <!-- budaya -->
-    <div class="container-fluid vh-auto" style="background-color: #475284">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-8 col-sm-8">
-          <div class="text-center py-2 vh-100" id="galery">
-            <h1 class="my-4">Galery</h1>
-            <div
-              id="carouselExampleCaptions"
-              class="carousel slide"
-              data-bs-ride="false"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="./assets/img/sasando.jpg"
-                    class="d-block rounded card-img"
-                    width="100%"
-                    height="600"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Sasando</h5>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./assets/img/sei.jpg"
-                    class="d-block rounded card-img"
-                    width="100%"
-                    height="600"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Se'i</h5>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./assets/img/Komodo.jpg"
-                    class="d-block rounded card-img"
-                    width="100%"
-                    height="600"
-                    alt="..."
-                  />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5>Komodo</h5>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- this button will visivle if documen scolled down -->
+  <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+  <!-- container content list -->
+  <div class="container my-5 vh-auto">
+    <div class="text-center pt-5">
+      <h2 class="fw-bold" data-aos="fade-up" data-aos-dalay="200">KONTEN</h2>
+      <p class="pb-5 article text-center" data-aos="fade-up" data-aos-dalay="350">
+        Beberapa content unggulan kami
+      </p>
     </div>
-    <!-- end budaya -->
-
-    <!-- this button will visivle if documen scolled down -->
-    <button
-      onclick="topFunction()"
-      id="go-top"
-      title="Go to top"
-      class="bg-info"
-    >
-      <i class="bi bi-arrow-up-circle"></i>
-    </button>
-
-    <!-- container content list -->
-    <div class="container mt-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <a href="./budaya/" class="text-decoration-none text-black">
-            <div class="card mb-2 card-content" style="height: 10rem">
-              <div class="card-body bg-info rounded"></div>
-              <h5 class="bg-white p-2">Budaya</h5>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a href="#" class="text-decoration-none text-black">
-            <div class="card mb-2 card-content" style="height: 10rem">
-              <div class="card-body bg-info rounded"></div>
-              <h5 class="bg-white p-2">Geografi</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <a href="#" class="text-decoration-none text-black">
-            <div class="card mb-2 card-content" style="height: 10rem">
-              <div class="card-body bg-info rounded"></div>
-              <h5 class="bg-white p-2">Sejarah</h5>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a href="#" class="text-decoration-none text-black">
-            <div class="card mb-2 card-content" style="height: 10rem">
-              <div class="card-body bg-info rounded"></div>
-              <h5 class="bg-white p-2">Landmark</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- about us -->
-    <div class="container" id="about-us">
-      <div class="row justify-content-center my-5">
+    <div class="row align-content-center pt-4">
+      <div class="col-10 mx-auto">
         <div class="row justify-content-center">
-          <div class="col-lg-6 mb-5">
-            <div class="card card-content">
-              <div class="card-body">
-                <p>Apakah artikel ini membantu?</p>
-                <div class="reaction mb-2">
-                  <a onclick="handleEmoji(this)"> 😒 </a>
-                  <a onclick="handleEmoji(this)"> 😑 </a>
-                  <a onclick="handleEmoji(this)"> 🙂 </a>
-                  <a onclick="handleEmoji(this)"> 😀 </a>
-                </div>
-                <div class="text-center" id="container-feedback">
-                  <form class="">
-                    <div class="mb-3">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          aria-describedby="nameHelp"
-                        />
-                        <label for="name">Full Name</label>
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="form-floating">
-                        <textarea
-                          class="form-control"
-                          placeholder="Leave a feedback here"
-                          id="feedback-placeholder"
-                          style="height: 100px"
-                        ></textarea>
-                        <label for="feedback-placeholder">Comments</label>
-                      </div>
-                    </div>
-                    <a
-                      onclick="handleFeedback()"
-                      class="btn btn-primary shadow-lg"
-                      id="send-feedback"
-                      >Submit</a
-                    >
-                  </form>
+          <div class="col-lg-6 mb-2" data-aos="zoom-in-up" data-aos-dalay="500">
+            <a href="#" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/budaya.png" class="ms-4 me-0" width="150px" height="150px" alt=""
+                      srcset="" />
+                  </div>
+                  <div class="col">
+                    <h5 class="fw-bold text-start">BUDAYA</h5>
+                    <p class="text-start">Beberapa budaya yang kami angkat</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="col-lg-6 mb-5">
-            <div class="card mb-2 card-content">
-              <div class="card-body">
-                <h5>Contact Us</h5>
-                <p>Hubungi kami sekarang!</p>
-                <div id="container-feedback">
-                  <form class="">
-                    <div class="mb-3">
-                      <div class="form">
-                        <label for="name">Full Name</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          aria-describedby="nameHelp"
-                        />
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="form">
-                        <label for="email">Email Address</label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          aria-describedby="email"
-                        />
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="form-floating">
-                        <textarea
-                          class="form-control"
-                          placeholder="Leave a feedback here"
-                          id="feedback-placeholder"
-                          style="height: 100px"
-                        ></textarea>
-                        <label for="feedback-placeholder">Comments</label>
-                      </div>
-                    </div>
-                    <a
-                      onclick="handleFeedback()"
-                      class="btn btn-primary shadow-lg"
-                      id="send-feedback"
-                      >Submit</a
-                    >
-                  </form>
+          <div class="col-lg-6 mb-2">
+            <a href="#" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="600">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/geografi.png" class="ms-4 me-0" width="150px" height="150px" alt=""
+                      srcset="" />
+                  </div>
+                  <div class="col">
+                    <h5 class="fw-bold text-start">GEOGRAFI</h5>
+                    <p class="text-start">Kondisi geografis pada provinsi</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <a href="#" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="700">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/sejarah.png" class="ms-4 me-0" width="150px" height="150px" alt=""
+                      srcset="" />
+                  </div>
+                  <div class="col">
+                    <h5 class="fw-bold text-start">SEJARAH</h5>
+                    <p class="text-start">
+                      Sejarah lahirnya atau terciptanya
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a href="#" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="800">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/landmark.png" class="ms-4 me-0" width="150px" height="150px" alt=""
+                      srcset="" />
+                  </div>
+                  <div class="col">
+                    <h5 class="fw-bold text-start">LANDMARK</h5>
+                    <p class="text-start">
+                      Landmark atau markah pada provinsi
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <!-- end of content list -->
 
-    <footer
-      class="mt-auto text-white fw-bold"
-      style="background-color: #475284"
-    >
-      <div class="p-5 container">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 mb-4">
-            <img
-              src="./assets/img/logo-light.png"
-              alt="logo pustaka budaya"
-              width="100px"
-            />
-            <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
-          </div>
-          <div class="col-lg-4 mb-4">
-            <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
-          </div>
-          <div class="col-lg-4 mb-4 mx-auto">
-            <h5>Sortcut</h5>
-            <p><a href="./" class="text-decoration-none">Home</a></p>
-            <p><a href="#" class="text-decoration-none">Provinsi</a></p>
-            <p><a href="#" class="text-decoration-none">About us</a></p>
-            <p><a href="#" class="text-decoration-none">Contact</a></p>
-          </div>
-        </div>
+  <div class="p-4 text-white main-content" style="background-color: #475284">
+    <!-- sejarah -->
+    <div class="container mt-4 mb-5 px-lg-5">
+      <h2 class="fw-bold">SEJARAH</h2>
+      <div class="img-main text-center">
+        <img src="../assets/img/logontt.png" alt="borobudur" class="img-fluid rounded" />
       </div>
-      <div class="bg-dark p-2 text-white d-flex justify-content-around">
-        <p class="fw-lighter">
-          Build with ❤️ using
-          <a href="https://getbootstrap.com/" class="text-white"> Bootstrap </a
-          >.
+
+      <div class="article-main mt-4">
+        <p class="article">
+          <li>
+            ZAMAN KEBANGKITAN NASIONAL || 1900 - 1942 <br />
+            Pada masa sesudah tahun 1900, kerajaan-kerajaan yang ada di Nusa
+            Tenggara Timur pada umumnya telah berubah status menjadi status
+            menjadi Swapraja. Swapraja-swapraja tersebut, 10 berada di Pulau
+            Timor ( Kupang, Amarasi, Fatuleu, Amfoang, Molo, Amanuban,
+            Amanatun, Mio mafo, Biboki, Insana) satu di pulau Rote, satu di
+            pulau Sabu, 15 di pulau Sumba ( Kanatang, Lewa-Kanbera, Takundung,
+            Melolo, Rendi Mangili, Wei jelu, Masukaren, Laura, Waijewa,
+            Kodi-Laula, Membora, Umbu Ratunggay, Ana Kalang, Wanokaka,
+            Lambaja), sembilan di pulau Flores (Ende, Lio, Larantuka, Adonara,
+            Sikka, Angada, Riung, Nage Keo, Manggarai), tujuh di pulau
+            Alor-Pantar (Alor, Baranusa, Pantar, Matahari Naik, Kolana, Batu
+            lolang, Purema).Swapraja-swapraja tersebut terbagi lagi menjadi
+            bagian-bagian yang wilayahnya lebih kecil. Wilayah-wilayah kecil
+            itu disebut Kafetoran-kafetoran. <br />
+          </li>
+
+          <li>
+            ZAMAN PENDUDUKAN JEPANG || 1942 - 1945 <br />
+            1942 Pada tanggal 8 Maret 1942 komando angkatan perang Belanda di
+            Indonesia menyerah tanpa syarat kepada Jepang. Dengan demikian
+            secara resmi Jepang menggantikan Belanda sebagai pemegang
+            kekuasaan di Indonesia. Untuk Indonesia bagian timur termasuk
+            wilayah Indonesia. Bagian Timur wilayah NTT berada di bawah
+            kekuasaan angkatan laut Jepang (Kaigun) yang berkedudukan di
+            Makasar. Adapun dalam rangka menjalankan pemerintahan di daerah
+            yang diduduki Kaigun menyusun pemerintahannya. Untuk wilayah
+            Indonesia bagian Timur dikepalai oleh Minseifu yang berkedudukan
+            di Makasar. Di bawah Minseifu adalah Minseibu yang untuk daerah
+            Nusa Tenggara Timur termasuk ke dalam Sjoo Sunda Shu (Sunda Kecil)
+            yang berada di bawah pimpinan Minseifu Cokan Yang berkedudukan di
+            Singaraja. Disamping Minseibu Cokan terdapat dewan perwakilan
+            rakyat yang disebut Syoo Sunda Sukai Yin. Dewan ini juga berpusat
+            di Singaraja. Diantaranya anggota dewan ini yang berasal dari Nusa
+            Tenggara Timur adalah raja Amarasi H.A. Koroh dan I.H. Doko. Untuk
+            pemerintahan di daerah-daerah nampaknya tidak banyak mengalami
+            perubahan, hanya istilah-istilah saja yang diruba. Bekas wilayah
+            afdeeling dirubah menjadi Ken dan di NTT ada tiga Ken yakni Timor
+            Ken, Flores Ken dan Sumba Ken. Ken ini masing-masing dikepalai
+            oleh Ken Kanrikan. Sedangkan tiap Ken terdiri dari beberapa Bunken
+            (sama dengan wilayah onder afdeeling) yang dikepalai dengan Bunken
+            Karikan. Di bawah wilayah Bunken adalah swapraja-swapraja yang
+            dikepalai oleh raja-raja dan pemerintahan swapraja ke bawah sampai
+            ke rakyat tidak mengalami perubahan.
+          </li>
+
+          <li>
+            ZAMAN KEMERDEKAAN || 1945 - 1975 <br />
+            Setelah Jepang menyerah, Kepala Pemerintahan Jepang (Ken Kanrikan)
+            di Kupang memutuskan untuk menyerahkan pemerintahan atas Kota
+            Kupang kepada tiga orang yakni Dr.A.Gakeler sebagai walikota, Tom
+            Pello dan I.H.Doko. Namun hal ini tidak berlangsung lama, karena
+            pasukan NICA segera mengambil alih pemerintahan sipil di NTT,
+            dimana susunan pemerintahan dan pejabat-pejabatnya sebagian besar
+            adalah pejabat Belanda sebelum perang dunia II. Dengan demikian
+            NTT menjadi daerah kekuasaan Belanda lagi, sistem pemerintahan
+            sebelum masa perang ditegakkan kembali. Pada tahun 1945 kaum
+            pergerakan secara sembunyi-sembunyi telah mengetahui perjuangan
+            Republik Indonesia melalui radio. Oleh karena itu kaum pegerakan
+            menghidupkan kembali Partai Perserikatan Kebangsaan Timor yang
+            berdiri sejak tahun 1937 dan kemudian berubah menjadi Partai
+            Demokrasi Indonesia (PDI). Perjuangan politik terus berlanjut,
+            sampai pada tahun 1950 dimulai pase baru dengan dihapusnya dewan
+            raja-raja. Pada bulan Mei 1951 Menteri Dalam Negeri NIT mengangkat
+            Y.S. Amalo menjadi Kepala Daeraah Timor dan kepulauannya
+            menggantikan H.A.Koroh yang wafat pada tanggal 30 Maret 1951. Pada
+            waktu itu daerah Nusa Tenggara Timur termasuk dalam wilayah
+            Propinsi Sunda Kecil. Berdasarkan atas keinginan serta hasrat dari
+            rakyat Daerah Nusa Tenggara, dalam bentuk resolusi, mosi,
+            pernyataan dan delegasi-delegasi kepada Pemerintahan Pusat dan
+            Panitia Pembagian Daerah yang dibentuk dengan Keputusan Presiden
+            No.202/ 1956 perihal Nusa Tenggara, pemerintah berpendapat suda
+            tiba saatnya untuk membagi daerah Propinsi Nusa Tenggara termasuk
+            dalam Peraturan Pemerintahan RIS no. 21 tahun 1950, (Lembaran
+            Negara RIS tahun 1950 No.59) menjadi tiga daerah tingkat I
+            dimaksud oleh undang-undang No.I tahun 1957. Akhirnya berdasarkan
+            undang-undang No.64/1958 propinsi Nusa Tenggara di pecah menjadi
+            Daerah Swa tantra Tingkat I Bali, Nusa Tenggara Barat dan Nusa
+            Tenggara Timur. Daerah Tingkat I Nusa Tenggara Timur meliputi
+            daerah Flores, Sumba dan Timor. Berdasarkan undang-undang No.69/
+            1958 tentang pembentukan daerah-daerah Tingkat II dalam wilayah
+            Daerah Tingkat I Bali, Nusa Tenggara Barat dan Nusa Tenggara
+            Timur, maka daerah Swa tantra Tingkat I Nusa Tenggara Timur dibagi
+            menjadi 12 Daerah Swatantra Tingkat II ( Monografi NTT, 1975, hal.
+            297). Adapun daerah swatantra tingkat II yang ada tersebut adalah
+            : Sumba Barat, Sumba Timur, Manggarai, Angada, Ende, Sikka, Flores
+            Timur, Alor, Kupang, Timo Tengah Selatan, Timor Tengah Utara dan
+            Belu. Dengan keluarnya Surat Keputusan Gubernur Kepala Daerah
+            Daswati I Nusa Tenggara Timur tertanggal 28 Februari 1962
+            No.Pem.66/1/2 yo tanggal 2 juli 1962 tentang pembentukan kecamatan
+            di Daerah Swatantra Tingkat I Nusa Tenggara Timur, maka secara de
+            facto mulai tanggal 1Juli 1962 swapraja-swapraja dihapuskan
+            (Monografi NTT, Ibid, hal. 306). Sedangkan secara de jure baru
+            mulai tanggal 1 September 1965 dengan berlakunya undang-undang no.
+            18 tahun 1965 tentang pokok-pokok pemerintahan daerah. Pada saat
+            itu juga sebutan Daerah Swatantra Tingkat I Nusa Tenggara Timur
+            dirubah menjadi Propinsi Nusa Tenggara Timur, sedangkan Daerah
+            Swatantra Tingkat II dirubah menjadi Kabupaten. Berdasarkan Surat
+            Keputusan Gubernur Kepala Daerah Tingkat I Nusa Tenggara Timur di
+            Kupang, tanggal 20 Juli 1963 No.66/1/32 mengenai pembentukan
+            kecamatan , maka Propinsi Nusa Tenggara Timur dengan 12 Daerah
+            Tingkat II dibagi menjadi 90 kecamatan dan 4.555 desa tradisional,
+            yakni desa yang bersifat kesatuan geneologis yang kemudian dirubah
+            menjadi desa gaya baru. Pada tahun 2003 wilayah Propinsi Nusa
+            Tenggara Timur terdiri dari 16 Kabupaten dan Satu Kota .
+            Kabupaten-kabupaten dan Kota tersebut adalah : Sumba Barat, Sumba
+            Timur, Kupang, Timor Tengah Selatan, Timor Tengah Utara , Belu,
+            Alor, Lembata, Flores Timur, Sikka, Ende, Angada, Manggarai, Rote
+            Ndao, Manggarai Barat dan Kota Kupang. Dari 16 Kabupaten dan satu
+            kota tersebut terbagi dalam 197 kecamatan dan 2.585
+            desa/kelurahan.
+          </li>
+
+          <li>
+            ZAMAN PEMERINTAHAN HINDIA BELANDA || 1945 - <br />
+            Wilayah Nusa Tenggara Timur pada waktu itu merupakan wilayah hukum
+            dari keresidenan Timor dan daerah takluknya. Keresidenan Timor dan
+            daerah bagian barat (Timor Indonesia pada waktu itu, Flores,
+            Sumba, Sumbawa serta pulau-pulau kecil sekitarnya seperti Rote,
+            Sabu, Alor, Pantar, Lomblen, Adonara, Solor). Keresidenan Timor
+            dan daerah takluknya berpusat di Kupang, yang memiliki wilayah
+            terdiri dari tiga affdeling (Timor, Flores, Sumba dan Sumbawa), 15
+            onderafdeeling dan 48 Swapraja. Afdeeling Timor dan pulau-pulau
+            terdiri dari 6 onderafdeeling dengan ibukotanya di Kupang.
+            Afdeeling Flores terdiri dari 5 onder afdeeling dengan ibukotanya
+            di Ende. Yang ketiga adalah Afdeeling Sumbawa dan Sumba dengan
+            ibukota di Raba (Bima). Afdeeling Sumbawa dan Sumba ini tediri
+            dari 4 oder afdeeling. Keresidenan Timor dan daerah takluknya
+            dipimpin oleh seorang residen, sedangkan afdeeling di pimpin oleh
+            seorang asisten residen. Asisten residen ini membawahi Kontrolir
+            atau Controleur dan Geraghebber sebagai pemimpin Onder afdeeling.
+            Asisten residen , kontrolir dan gezaghebber adalah pamong praja
+            Kolonial Belanda. Para kepala onder afdeeling yakni kontrolir
+            dibantu oleh pamong praja bumi putra ber pangkat Bestuurs
+            assistant. (Ch. Kana, 1969,hal . 49-51).
+          </li>
         </p>
       </div>
-    </footer>
+    </div>
+    <!-- end of sejarah -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"
-      integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/getRecomendation.js"></script>
-    <script>
-      AOS.init();
-      // var splide = new Splide( '.splide', {
-      //   type   : 'loop',
-      //   perPage: 3,
-      //   perMove: 1,
-      // } );
+    <!-- geografi -->
+    <div class="container mt-4 mb-5 px-lg-5">
+      <h2 class="fw-bold">GEOGRAFIS</h2>
+      <div class="img-main text-center">
+        <img src="../assets/img/petantt.jpg" alt="borobudur" class="img-fluid rounded" />
+      </div>
 
-      // splide.mount();
+      <div class="article-main mt-4">
+        <p class="article">
+          <ul>
+            <li>Perbatasan Darat <br>
+              Kawasan perbatasan darat Timor bagian barat dengan RDTL secara administrasi meliputi 10 Kecamatan :
+              Kabupaten Kupang : Kecamatan Amfoang Utara; Kabupaten Timor Tengah Utara : Kecamatan Miomafo Barat,
+              Miomafo
+              Timur & Kecamatan Insana Utara; Kabupaten Belu : Kecamatan Malaka Timur, Tasifeto Barat, Tasifeto Timur,
+              Lamaknen,Kecamatan Rehaat & Kecamatan Kobalima;
+            </li>
+            <li>Perbatasan Laut <br>
+              Kawasan perbatasan Laut Wilayah NTT dengan RDTL meliputi 4 Kabupaten, 5 Kecamatan : Kabupaten Kupang :
+              Kecamatan Amfong Utara; Kabupaten Belu : Kecamatan Tasifeto Barat, Kecamatan Kobalima; Kabupaten TTU :
+              Kecamatan Insana Utara; Kabupaten Alor : Kecamatan Alor Barat Daya.
+            </li>
+            <li>Gambaran Fisik Garis Perbatasan <br>
+              Perbatasan Negara di daratan di Timor Barat dengan RDTL meliputi 3 wilayah Kabupaten yaitu : Kabupaten
+              Belu
+              sepanjang 149,9 Km (dari Motaain di Utara sampai
+              Mota Masin di Selatan); Perbatasan pada wilayah enclave Ambenu dengan Kabupaten Kupang sepanjang 15,2 Km;
+              Kabupaten Timor Tengah Utara (TTU) sepanjang 114,9 Km.Total garis perbatasan negara darat di Kabupaten
+              Belu,
+              TTU dan
+            </li>
+            <li>
+              Batas Administrasi Daerah dan Luas Wilayah <br>
+              Sebelah Utara berbatasan dengan Laut Flores;<br>
+              Sebelah Selatan berbatasan dengan Samudera Hindia dan Negara Australia;<br>
+              Sebelah timur berbatasan dengan Negara Republik Democratik Timor Leste;<br>
+              Sebelah Barat berbatasan dengan Selat Sape Provinsi Nusa Tenggara Barat.
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <!-- end of geografi -->
+
+    <!-- landmark -->
+    <div class="container mt-4 mb-5 px-lg-5">
+      <h2 class="fw-bold">LANDMARK</h2>
+      <div class="img-main text-center">
+        <img src="../assets/img/pulaukomodo.jpg" alt="borobudur" class="img-fluid rounded" />
+      </div>
+
+      <div class="article-main mt-4">
+        <p class="article">
+          Pulau Komodo terletak di Kepulauan Nusa Tenggara. Pulau Komodo dikenal sebagai habitat asli hewan komodo.
+          Pulau ini juga merupakan kawasan Taman Nasional Komodo . Pulau Komodo berada di sebelah barat Pulau Sumbawa,
+          yang dipisahkan oleh Selat Sape, termasuk wilayah Kecamatan Komodo, Kabupaten Manggarai Barat, Provinsi Nusa
+          Tenggara Timur, Indonesia. Pulau Komodo merupakan ujung paling barat Provinsi Nusa Tenggara Timur, berbatasan
+          dengan Provinsi Nusa Tenggara Barat.
+          Selain komodo, pulau ini juga menyimpan eksotisme flora yang beragam, pohon kayu sepang yang oleh warga
+          sekitar digunakan sebagai obat dan bahan pewarna pakaian, pohon nitak (sterculia oblongata) ini diyakini
+          berguna sebagai obat dan bijinya gurih dan enak seperti kacang polong.
+          Pulau Komodo sangat mengesankan , menelusuri pulau yang eksotis, menyelami birunya laut, dan bermandikan
+          cahaya mentari sambil melihat jejak-jejak kehidupan masa lalu yang terpelihara dan akan menjadi bagian dari
+          ragam keindahan Indonesia. Meliputi Pulau Komodo, Rinca and Padar, ditambah pulau-pulau lain seluas 1.817
+          persegi adalah habitat asli komodo.Taman Nasional Komodo didirikan pada 1980 untuk melindungi kelestarian
+          komodo. Tak hanya hewan langka tersebut, Taman Nasional Komodo juga untuk melindungi berbagai macam
+          tumbuh-tumbuhan dan satwa, termasuk binatang-binatang laut.
+          UNESCO mengakui sebagai Situs Warisan Dunia pada 1986. Bersama dua pulau besar lainnya, yakni Pulau Rinca dan
+          Padar, Pulau Komodo dan beberapa pulau kecil disekitarnya terus dipelihara sebagai habitat asli reptil yang
+          dijuluki “Komodo”
+
+        </p>
+      </div>
+    </div>
+    <!-- end of landmark -->
+  </div>
+
+  <!-- list budaya -->
+  <div class="container my-5">
+    <h2 class="fw-bold mb-4 px-5">Budaya Nusa Tenggara Timur</h2>
+    <hr />
+    <div class="container my-5 vh-100 overflow-auto" id="list-budaya-dekstop">
+      <!-- sasando -->
+      <div class="row m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Alat Musik Sasando</h3>
+          <p class="article pt-4 text-justify">
+            Sasando merupakan alat musik petik yang berasal dari Pulau Rote, Nusa Tenggara Timur. Secara harfiah,
+            istilah ‘sasando’ yang berasal dari kata dalam bahasa Rote, ‘sasandu’, berarti alat yang bergetar atau
+            berbunyi.
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="../assets/img/sasando.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%" />
+          </div>
+        </div>
+      </div>
+      <!-- batas sasando -->
+      <!-- komodo -->
+      <div class="row m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Hewan Endemik Komodo</h3>
+          <p class="article pt-4 text-justify">
+            Komodo atau lengkapnya biawak komodo (Varanus komodoensis), adalah spesies biawak besar yang terdapat di
+            Pulau Komodo, Rinca, Flores, Gili Motang, dan Gili Dasami di Provinsi Nusa Tenggara Timur, Indonesia
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="../assets/img/Komodo.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%" />
+          </div>
+        </div>
+      </div>
+      <!-- bata komodo -->
+      <!-- lagu desaku -->
+      <div class="row m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Lagu Desaku</h3>
+          <p class="article pt-4 text-justify">
+            Lagu ini merupakan salah satu lagu yang memiliki nada dengan tempo sedang. Hal ini juga dipaparkan dalam
+            buku Rangkuman Intisari Semua Mata Pelajaran Kelas 3 SD/MI: Rangkuman Intisari Penting Semua Mata Pelajaran
+            yang disusun oleh
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="../assets/img/lagudesaku.png" alt="" class="img-fluid rounded" style="width: 50%; height: 50%" />
+          </div>
+        </div>
+      </div>
+      <!-- batas lagu desaku -->
+      <!-- sei -->
+      <div class="row m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Se'i</h3>
+          <p class="article pt-4 text-justify">
+            Se'i atau sei adalah daging asap Indonesia yang berasal dari Kupang, pulau Timor, Nusa Tenggara Timur,
+            Indonesia. Se'i mungkin berasal dari berbagai daging, dengan babi (se'i babi), sapi (se'i sapi) atau hewan
+            buruan seperti
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="../assets/img/sei.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%" />
+          </div>
+        </div>
+      </div>
+      <!-- batas sei -->
+      <!-- pakaian adat -->
+      <div class="row mx-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Pakaian Adat Suku Rote</h3>
+          <p class="article pt-4 text-justify">
+            Pakaian adat suku Rote terpilih menjadi simbol pakaian adat di provinsi Nusa Tenggara Timur di tingkat
+            nasional karena memiliki model yang khas, sejarah, keunikan dan juga nilai filosofis yang terdapat
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="../assets/img/pakaianrote.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%" />
+          </div>
+        </div>
+      </div>
+      <!-- batas pakaian adat -->
+
+    </div>
+
+
+    <!-- batas -->
+    <div class="my-5 vh-100 overflow-auto d-none" id="list-budaya-mobile">
+      <div class="row d-flex flex-column justify-content-center">
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/sasando.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Alamat Musik Sasando</h5>
+              <p class="card-text">
+                Sasando merupakan alat musik petik yang berasal dari Pulau Rote, Nusa Tenggara Timur.
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/Komodo.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Hewan Endemik Komodo</h5>
+              <p class="card-text">
+                Komodo atau lengkapnya biawak komodo (Varanus komodoensis), adalah spesies biawak besar yang terdapat di
+                Pulau Komodo, Rinca, Flores, Gili Motang, dan Gili Dasami di Provinsi Nusa Tenggara Timur,
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/lagudesaku.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Lagu Desaku</h5>
+              <p class="card-text">
+                Lagu ini merupakan salah satu lagu yang memiliki nada dengan tempo sedang. Hal ini juga dipaparkan dalam
+                buku Rangkuman Intisari Semua Mata Pelajaran Kelas 3 SD/MI:
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/sei.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Se'i</h5>
+              <p class="card-text">
+                Se'i atau sei adalah daging asap Indonesia yang berasal dari Kupang, pulau Timor, Nusa Tenggara Timur,
+                Indonesia. Se'i mungkin berasal dari berbagai daging, dengan
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/pakaianrote.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Pakaian Suku Rote</h5>
+              <p class="card-text">
+                Pakaian adat suku Rote terpilih menjadi simbol pakaian adat di provinsi Nusa Tenggara Timur di tingkat
+                nasional karena memiliki model yang khas, sejarah, keunikan dan juga nilai filosofis
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/rumahmusalaki.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Rumah Musalaki</h5>
+              <p class="card-text">
+                Rumah Musalaki adalah sebuah lambang dari provinsi Nusa Tenggara Timur.Rumah adat Musalaki pada awalnya
+                dipakai sebagai sebuah tempat tinggal bagi kepala suku
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/senjataklewang.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Senjata Klewang</h5>
+              <p class="card-text">
+                Klewang adalah senjata tradisional Nusa Tenggara Timur yang berbentuk seperti pedang. Klewang merupakan
+                pedang dengan bilah bermata satu
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/tarikataga.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Tari Kataga</h5>
+              <p class="card-text">
+                adalah salah satu tarian tradisional sejenis tarian perang yang khas dari Sumba Barat,Provinsi Nusa
+                Tenggara Timur (NTT).Tarian ini biasanya
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="../assets/img/upacarareba.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Upacara Reba</h5>
+              <p class="card-text">
+                Pesta Adat Reba, kegiatan kebudayaan masyarakat di Nusa Tenggara Timur yang diselenggarakan dalam rangka
+                menyambut pergantian tahun.
+              </p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of list budaya -->
+
+  <!-- about us -->
+  <div class="container" id="about-us">
+    <div class="row justify-content-center my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-5">
+          <div class="card card-content">
+            <div class="card-body">
+              <p>Apakah artikel ini membantu?</p>
+              <div class="reaction mb-2">
+                <a onclick="handleEmoji(this)"> 😒 </a>
+                <a onclick="handleEmoji(this)"> 😑 </a>
+                <a onclick="handleEmoji(this)"> 🙂 </a>
+                <a onclick="handleEmoji(this)"> 😀 </a>
+              </div>
+              <div class="text-center" id="container-feedback">
+                <form class="">
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp" />
+                      <label for="name">Full Name</label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                        style="height: 100px"></textarea>
+                      <label for="feedback-placeholder">Comments</label>
+                    </div>
+                  </div>
+                  <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-5">
+          <div class="card mb-2 card-content">
+            <div class="card-body">
+              <h5>Contact Us</h5>
+              <p>Hubungi kami sekarang!</p>
+              <div id="container-feedback">
+                <form class="">
+                  <div class="mb-3">
+                    <div class="form">
+                      <label for="name">Full Name</label>
+                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp" />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form">
+                      <label for="email">Email Address</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="email" />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                        style="height: 100px"></textarea>
+                      <label for="feedback-placeholder">Comments</label>
+                    </div>
+                  </div>
+                  <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--footer  -->
+  <footer class="mt-auto text-white fw-bold" style="background-color: #475284;">
+    <div class="p-5 container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
+          <img src="./assets/img/logo-light.png" alt="logo pustaka budaya" width="100px">
+          <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+        </div>
+        <div class="col-lg-4 mb-4 mx-auto">
+          <h5>Navigasi</h5>
+          <p><a href="./" class="text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-decoration-none">Provinsi</a></p>
+          <p><a href="#" class="text-decoration-none">About us</a></p>
+          <p><a href="#tentangkami" class="text-decoration-none">Contact</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark p-2 text-white d-flex justify-content-around">
+      <p class="fw-lighter ">Build with ❤️ using
+        <a href="https://getbootstrap.com/" class="text-white">
+          Bootstrap
+        </a>.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- alert for notifcation -->
+
+  <noscript>
+
+  </noscript>
+
+  <script src="./assets/js/gsap/gsap.min.js"></script>
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+        "imports": {
+          "three": "https://unpkg.com/three@0.141.0/build/three.module.js"
+        }
+      }
     </script>
-  </body>
+  <script type="module" src="./assets/js/globe.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
+  <script src="./assets/js/script.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

@@ -16,33 +16,6 @@ window.addEventListener('load', () =>{
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
         $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
     }
-
-
-    let main = new Splide( '#main-carousel', {
-      type      : 'fade',
-      rewind    : true,
-      pagination: false,
-      arrows    : true,
-    } );
-
-    let thumbnails = new Splide( '#thumbnail-carousel', {
-      fixedWidth  : 100,
-      fixedHeight : 60,
-      gap         : 10,
-      rewind      : true,
-      pagination  : false,
-      isNavigation: true,
-      breakpoints : {
-        600: {
-          fixedWidth : 60,
-          fixedHeight: 44,
-        },
-      },
-    } );
-
-    main.sync( thumbnails );
-    main.mount();
-    thumbnails.mount();
 })
 
 mobileNav.addEventListener('click', () => {

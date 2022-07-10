@@ -4,20 +4,16 @@ let choosedEmoji = "";
 
 
 window.addEventListener('load', () =>{
-    let state = localStorage.getItem('theme');
-    console.log(state)
-    let body = document.body;
-    let nav = document.querySelector('nav')
-    let headColor = document.querySelector("head > meta:nth-child(4)");
-    
-    let form = document.querySelector('form')
-    if(state == 'dark'){
-        body.classList.toggle("dark-mode");
-        nav.classList.toggle("dark-mode")
-        nav.classList.toggle("navbar-dark")
-        headColor.content = '#1d1d1d'
-        themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
-    }
+  let state = localStorage.getItem('theme');
+  let headColor = document.querySelector("head > meta:nth-child(4)");
+  let nav = document.querySelector('nav')
+  
+  if(state == 'dark'){
+    nav.classList.toggle('navbar-dark')
+    headColor.content = '#1d1d1d'
+    themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+    $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
+  }
 })
 
 mobileNav.addEventListener('click', () => {
@@ -26,25 +22,26 @@ mobileNav.addEventListener('click', () => {
 })
 
 themeBtn.addEventListener('click', () => {
-    console.log("Clicked!")
-    let headColor = document.querySelector("head > meta:nth-child(4)");
-    let state = localStorage.getItem('theme');
-    let body = document.body;
-    let nav = document.querySelector('nav')
-    let form = document.querySelector('form')
-    if(state == 'dark'){
-        localStorage.removeItem('theme');
-        themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
-        headColor.content = '#0dcaf0'
-    }else{
-        localStorage.setItem('theme', 'dark');
-        themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
-        headColor.content = '#1d1d1d'
-    }
-    body.classList.toggle("dark-mode");
-    nav.classList.toggle("dark-mode");
-    nav.classList.toggle("navbar-dark");
-    
+  let nav = document.querySelector('nav')
+  let headColor = document.querySelector("head > meta:nth-child(4)");
+  let state = localStorage.getItem('theme');
+  let isDarkMode = $('link[href="./assets/css/darkmode.css"]');
+
+  if(state == 'dark'){
+    nav.classList.toggle('navbar-dark')
+    localStorage.removeItem('theme');
+    themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
+    headColor.content = '#0dcaf0'
+    isDarkMode.remove();
+  }else{
+    nav.classList.toggle('navbar-dark')
+    localStorage.setItem('theme', 'dark');
+    themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+    headColor.content = '#1d1d1d'
+    $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
+
+  }
+  
 })
 
 // function scroll bar

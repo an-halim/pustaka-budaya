@@ -1,6 +1,5 @@
 const themeBtn = document.getElementById('theme-changer');
 const mobileNav = document.querySelector('.bi-list-nested');
-const btnSearch = document.getElementById('btn-search');
 let choosedEmoji = "";
 
 window.addEventListener('load', () =>{
@@ -49,79 +48,6 @@ themeBtn.addEventListener('click', () => {
     nav.classList.toggle("navbar-dark");
 })
 
-// search modal
-btnSearch.addEventListener('click', (e) =>{
-  $('.navbar-toggler').click()
-  $("#search-modal").modal('show');
-  $('.search-result').empty();
-  document.querySelector("#search-container").value = ''
-})
-
-
-$('#search-modal').on('click', () =>{
-  document.querySelector("#search-container").addEventListener('input', (e) =>{
-    let searchValue = e.target.value.toLowerCase();
-    let paragrafContainer = document.querySelectorAll('p');
-    
-    
-    document.querySelector('input').addEventListener('keypress', (e) => {
-      if(e.key == 'Enter'){
-        // reset result container if used before
-        $('.search-result').empty();
-
-        let i = 0;
-        paragrafContainer.forEach(p =>{
-          p.innerHTML.split(' ').forEach(el => {
-            if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
-              let searchId = `searchid-${i}`
-              p.parentElement.parentElement.setAttribute('id', searchId);
-
-              let content = p.innerHTML
-              if(content.length > 40){
-                content = content.slice(0 , 40)
-              }
-              $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a></span>`)
-              $('.search-result').append('<hr>')
-              i++;
-            }
-          });
-        })
-
-      }
-    })
-
-  }, true)
-})
-
-const closeModal = () => {
-  $("#search-modal").modal('hide');
-}
-
-window.onkeydown = keydown;
-
-function keydown(e){
-  if (!e) 
-  e = event;
-  if (e.ctrlKey && e.keyCode==75){ //CTRL+K
-    e.preventDefault();
-    $("#search-modal").modal('show');
-    setTimeout(() => {
-        $('#search-container').focus();
-    }, 500);
-  }
-}
-
-const bukaModal = () => {
-  document.getElementById("modals").style.display = "block";
-  document.querySelector('nav').classList.toggle('d-none')
-  document.querySelector('#go-top').classList.toggle('d-none')
-}
-
-const tutupModal = () => {
-  document.getElementById("modals").style.display = "none";
-  document.querySelector('nav').classList.toggle('d-none')
-  document.querySelector('#go-top').classList.toggle('d-none')
-}
 
 // function scroll bar
 function scrollProgressBar() {

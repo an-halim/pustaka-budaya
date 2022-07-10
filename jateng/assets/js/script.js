@@ -123,7 +123,7 @@ const handleEmoji = (event) => {
 
   console.log(choosedEmoji)
   let containerFeedback = document.getElementById('container-feedback');
-  containerFeedback.classList.toggle('disable')
+  containerFeedback.classList.toggle('d-none')
 }
 
 const scrollFunction = () => {

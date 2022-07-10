@@ -337,9 +337,6 @@ for (let i = 0; i < recomentationsEL.length; i++) {
       : data[i].article.tittle.toUpperCase();
   articlePhoto.src = parentUrl + data[i].article.articlePhoto;
 
-  recomentationsEL[i].setAttribute(
-    "onclick",
-    `window.location.href = '${parentUrl + data[i].article.articelPath}'`
-  );
+  recomentationsEL[i].href = `${parentUrl + data[i].article.articelPath}`
   console.log(data[i]);
 }

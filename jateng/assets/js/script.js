@@ -97,6 +97,12 @@ const handleFeedback = () => {
 }
 
 const handleEmoji = (event) => {
+  let emojies = document.querySelectorAll('#ic-reaction');
+
+  emojies.forEach((e) => {
+    e.innerHTML !== event.innerHTML ? e.style.filter = 'grayscale(100%)' : e.style.filter = 'grayscale(0%)'
+    e.innerHTML === event.innerHTML ? e.style.fontSize = 'x-large' : e.style.fontSize = 'large' 
+  })
   
   switch(event.innerHTML.trim()){
     case '😒':

@@ -6,16 +6,12 @@ window.addEventListener('load', () =>{
     let state = localStorage.getItem('theme');
     let body = document.body;
     let nav = document.querySelector('nav')
-    let headColor = document.querySelector("head > meta:nth-child(4)");    
-    let logoDark = document.querySelector('.logo-dark')
-    let logoLight = document.querySelector('.logo-light')
+    let headColor = document.querySelector("head > meta:nth-child(4)");  
 
     if(state == 'dark'){
         body.classList.toggle("dark-mode");
         nav.classList.toggle("dark-mode")
         nav.classList.toggle("navbar-dark")
-        logoDark.classList.add('d-none')
-        logoLight.classList.remove('d-none')
         headColor.content = '#1d1d1d'
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
         $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
@@ -61,20 +57,14 @@ themeBtn.addEventListener('click', () => {
     let state = localStorage.getItem('theme');
     let body = document.body;
     let nav = document.querySelector('nav')
-    let logoDark = document.querySelector('.logo-dark')
-    let logoLight = document.querySelector('.logo-light')
     let isDarkMode = $('link[href="./assets/css/darkmode.css"]');
     
     if(state == 'dark'){
-        logoDark.classList.remove('d-none')
-        logoLight.classList.add('d-none')
         localStorage.removeItem('theme');
         themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
         headColor.content = '#0dcaf0'
         isDarkMode.remove();
     }else{
-      logoDark.classList.add('d-none')
-      logoLight.classList.remove('d-none')
       localStorage.setItem('theme', 'dark');
       themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
       headColor.content = '#1d1d1d'
@@ -83,7 +73,6 @@ themeBtn.addEventListener('click', () => {
     body.classList.toggle("dark-mode");
     nav.classList.toggle("dark-mode");
     nav.classList.toggle("navbar-dark");
-    // form.classList.toggle("dark-mode")
 })
 
 // search modal

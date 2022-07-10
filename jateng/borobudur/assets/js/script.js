@@ -15,14 +15,12 @@ window.addEventListener('load', () =>{
         body.classList.toggle("dark-mode");
         nav.classList.toggle("dark-mode")
         nav.classList.toggle("navbar-dark")
-        form.classList.toggle("dark-mode")
         headColor.content = '#1d1d1d'
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
     }
 })
 
 mobileNav.addEventListener('click', () => {
-  console.log('hai im clicked!')
   let navContainer = document.querySelector('.navbar');
   navContainer.classList.toggle('bg-transparent')
 })
@@ -46,19 +44,76 @@ themeBtn.addEventListener('click', () => {
     body.classList.toggle("dark-mode");
     nav.classList.toggle("dark-mode");
     nav.classList.toggle("navbar-dark");
-    form.classList.toggle("dark-mode")
+    
 })
+
+// function scroll bar
+
+function scrollProgressBar() {
+  var getMax = function () {
+    return $(document).height() - $(window).height();
+  };
+
+  var getValue = function () {
+    return $(window).scrollTop();
+  };
+
+  var progressBar = $(".progress-bar"),
+    max = getMax(),
+    value,
+    width;
+
+  var getWidth = function () {
+    // Calculate width in percentage
+    value = getValue();
+    width = (value / max) * 100;
+    width = width + "%";
+    return width;
+  };
+
+  var setWidth = function () {
+    progressBar.css({ width: getWidth() });
+  };
+
+  $(document).on("scroll", setWidth);
+  $(window).on("resize", function () {
+    // Need to reset max
+    max = getMax();
+    setWidth();
+  });
+}
+
+
 
 
 const handleFeedback = () => {
-    let btn = document.getElementById('send-feedback')
-    let name = document.getElementById('name');
-    let comment = document.getElementById('feedback-placeholder');
-    btn.href = `mailto:halimbla2@gmail.com?subject=${name.value} merasa ${choosedEmoji} dengan artikel&body=${comment.value}`
+  let emojies = document.querySelectorAll('#ic-reaction');
+  let btn = document.getElementById('send-feedback')
+  let name = document.getElementById('name');
+  let comment = document.getElementById('feedback-placeholder');
+  let feedbackRes = document.querySelector('.feedback-response');
+  
+
+  if(name.value.length > 0 && comment.value.length > 0){
+    emojies.forEach((e) => {
+      e.style.filter = 'grayscale(0%)'
+      e.style.fontSize = 'large'
+    })
+    btn.href = `mailto:halimbla2@gmail.com?subject=${name.value} merasa ${choosedEmoji} dengan artikel&body=${comment.value}`;
+    let containerFeedback = document.getElementById('container-feedback');
+    containerFeedback.classList.toggle('d-none')
+    feedbackRes.classList.toggle('d-none')
+  }
 }
 
 const handleEmoji = (event) => {
-  
+  let emojies = document.querySelectorAll('#ic-reaction');
+
+  emojies.forEach((e) => {
+    e.innerHTML !== event.innerHTML ? e.style.filter = 'grayscale(100%)' : e.style.filter = 'grayscale(0%)'
+    e.innerHTML === event.innerHTML ? e.style.fontSize = 'x-large' : e.style.fontSize = 'large' 
+  })
+
   switch(event.innerHTML.trim()){
     case '😒':
       choosedEmoji = 'tidak terbantu';
@@ -75,10 +130,9 @@ const handleEmoji = (event) => {
     default:
       choosedEmoji = '';
   }
-
-  console.log(choosedEmoji)
+  
   let containerFeedback = document.getElementById('container-feedback');
-  containerFeedback.classList.toggle('disable')
+  containerFeedback.classList.toggle('d-none')
 }
 
 //Get the button
@@ -105,12 +159,19 @@ function topFunction() {
 document.querySelector('.main-img').addEventListener('mouseover', () => {
   document.querySelector('.share-to').classList.remove('disable')
 })
+
 document.querySelector('.main-img').addEventListener('mouseleave', () => {
   document.querySelector('.share-to').classList.add('disable')
 })
+
 $(document).ready(function(){
-    $("#myModal").modal('show');
+  // preloader
+  $(".preloader").fadeOut();
+
+  // scrollprogresbar
+  scrollProgressBar();
 });
+
 $(document).scroll(function () {
   var $nav = $(".sticky-top");
   if(localStorage.getItem('theme') != 'dark')
@@ -119,23 +180,3 @@ $(document).scroll(function () {
     $nav.toggleClass('shadow', $(this).scrollTop() > $nav.height());
 });
 
-
-document.getElementById('btn-search').addEventListener('click', (e) =>{
-  document.querySelector('input').classList.toggle('disable')
-  document.getElementById('btn-search').classList.toggle('disable');
-  document.querySelector('input').focus();
-})
-document.getElementById('search-container').addEventListener('input', (e) =>{
-  let searchValue = e.target.value;
-  let paragrafContainer = document.querySelectorAll('p');
-  for(p of paragrafContainer){
-      console.log(p.innerHTML.includes(searchValue))
-  }
-}, true)
-document.querySelector('input').addEventListener('keypress', (e) => {
-  if(e.key == 'Enter'){
-      document.getElementById('search-container').classList.toggle('disable')
-      document.getElementById('btn-search').classList.toggle('disable');
-  }
-
-})

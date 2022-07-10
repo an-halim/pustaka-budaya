@@ -6,17 +6,47 @@ window.addEventListener('load', () =>{
     let state = localStorage.getItem('theme');
     let body = document.body;
     let nav = document.querySelector('nav')
-    let headColor = document.querySelector("head > meta:nth-child(4)");
-    
-    let form = document.querySelector('form')
+    let headColor = document.querySelector("head > meta:nth-child(4)");    
+    let logoDark = document.querySelector('.logo-dark')
+    let logoLight = document.querySelector('.logo-light')
+
     if(state == 'dark'){
         body.classList.toggle("dark-mode");
         nav.classList.toggle("dark-mode")
         nav.classList.toggle("navbar-dark")
-        form.classList.toggle("dark-mode")
+        logoDark.classList.add('d-none')
+        logoLight.classList.remove('d-none')
         headColor.content = '#1d1d1d'
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+        $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
     }
+
+
+    let main = new Splide( '#main-carousel', {
+      type      : 'fade',
+      rewind    : true,
+      pagination: false,
+      arrows    : true,
+    } );
+
+    let thumbnails = new Splide( '#thumbnail-carousel', {
+      fixedWidth  : 100,
+      fixedHeight : 60,
+      gap         : 10,
+      rewind      : true,
+      pagination  : false,
+      isNavigation: true,
+      breakpoints : {
+        600: {
+          fixedWidth : 60,
+          fixedHeight: 44,
+        },
+      },
+    } );
+
+    main.sync( thumbnails );
+    main.mount();
+    thumbnails.mount();
 })
 
 mobileNav.addEventListener('click', () => {
@@ -25,20 +55,30 @@ mobileNav.addEventListener('click', () => {
   navContainer.classList.toggle('bg-transparent')
 })
 
+
 themeBtn.addEventListener('click', () => {
     let headColor = document.querySelector("head > meta:nth-child(4)");
     let state = localStorage.getItem('theme');
     let body = document.body;
     let nav = document.querySelector('nav')
-    // let form = document.querySelector('form')
+    let logoDark = document.querySelector('.logo-dark')
+    let logoLight = document.querySelector('.logo-light')
+    let isDarkMode = $('link[href="./assets/css/darkmode.css"]');
+    
     if(state == 'dark'){
+        logoDark.classList.remove('d-none')
+        logoLight.classList.add('d-none')
         localStorage.removeItem('theme');
         themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
         headColor.content = '#0dcaf0'
+        isDarkMode.remove();
     }else{
-        localStorage.setItem('theme', 'dark');
-        themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
-        headColor.content = '#1d1d1d'
+      logoDark.classList.add('d-none')
+      logoLight.classList.remove('d-none')
+      localStorage.setItem('theme', 'dark');
+      themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+      headColor.content = '#1d1d1d'
+      $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
     }
     body.classList.toggle("dark-mode");
     nav.classList.toggle("dark-mode");
@@ -47,57 +87,120 @@ themeBtn.addEventListener('click', () => {
 })
 
 // search modal
-// document.getElementById('btn-search').addEventListener('click', (e) =>{
-//   $("#search-modal").modal('show');
-// })
+document.getElementById('btn-search').addEventListener('click', (e) =>{
+  $('.navbar-toggler').click()
+  $("#search-modal").modal('show');
+  $('.search-result').empty();
+  document.querySelector("#search-container").value = ''
+})
 
-// $('#search-modal').on('click', () =>{
-//   document.querySelector("#search-container").addEventListener('input', (e) =>{
-//     let searchValue = e.target.value.toLowerCase();
-//     let paragrafContainer = document.querySelectorAll('p');
 
-//     document.querySelector('input').addEventListener('keypress', (e) => {
-//       if(e.key == 'Enter'){
-//         // reset result container if used before
-//         $('.search-result').empty();
+$('#search-modal').on('click', () =>{
+  document.querySelector("#search-container").addEventListener('input', (e) =>{
+    let searchValue = e.target.value.toLowerCase();
+    let paragrafContainer = document.querySelectorAll('p');
+    
+    
+    document.querySelector('input').addEventListener('keypress', (e) => {
+      if(e.key == 'Enter'){
+        // reset result container if used before
+        $('.search-result').empty();
 
-//         let i = 0;
-//         paragrafContainer.forEach(p =>{
-//           p.innerHTML.split(' ').forEach(el => {
-//             if(el.toLowerCase() == searchValue){
-//               let searchId = `searchid-${i}`
-//               p.parentElement.parentElement.setAttribute('id', searchId);
+        let i = 0;
+        paragrafContainer.forEach(p =>{
+          p.innerHTML.split(' ').forEach(el => {
+            if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
+              let searchId = `searchid-${i}`
+              p.parentElement.parentElement.setAttribute('id', searchId);
 
-//               let content = p.innerHTML
-//               if(content.length > 40){
-//                 content = content.slice(0 , 40)
-//               }
-//               $('.search-result').append(`<p>${content}....</p>`)
-//               $('.search-result').append(`<a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a>`)
-//               $('.search-result').append('<hr>')
+              let content = p.innerHTML
+              if(content.length > 40){
+                content = content.slice(0 , 40)
+              }
+              $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a></span>`)
+              $('.search-result').append('<hr>')
+              i++;
+            }
+          });
+        })
 
-//               console.log(p.parentElement.parentElement.parentElement)
-//               i++;
-//             }
-//           });
-//         })
+      }
+    })
 
-//       }
-//     })
+  }, true)
+})
 
-//   }, true)
-// })
+const closeModal = () => {
+  $("#search-modal").modal('hide');
+}
 
-// const closeModal = () => {
-//   $("#search-modal").modal('hide');
-//   console.log('oke')
-// }
+document.querySelector('input').addEventListener('keypress', (e) => {
+  if(e.key == 'Enter'){
+  }
 
-// document.querySelector('input').addEventListener('keypress', (e) => {
-//   if(e.key == 'Enter'){
-//   }
+})
 
-// })
+window.onkeydown = keydown;
+
+function keydown(e){
+  if (!e) 
+  e = event;
+  if (e.ctrlKey && e.keyCode==75){ //CTRL+K
+    e.preventDefault();
+    $("#search-modal").modal('show');
+    setTimeout(() => {
+        $('#search-container').focus();
+    }, 500);
+  }
+}
+
+const bukaModal = () => {
+  document.getElementById("modals").style.display = "block";
+  document.querySelector('nav').classList.toggle('d-none')
+  document.querySelector('#go-top').classList.toggle('d-none')
+}
+
+const tutupModal = () => {
+  document.getElementById("modals").style.display = "none";
+  document.querySelector('nav').classList.toggle('d-none')
+  document.querySelector('#go-top').classList.toggle('d-none')
+}
+
+// function scroll bar
+function scrollProgressBar() {
+  var getMax = function () {
+    return $(document).height() - $(window).height();
+  };
+
+  var getValue = function () {
+    return $(window).scrollTop();
+  };
+
+  var progressBar = $(".progress-bar"),
+    max = getMax(),
+    value,
+    width;
+
+  var getWidth = function () {
+    // Calculate width in percentage
+    value = getValue();
+    width = (value / max) * 100;
+    width = width + "%";
+    return width;
+  };
+
+  var setWidth = function () {
+    progressBar.css({ width: getWidth() });
+  };
+
+  $(document).on("scroll", setWidth);
+  $(window).on("resize", function () {
+    // Need to reset max
+    max = getMax();
+    setWidth();
+  });
+}
+
 
 const handleFeedback = () => {
     let btn = document.getElementById('send-feedback')
@@ -152,10 +255,13 @@ const topFunction = () => {
   document.documentElement.scrollTop = 0;
 }
 
-
-$(window).ready(() => {
+$(document).ready(function(){
+  // preloader
   $(".preloader").fadeOut();
-})
+
+  // scrollprogresbar
+  scrollProgressBar();
+});
 
 $(document).ready(() => {
   $("#myModal").modal('show');

@@ -1,5 +1,6 @@
 const themeBtn = document.getElementById('theme-changer');
 const mobileNav = document.querySelector('.bi-list-nested');
+const btnSearch = document.getElementById('btn-search');
 let choosedEmoji = "";
 
 window.addEventListener('load', () =>{
@@ -49,7 +50,7 @@ themeBtn.addEventListener('click', () => {
 })
 
 // search modal
-document.getElementById('btn-search').addEventListener('click', (e) =>{
+btnSearch.addEventListener('click', (e) =>{
   $('.navbar-toggler').click()
   $("#search-modal").modal('show');
   $('.search-result').empty();
@@ -95,12 +96,6 @@ $('#search-modal').on('click', () =>{
 const closeModal = () => {
   $("#search-modal").modal('hide');
 }
-
-document.querySelector('input').addEventListener('keypress', (e) => {
-  if(e.key == 'Enter'){
-  }
-
-})
 
 window.onkeydown = keydown;
 
@@ -208,10 +203,8 @@ const scrollFunction = () => {
     goTOp.style.display = "none";
 }
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = scrollFunction
 
-// When the user clicks on the button, scroll to the top of the document
 const topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;

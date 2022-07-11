@@ -79,7 +79,7 @@ let contentList = [
             {
                 articelPath: '/bali/nyepi',
                 tittle: 'Nyepi',
-                articlePhoto: '/assets/img/Nyepi.jpg'
+                articlePhoto: '/assets/img/nyepi.jpg'
             },
             {
                 articelPath: '/bali/pakaian-adat',

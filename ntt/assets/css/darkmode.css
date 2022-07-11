@@ -4,6 +4,15 @@
     --dark-mode-sec: rgb(30 41 59);
 }
 
+.logo-light{
+    display: block !important;
+    display: inline-block !important;
+}
+
+.logo-dark {
+    display: none !important;
+}
+
 body, .navbar, .form {
     background-color: var(--dark-mode-color) !important;
     color: var(--main-color) !important;

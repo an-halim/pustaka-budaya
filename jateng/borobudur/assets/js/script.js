@@ -4,20 +4,16 @@ let choosedEmoji = "";
 
 
 window.addEventListener('load', () =>{
-    let state = localStorage.getItem('theme');
-    console.log(state)
-    let body = document.body;
-    let nav = document.querySelector('nav')
-    let headColor = document.querySelector("head > meta:nth-child(4)");
-    
-    let form = document.querySelector('form')
-    if(state == 'dark'){
-        body.classList.toggle("dark-mode");
-        nav.classList.toggle("dark-mode")
-        nav.classList.toggle("navbar-dark")
-        headColor.content = '#1d1d1d'
-        themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
-    }
+  let state = localStorage.getItem('theme');
+  let headColor = document.querySelector("head > meta:nth-child(4)");
+  let nav = document.querySelector('nav')
+  
+  if(state == 'dark'){
+    nav.classList.toggle('navbar-dark')
+    headColor.content = '#1d1d1d'
+    themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+    $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
+  }
 })
 
 mobileNav.addEventListener('click', () => {
@@ -26,25 +22,26 @@ mobileNav.addEventListener('click', () => {
 })
 
 themeBtn.addEventListener('click', () => {
-    console.log("Clicked!")
-    let headColor = document.querySelector("head > meta:nth-child(4)");
-    let state = localStorage.getItem('theme');
-    let body = document.body;
-    let nav = document.querySelector('nav')
-    let form = document.querySelector('form')
-    if(state == 'dark'){
-        localStorage.removeItem('theme');
-        themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
-        headColor.content = '#0dcaf0'
-    }else{
-        localStorage.setItem('theme', 'dark');
-        themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
-        headColor.content = '#1d1d1d'
-    }
-    body.classList.toggle("dark-mode");
-    nav.classList.toggle("dark-mode");
-    nav.classList.toggle("navbar-dark");
-    
+  let nav = document.querySelector('nav')
+  let headColor = document.querySelector("head > meta:nth-child(4)");
+  let state = localStorage.getItem('theme');
+  let isDarkMode = $('link[href="./assets/css/darkmode.css"]');
+
+  if(state == 'dark'){
+    nav.classList.toggle('navbar-dark')
+    localStorage.removeItem('theme');
+    themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
+    headColor.content = '#0dcaf0'
+    isDarkMode.remove();
+  }else{
+    nav.classList.toggle('navbar-dark')
+    localStorage.setItem('theme', 'dark');
+    themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+    headColor.content = '#1d1d1d'
+    $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
+
+  }
+  
 })
 
 // function scroll bar
@@ -135,22 +132,19 @@ const handleEmoji = (event) => {
   containerFeedback.classList.toggle('d-none')
 }
 
-//Get the button
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+// go top
+const scrollFunction = () => {
+  const goTOp = document.getElementById("myBtn");
+  
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+    goTOp.style.display = "block";
+  else
+    goTOp.style.display = "none";
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
+window.onscroll = scrollFunction
+
+const topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
@@ -158,11 +152,11 @@ function topFunction() {
 
 document.querySelector('.main-img').addEventListener('mouseover', () => {
   document.querySelector('.share-to').classList.remove('disable')
+  setTimeout(() => {
+    document.querySelector('.share-to').classList.add('disable')
+  }, 5000)
 })
 
-document.querySelector('.main-img').addEventListener('mouseleave', () => {
-  document.querySelector('.share-to').classList.add('disable')
-})
 
 $(document).ready(function(){
   // preloader

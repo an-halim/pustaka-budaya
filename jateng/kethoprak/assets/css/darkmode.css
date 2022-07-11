@@ -33,3 +33,7 @@ body, .navbar, .form {
 input, textarea {
     background-color: var(--dark-mode-sec);
 }
+
+.share-to {
+    background-color: var(--dark-mode-color) !important;
+}

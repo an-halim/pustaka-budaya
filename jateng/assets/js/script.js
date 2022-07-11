@@ -135,6 +135,36 @@ const scrollFunction = () => {
     goTOp.style.display = "none";
 }
 
+const closeModal = () => {
+  $("#search-modal").modal('hide');
+}
+
+window.onkeydown = keydown;
+
+function keydown(e){
+  if (!e) 
+  e = event;
+  if (e.ctrlKey && e.keyCode==75){ //CTRL+K
+    e.preventDefault();
+    $("#search-modal").modal('show');
+    setTimeout(() => {
+        $('#search-container').focus();
+    }, 500);
+  }
+}
+
+const bukaModal = () => {
+  document.getElementById("modals").style.display = "block";
+  document.querySelector('nav').classList.toggle('d-none')
+  document.querySelector('#go-top').classList.toggle('d-none')
+}
+
+const tutupModal = () => {
+  document.getElementById("modals").style.display = "none";
+  document.querySelector('nav').classList.toggle('d-none')
+  document.querySelector('#go-top').classList.toggle('d-none')
+}
+
 window.onscroll = scrollFunction
 
 const topFunction = () => {

@@ -6,31 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0dcaf0">
+  <link rel="shortcut icon" href="./assets/img/logo-light.png" type="image/x-icon">
   <title>Pustaka Budaya</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">  
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body data-aos-easing="ease" data-aos-duration="400">
+<body >
+
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loading">
+      <img src="./assets/img/preloader.gif" width="80">
+    </div>
+  </div>
+
   <!-- navbar -->
   <nav class="navbar p-3 mb-5 bg-transparent navbar-expand-lg navbar-expand-md sticky-top rounded-bottom fw-bolder">
     <div class="container">
       <a class="navbar-brand" href="../../">
-        <img src="./assets/img/logo-dark.png" alt="logo" width="40" height="30" class="d-inline-block align-text-top">
+        <img src="./assets/img/logo-dark.png" alt="logo" width="40" height="30" class="d-inline-block align-text-top logo-dark">
+        <img src="./assets/img/logo-light.png" alt="logo" width="40" height="30" class="d-inline-block align-text-top d-none logo-light">
         <span class="fw-bold fs-6">Pustaka Budaya</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
-      </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+        </button>
       <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item mx-2">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          <li class="nav-item mx-2" >
+            <a class="nav-link active" aria-current="page" href="#home" >Home</a>
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link active" href="#about-us">About Us</a>
@@ -43,16 +51,16 @@
               <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
             </a>
           </li>
-          <li class="nav-item ms-2">
-            <input class="form-control me-2 disable" type="search" placeholder="Search" id="search-container"
-              aria-label="Search">
-            <span id="btn-search" class="btn"><i class="bi bi-search"></i></span>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- end navbar -->
+
+  <!-- progres bar -->
+  <div class="progress-container fixed-top">
+    <span class="progress-bar"></span>
+  </div>
 
   <div id="main" class="px-4 mb-5 ">
     <div class="row">
@@ -90,7 +98,7 @@
               <h5 class="fw-bold">
                 Sejarah
               </h5>
-              <p>
+              <p class="article">
                 Legenda mengatakan bahwa aksara Hanacaraka diciptakan oleh Aji Saka, penguasa Kerajaan Medang Kamulan,
                 yang mempunyai dua abdi setia bernama Dora dan Sembada. Suatu ketika, Aji Saka mengutus Dora untuk
                 menemui Sembada dan membawakan pusakanya. Dara kemudian mendatangi Sembada dan menyampaikan tentang
@@ -103,11 +111,11 @@
               </p>
             </div>
 
-            <div class="filosofi">
+            <div class="filosofi pt-4">
               <h5 class="fw-bold">
                 Filosofi
               </h5>
-              <p>
+              <p class="article">
                 Dawai sasando yang awalnya berjumlah tujuh konon melambangkan siklus kehidupan seorang anak manusia yang
                 berada di dalam kandungan.Orang Rote percaya, seorang bayi yang telah berusia 7 bulan telah sempurna
                 secara fisik. Adapun dawai yang berjumlah 9 memiliki arti bahwa seorang anak telah siap dilahirkan ke
@@ -132,9 +140,9 @@
               </p>
             </div>
 
-            <div class="funfact">
+            <div class="funfact pt-4">
               <h5 class="fw-bold">Funfact</h5>
-              <p>
+              <p class="article">
                 <ul>
                   <li>Sasando dimainkan dengan dua tangan dari arah berlawanan, kiri ke kanan dan kanan ke kiri. Tangan
                     kiri berfungsi memainkan melodi dan bas, sementara tangan kanan bertugas memainkan accord.</li>
@@ -155,6 +163,7 @@
         </div>
         <!-- end home -->
       </div>
+      <!-- recomendation -->
       <div class="col-sm-12 col-lg-4">
         <div class="writer px-lg-5">
           <img src="../../assets/img/WibiSini.jpg" class="rounded-circle mt-5 mb-4 shadow-lg"
@@ -169,13 +178,12 @@
           </a>
         </div>
         <div class="recomendation mt-5 ">
-          <h4 class="text-gray mb-5 px-lg-5 fw-bold">Lainnya dari pustaka budaya</h4>
+          <h4 class="text-gray mb-5 px-lg-5 fw-bold">Artikel lain.</h4>
 
-          <div class="row px-lg-5 mb-4 recomendation-item">
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
             <div class="col pe-0 me-0">
               <div class="recomedation-head d-flex">
-                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
-                  style="object-fit: cover; width: 40px; height: 40px;" alt="">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3" style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
                 <div style="font-size: 15px; color:gray;">
                   <span id="author">Ahmad Nur...</span>
                   <span> in </span>
@@ -185,16 +193,14 @@
               <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
             </div>
             <div class="col text-center">
-              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
-                style="object-fit: cover; width: 50%; height: 80%;" alt="">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg" style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
             </div>
-          </div>
+          </a>
 
-          <div class="row px-lg-5 mb-4 recomendation-item">
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
             <div class="col pe-0 me-0">
               <div class="recomedation-head d-flex">
-                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
-                  style="object-fit: cover; width: 40px; height: 40px;" alt="">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3" style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
                 <div style="font-size: 15px; color:gray;">
                   <span id="author">Ahmad Nur...</span>
                   <span> in </span>
@@ -204,16 +210,14 @@
               <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
             </div>
             <div class="col text-center">
-              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
-                style="object-fit: cover; width: 50%; height: 80%;" alt="">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg" style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
             </div>
-          </div>
-
-          <div class="row px-lg-5 mb-4 recomendation-item">
+          </a>
+          
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
             <div class="col pe-0 me-0">
               <div class="recomedation-head d-flex">
-                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
-                  style="object-fit: cover; width: 40px; height: 40px;" alt="">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3" style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
                 <div style="font-size: 15px; color:gray;">
                   <span id="author">Ahmad Nur...</span>
                   <span> in </span>
@@ -223,16 +227,14 @@
               <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
             </div>
             <div class="col text-center">
-              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
-                style="object-fit: cover; width: 50%; height: 80%;" alt="">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg" style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
             </div>
-          </div>
+          </a>
 
-          <div class="row px-lg-5 mb-4 recomendation-item">
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
             <div class="col pe-0 me-0">
               <div class="recomedation-head d-flex">
-                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
-                  style="object-fit: cover; width: 40px; height: 40px;" alt="">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3" style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
                 <div style="font-size: 15px; color:gray;">
                   <span id="author">Ahmad Nur...</span>
                   <span> in </span>
@@ -242,16 +244,14 @@
               <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
             </div>
             <div class="col text-center">
-              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
-                style="object-fit: cover; width: 50%; height: 80%;" alt="">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg" style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
             </div>
-          </div>
-
-          <div class="row px-lg-5 mb-4 recomendation-item">
+          </a>
+          
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
             <div class="col pe-0 me-0">
               <div class="recomedation-head d-flex">
-                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
-                  style="object-fit: cover; width: 40px; height: 40px;" alt="">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3" style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
                 <div style="font-size: 15px; color:gray;">
                   <span id="author">Ahmad Nur...</span>
                   <span> in </span>
@@ -261,40 +261,66 @@
               <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
             </div>
             <div class="col text-center">
-              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
-                style="object-fit: cover; width: 50%; height: 80%;" alt="">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg" style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
             </div>
-          </div>
+          </a>
 
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
-  <!-- container for writer
-     <div class="col-lg-6">
-      <div class="card shadow">
-        <div class="card-body">
-          <h2>Writers Profile</h2>
-          <div class="alert alert-secondary">
-            <div class="row ">
-              <div class="col-lg-6">
-                <img class="img-fluid rounded-circle w-50" src="data:image/png;base64,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" alt="avatar">
-              </div>
-              <div class="col-lg-6 text-start">
-                <h5>Ahmad Nur Halim</h5>
-                <i class="bi bi-envelope-check-fill"></i> <span class="fs-6">halimbla2@gmail.com</span> <br>
-                <i class="bi bi-facebook"></i> <span>anhalim</span> <i class="bi bi-twitter"></i> <span>anhalim</span>
-              </div>
-            </div>
-          </div>
+
+  <!-- feedback -->
+  <div class="row justify-content-center text-center">
+    <div class="col-md-8">
+      <p class="text-sm">Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
+    </div>
+  </div>
+  <div class="row justify-content-center text-center mb-5">
+    <div class="col-md-6">
+      <p>Apakah artikel ini membantu?</p>
+      <div class="reaction">
+        <a  id="ic-reaction" onclick="handleEmoji(this)">
+          😒
+        </a>
+        <a id="ic-reaction" onclick="handleEmoji(this)">
+          😑
+        </a>
+        <a id="ic-reaction" onclick="handleEmoji(this)">
+          🙂
+        </a>
+        <a id="ic-reaction" onclick="handleEmoji(this)">
+          😀
+        </a>
+      </div>
+    </div>
+  </div>
+  <p class="lead text-center d-none fw-light feedback-response mb-4">
+    Terima kasih atas masukannya. Kami sangat senang bisa membantu!
+  </p>
+  <div class="container px-5  d-none text-center mb-5" id="container-feedback">
+    <form class="" >
+      <div class="mb-3" >
+        <div class="form-floating" >
+          <input type="text" class="form-control form" id="name" aria-describedby="nameHelp">
+          <label for="name">Full Name</label>
         </div>
       </div>
-  </div> -->
+      <div class="mb-3">
+        <div class="form-floating">
+          <textarea class="form-control form" placeholder="Leave a feedback here" id="feedback-placeholder"
+            style="height: 100px"></textarea>
+          <label for="feedback-placeholder">Comments</label>
+        </div>
+      </div>
+      <a onclick="handleFeedback()" class="btn btn-primary shadow-lg fw-bold" id="send-feedback">Submit</a>
+    </form>
+  </div>
 
-
-
+  
   <footer class="mt-auto text-white fw-bold" style="background-color: #475284;">
     <div class="p-5 container">
       <div class="row justify-content-center">
@@ -308,13 +334,13 @@
           <h5>Navigasi</h5>
           <p><a href="./" class="text-decoration-none">Home</a></p>
           <p><a href="#" class="text-decoration-none">Provinsi</a></p>
-          <p><a href="#" class="text-decoration-none">About us</a></p>
-          <p><a href="#tentangkami" class="text-decoration-none">Contact</a></p>
+          <p><a href="../../index.html#tentangkami" class="text-decoration-none">About us</a></p>
+          <p><a href="#" class="text-decoration-none">Contact</a></p>
         </div>
       </div>
     </div>
     <div class="bg-dark p-2 text-white d-flex justify-content-around">
-      <p class="fw-lighter ">Build with ❤️ using
+      <p class="fw-lighter ">Build with ❤️ using 
         <a href="https://getbootstrap.com/" class="text-white">
           Bootstrap
         </a>.
@@ -322,23 +348,19 @@
     </div>
   </footer>
 
-  </footer>
-
   <!-- this button will visivle if documen scolled down -->
-  <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
+  <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
     <i class="bi bi-arrow-up-circle"></i>
   </button>
 
   <!-- alert for notifcation -->
-
+  
   <noscript>
 
   </noscript>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   <script src="./assets/js/script.js"></script>
   <script src="../../assets/js/getRecomendation.js"></script>
   <script>

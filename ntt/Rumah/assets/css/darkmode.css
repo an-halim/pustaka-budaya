@@ -1,0 +1,35 @@
+:root{
+    --main-color: rgb(241 245 249);
+    --dark-mode-color: rgb(15 23 42);
+    --dark-mode-sec: rgb(30 41 59);
+}
+
+.logo-light{
+    display: block !important;
+    display: inline-block !important;
+}
+
+.logo-dark {
+    display: none !important;
+}
+
+body, .navbar, .form {
+    background-color: var(--dark-mode-color) !important;
+    color: var(--main-color) !important;
+    transition: 0.7s ease-in-out; 
+}
+
+#galery, .main-content, footer {
+    background-color: var(--dark-mode-sec) !important;
+    color: var(--main-color) !important;
+    transition: 0.7s ease-in-out; 
+}
+
+.card {
+    background-color: var(--dark-mode-sec);
+    color: var(--main-color);
+}
+
+input, textarea {
+    background-color: var(--dark-mode-sec);
+}

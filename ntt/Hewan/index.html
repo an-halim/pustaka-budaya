@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0dcaf0">
+  <link rel="shortcut icon" href="./assets/img/logo-light.png" type="image/x-icon">
+  <title>Pustaka Budaya</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loading">
+      <img src="./assets/img/preloader.gif" width="80">
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar p-3 mb-5 bg-transparent navbar-expand-lg navbar-expand-md sticky-top rounded-bottom fw-bolder">
+    <div class="container">
+      <a class="navbar-brand" href="../../">
+        <img src="./assets/img/logo-dark.png" alt="logo" width="40" height="30"
+          class="d-inline-block align-text-top logo-dark">
+        <img src="./assets/img/logo-light.png" alt="logo" width="40" height="30"
+          class="d-inline-block align-text-top d-none logo-light">
+        <span class="fw-bold fs-6">Pustaka Budaya</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link active waves-effect waves-light" id="theme-changer">
+              <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- progres bar -->
+  <div class="progress-container fixed-top">
+    <span class="progress-bar"></span>
+  </div>
+
+  <div id="main" class="px-4 mb-5 ">
+    <div class="row">
+      <div class="col-sm-12 col-lg-2"></div>
+      <div class="col-sm-12 col-lg-6 vh-100 overflow-auto content-main">
+        <!-- home -->
+        <div class="container px-lg-5" id="home">
+          <a href="../" class="btn bg-primary my-4 text-white shadow">
+            <i class="bi bi-arrow-left-circle"></i>
+            <spanc>BACK</span>
+          </a>
+          <h3 class="fw-bolder">Komodo</h3>
+          <p class="lead fs-6 fw-lighter">
+            <img src="../../assets/img/WibiSini.jpg" class="img-fluid rounded-circle" width="25" alt="avatar">
+            <span>Satrio Wibisono | Juni 24, 2022</span>
+          </p>
+          <div class="img-content text-center position-relative">
+            <img src="./assets/img/Komodo.jpg" alt="sasando" class="img-fluid rounded my-5 start-50 shadow main-img">
+            <div class="share-to disable bg-light rounded position-absolute ">
+              <p class="py-0">Share to:</p>
+              <span class="mx-1 display-6 rounded">
+                <a href="" class="img-fluid"><i class="bi bi-whatsapp"></i></a>
+              </span>
+              <span class="mx-1 display-6 rounded">
+                <a href="" class="img-fluid"><i class="bi bi-facebook"></i></a>
+              </span>
+              <span class="mx-1 display-6 rounded">
+                <a href="" class="img-fluid"><i class="bi bi-twitter"></i></a>
+              </span>
+            </div>
+          </div>
+          <div class="mb-5 content" style="text-align: justify;">
+
+            <div class="sejarah">
+              <h5 class="fw-bold">
+                Sejarah
+              </h5>
+              <p class="article">
+                Auffenberg melakukan penelitian dengan dibantu ahli biologi bernama Claudio Ciofi dan berhasil
+                menjelaskan sifat dari komodo. Penelitian itu menyebutkan, perkembangan evolusi komodo dimulai dari 40
+                juta tahun yang lalu. Satwa liar tersebut konon memang berasal dari Asia dan bermigrasi ke
+                Australia.Konon, sekitar 15 juta tahun yang lalu, Australia dan Asia Tenggara mengalami perpecahan.
+                Sehingga kondisi itu memungkinkan komodo untuk kembali ke tempat asalnya yaitu Asia Tenggara, tepatnya
+                di Indonesia bagian timur.Hal itu dibuktikan dengan temuan fosil di Queensland, Australia. Fosil itu
+                menunjukkan bahwa komodo benar-benar berevolusi di Australia sebelum menyebar di Indonesia.
+
+              </p>
+            </div>
+
+            <div class="filosofi pt-4">
+              <h5 class="fw-bold">
+                Filosofi
+              </h5>
+              <p class="article">
+                Komodo atau The Dragon yang merupakan satu spesies kadal ini dahulunya punya panLegenda sejarah Komodo
+                ini menceritakan pada zaman dahulu kala, ada seorang putri yang bernama Putri Naga. Ia hidup dalam
+                sebuah pulau dan kemudian menikah dengan Moja pemuda pulau sebrang. Singkat cerita sang putri hamil dan
+                kemudian melahirkan putra kembar yang keduanya memiliki kelamin laki-laki. Hanya saja salah satunya
+                memiliki bentuk berbeda yang mirip dengan kadal dan membuat pasangan ini malu.Keduanya memberi nama Orah
+                untuk putra yang mirip dengan kadal dan memberi nama Gerong untuk bayi yang normal.Orah terasingkan ke
+                dalam hutan sementara Gerong diasuh sendiri oleh Putri Naga dan Moja.Seiring berjalan waktu yang
+                berlalu, Gerong sudah tumbuh besar dengan tubuh gagah. Hingga saat Gerong berburu rusa ia bertemu dengan
+                kadal raksasa yang kemudian Gerong kejar dan hendak menghunuskan tombak.Namun, tiba-tiba Putri Naga
+                datang dan melarang untuk membunuh kadal raksasa yang saat ini dikenal komodo. Putri Naga menjelaskan
+                kepada Gerong bahwa kadal itu adalah saudara kembarnya yang bernama Orah.Sejak saat itu masyarakat
+                sekitar selalu memperlakukan komodo sebagai saudara. Itulah sedikit cerita legenda asal muasal Komodo
+                bernama Orah dan menjadi hewan yang terjaga dengan baik hingga saat ini oleh masyarakat setempat.ggilan
+                “Orah” oleh masyarakat setempat.
+
+              </p>
+            </div>
+
+            <div class="funfact pt-4">
+              <h5 class="fw-bold">Funfact</h5>
+              <p class="article">
+                <ul>
+                  <li>Saat berburu, komodo mengandalkan kemampuan kamuflasenya dan berbaring menunggu mangsa yang
+                    lewat.Saat mangsa melewatinya, komodo pun keluar menggunakan cakarnya yang tajam dan gigi bergerigi
+                    seperti hiu untuk menerkam mangsanya.</li>
+
+                  <li>
+                    Komodo memiliki kelenjar racun yang dapat menurunkan tekanan darah, menyebabkan pendarahan hebat,
+                    mencegah pembekuan, dan menyebabkan syok.Komodo menggigit dengan gigi bergerigi dan otot leher yang
+                    kuat sehingga, mengakibatkan luka besar menganga pada mangsanya. Racun itu kemudian mempercepat
+                    kematian mangsanya.
+                  </li>
+                  <li>
+                    Setahun sekali komodo betina mengeluarkan bau dari kotorannya agar diikuti komodo jantan. Komodo
+                    jantan yang menemukan sang betina, ia menggaruk punggungnya dan menjilat tubuhnya.Jika sang betina
+                    menjilatnya kembali, proses kawin pun terjadi. Komodo betina memiliki cara lain untuk bereproduksi
+                    tanpa perlu kehadiran komodo jantan. Hal ini karena komodo betina memiliki kromosom kelamin jantan
+                    dan
+                    betina.Komodo betina dapat bereproduksi secara aseksual dalam proses yang disebut partenogenesis.
+
+                  </li>
+                </ul>
+              </p>
+            </div>
+
+          </div>
+        </div>
+        <!-- end home -->
+      </div>
+      <!-- recomendation -->
+      <div class="col-sm-12 col-lg-4">
+        <div class="writer px-lg-5">
+          <img src="../../assets/img/WibiSini.jpg" class="rounded-circle mt-5 mb-4 shadow-lg"
+            style="object-fit: cover; width: 100px; height: 100px;" alt="">
+          <h3 class="fw-semibold fs-5">Satrio Wibisono</h3>
+          <p class="fw-semibold" style="font-size: normal; color:gray;">Mahasiswa Amikom yang senang mengetik dan
+            mendengarkan musik</p>
+          <a href="mailto:wibicrull35@gmail.com" class="btn btn-warning rounded text-white shadow"
+            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+            title="tekan ini untuk mengirim pesan ke saya">
+            Colek Saya
+          </a>
+        </div>
+        <div class="recomendation mt-5 ">
+          <h4 class="text-gray mb-5 px-lg-5 fw-bold">Artikel lain.</h4>
+
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
+            <div class="col pe-0 me-0">
+              <div class="recomedation-head d-flex">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
+                  style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
+                <div style="font-size: 15px; color:gray;">
+                  <span id="author">Ahmad Nur...</span>
+                  <span> in </span>
+                  <span id="articel-prov">Jateng</span>
+                </div>
+              </div>
+              <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
+            </div>
+            <div class="col text-center">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
+                style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
+            </div>
+          </a>
+
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
+            <div class="col pe-0 me-0">
+              <div class="recomedation-head d-flex">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
+                  style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
+                <div style="font-size: 15px; color:gray;">
+                  <span id="author">Ahmad Nur...</span>
+                  <span> in </span>
+                  <span id="articel-prov">Jateng</span>
+                </div>
+              </div>
+              <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
+            </div>
+            <div class="col text-center">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
+                style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
+            </div>
+          </a>
+
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
+            <div class="col pe-0 me-0">
+              <div class="recomedation-head d-flex">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
+                  style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
+                <div style="font-size: 15px; color:gray;">
+                  <span id="author">Ahmad Nur...</span>
+                  <span> in </span>
+                  <span id="articel-prov">Jateng</span>
+                </div>
+              </div>
+              <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
+            </div>
+            <div class="col text-center">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
+                style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
+            </div>
+          </a>
+
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
+            <div class="col pe-0 me-0">
+              <div class="recomedation-head d-flex">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
+                  style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
+                <div style="font-size: 15px; color:gray;">
+                  <span id="author">Ahmad Nur...</span>
+                  <span> in </span>
+                  <span id="articel-prov">Jateng</span>
+                </div>
+              </div>
+              <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
+            </div>
+            <div class="col text-center">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
+                style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
+            </div>
+          </a>
+
+          <a class="row px-lg-5 mb-4 recomendation-item" href="#" style="text-decoration: none;">
+            <div class="col pe-0 me-0">
+              <div class="recomedation-head d-flex">
+                <img src="../../assets/img/AhmadNurHalim.jpg" id="author-photo" class="rounded-circle shadow-lg me-3"
+                  style="object-fit: cover; width: 40px; height: 40px;" alt="author-image">
+                <div style="font-size: 15px; color:gray;">
+                  <span id="author">Ahmad Nur...</span>
+                  <span> in </span>
+                  <span id="articel-prov">Jateng</span>
+                </div>
+              </div>
+              <h6 class="text-center fw-bold ms-4" id="article-tittle">AKSARA JAWA</h6>
+            </div>
+            <div class="col text-center">
+              <img src="./assets/img/hanacaraka.jpg" id="article-image" class="rounded shadow-lg"
+                style="object-fit: cover; width: 120px; height: 60px;" alt="recomendation-image">
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <!-- feedback -->
+  <div class="row justify-content-center text-center">
+    <div class="col-md-8">
+      <p class="text-sm">Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
+    </div>
+  </div>
+  <div class="row justify-content-center text-center mb-5">
+    <div class="col-md-6">
+      <p>Apakah artikel ini membantu?</p>
+      <div class="reaction">
+        <a id="ic-reaction" onclick="handleEmoji(this)">
+          😒
+        </a>
+        <a id="ic-reaction" onclick="handleEmoji(this)">
+          😑
+        </a>
+        <a id="ic-reaction" onclick="handleEmoji(this)">
+          🙂
+        </a>
+        <a id="ic-reaction" onclick="handleEmoji(this)">
+          😀
+        </a>
+      </div>
+    </div>
+  </div>
+  <p class="lead text-center d-none fw-light feedback-response mb-4">
+    Terima kasih atas masukannya. Kami sangat senang bisa membantu!
+  </p>
+  <div class="container px-5  d-none text-center mb-5" id="container-feedback">
+    <form class="">
+      <div class="mb-3">
+        <div class="form-floating">
+          <input type="text" class="form-control form" id="name" aria-describedby="nameHelp">
+          <label for="name">Full Name</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="form-floating">
+          <textarea class="form-control form" placeholder="Leave a feedback here" id="feedback-placeholder"
+            style="height: 100px"></textarea>
+          <label for="feedback-placeholder">Comments</label>
+        </div>
+      </div>
+      <a onclick="handleFeedback()" class="btn btn-primary shadow-lg fw-bold" id="send-feedback">Submit</a>
+    </form>
+  </div>
+
+
+  <footer class="mt-auto text-white fw-bold" style="background-color: #475284;">
+    <div class="p-5 container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
+          <img src="./assets/img/logo-light.png" alt="logo pustaka budaya" width="100px">
+          <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+        </div>
+        <div class="col-lg-4 mb-4 mx-auto">
+          <h5>Navigasi</h5>
+          <p><a href="./" class="text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-decoration-none">Provinsi</a></p>
+          <p><a href="../../index.html#tentangkami" class="text-decoration-none">About us</a></p>
+          <p><a href="#" class="text-decoration-none">Contact</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark p-2 text-white d-flex justify-content-around">
+      <p class="fw-lighter ">Build with ❤️ using
+        <a href="https://getbootstrap.com/" class="text-white">
+          Bootstrap
+        </a>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- this button will visivle if documen scolled down -->
+  <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
+
+  <!-- alert for notifcation -->
+
+  <noscript>
+
+  </noscript>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
+  <script src="./assets/js/script.js"></script>
+  <script src="../../assets/js/getRecomendation.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

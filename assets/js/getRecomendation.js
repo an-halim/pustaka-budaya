@@ -223,49 +223,44 @@ let contentList = [
         province: 'Sulawesi',
         articles : [
             {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jafswa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articelPath: '/sulawesi/badik',
+                tittle: 'Senjata badik',
+                articlePhoto: '/assets/img/Badik.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/sulawesi/baju-pokko',
                 tittle: 'Aksara Jfsdawa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/Pokko.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/sulawesi/coto-makassar',
                 tittle: 'Aksara Jarewwa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/coto makassar.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/sulawesi/rumah-tongkongan',
                 tittle: 'Aksara Jtawa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/Tongkongan.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/sulawesi/suku-toraja',
                 tittle: 'Aksara rJawa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/toraja.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/sulawesi/tari-mabadong',
                 tittle: 'Aksara Jawqa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/MaBadong.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/sulawesi/tenun-sutra',
                 tittle: 'Aksara Jaeqwa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/Sutra.jpg'
             },
             {
-                articelPath: '/jateng/aksara-jawa',
+                articelPath: '/sulawesi/upacara-annyampa',
                 tittle: 'Aksara Jaeqwa',
-                articlePhoto: '/assets/img/gamelan.jpg'
-            },
-            {
-                articelPath: '/jateng/aksara-jawa',
-                tittle: 'Aksara Jawrqxa',
-                articlePhoto: '/assets/img/gamelan.jpg'
+                articlePhoto: '/assets/img/Anyanpa.jpg'
             },
         ]
     }

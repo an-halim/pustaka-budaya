@@ -1,134 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0dcaf0">
-    <title>Pustaka Budaya</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">  
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css" integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0dcaf0">  
+  <link rel="shortcut icon" href="./assets/img/logo-light.png" type="image/x-icon">
+  <title>Pustaka Budaya</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
+    integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/splide-4.0.7/dist/css/splide.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-  <body data-aos-easing="ease" data-aos-duration="400">
-    <!-- navbar -->
-    <nav class="navbar shadow p-3 mb-5 bg-info bg-gradient  navbar-dark navbar-expand-lg sticky-top rounded ">
-      <div class="container">
-        <a class="navbar-brand" href="../">Pustaka Budaya</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
-          </button>
-        <div class="collapse navbar-collapse " id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item mx-2" >
-              <a class="nav-link active" aria-current="page" href="../" >Home</a>
+
+<body class="bg-white">
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loading">
+      <img src="./assets/img/preloader.gif" width="80">
+    </div>
+  </div>
+
+  <!-- navbar -->
+  <nav class="navbar shadow p-3 mb-5 bg-transparent navbar-expand-lg sticky-top rounded-bottom fw-bold">
+    <div class="container">
+      <a class="navbar-brand" href="../">
+        <img src="./assets/img/logo-dark.png" alt="logo" width="40" height="30" class="d-inline-block logo-dark align-text-top">
+        <img src="./assets/img/logo-light.png" alt="logo" width="40" height="30" class="d-inline-block logo-light d-none align-text-top">
+        <span class="fw-bold fs-6">Pustaka Budaya</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list-nested" style="font-size: 20px; color: cornflowerblue;"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="../">Home</a>
+          </li>
+          <li class="nav-item mx-2 dropdown">
+            <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdown" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Budaya
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown">
+              <li><a class="dropdown-item" href="./badik/">Senjata Badik</a></li>
+              <li><a class="dropdown-item" href="./baju-pokko/">Baju Pokko</a></li>
+              <li><a class="dropdown-item" href="./coto-makassar/">Coto Makkasar</a></li>
+              <li><a class="dropdown-item" href="./rumah-tongkongan/">Rumah Tongkongan</a></li>
+              <li><a class="dropdown-item" href="./suku-toraja/">Suku Toraja</a></li>
+              <li><a class="dropdown-item" href="./tari-mabadong/">Tarian Ma'Badong</a></li>
+              <li><a class="dropdown-item" href="./tenun-sutra/">Tenun Sutra</a></li>
+              <li><a class="dropdown-item" href="./upacara-annyampa/">Annyampa'Sanro</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#galery">Galery</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#about-us">About Us</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link active" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="nav-link active waves-effect waves-light" id="theme-changer">
+              <img src="./assets/img/night-mode.png" class="img-darkmode" alt="ligth mode">
+            </a>
+          </li>
+          <li class="nav-item ms-2">
+            <span id="btn-search" class="btn"><i class="bi bi-search text-white bg-info rounded p-2"></i></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  
+  <!-- progres bar -->
+  <div class="progress-container fixed-top">
+    <span class="progress-bar"></span>
+  </div>
+
+  <!-- search modal -->
+  <div id="search-modal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog text-dark modal-dialog-scrollable pt-5">
+      <div class="modal-content">
+        <div class="modal-header shadow">
+          <input class="form-control me-2" type="search" placeholder="Search" id="search-container" aria-label="Search">
+        </div>
+        <div class="modal-body">
+          <div class="search-result p-3"></div>
+        </div>
+        <div class="modal-footer p-2">
+          <span class="badge bg-secondary">ESC to close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of search modal -->
+
+  <!-- home -->
+  <div class="container vh-100" id="home" >
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" data-aos="fade-up">
+        <h3 class="fw-semibold">SULAWESI</h3>
+        <p>
+          Sulawesi, sebuah pulau Indonesia di sebelah timur Kalimantan, terdiri dari beberapa semenanjung panjang yang memancar dari pusat pegunungan. Pulau ini terkenal dengan terumbu karang dan lokasi penyelaman seperti Taman Nasional Bunaken, Kepulauan Togian dan Taman Nasional Wakatobi. Kota terbesarnya adalah Makassar, rumah bagi Fort Rotterdam, bekas benteng Belanda yang sekarang menjadi museum. Di luar Makassar, Taman Bersejarah Leang-Leang menyimpan lukisan gua prasejarah.
+        </p>
+        <a href="#galery" class="btn btn-lg btn-secondary fw-bold border-white bg-primary">Jelajah Sekarang!</a>
+      </div>
+    </div>
+  </div>
+  <!-- end home -->
+
+  <!-- budaya -->
+  <div class="container-fluid vh-100 py-5" id="galery" style="background-color: #475284;">
+    <div class="row justify-content-center align-content-center" >
+      <div class="col-lg-8 col-md-8 col-sm-8 mx-5">
+        <h1 class="my-4 text-white text-center fw-semibold py-5" >Galery</h1>
+        <div class="row py-4 mx-5">
+          <div class="col" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="400">
+            <img src="./assets/img/Sulawesi.jpg" alt="Geografis" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 300px">
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="450">
+            <img src="./assets/img/Tongkongan.jpg" alt="Tongkongan" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 3 00px">
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="500">
+            <img src="./assets/img/Pokko.jpg" alt="Baju Pokko" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 3 00px">
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="550">
+            <img src="./assets/img/Mandala.jpg" alt="Monumen Mandala" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 300px">
+          </div>
+        </div>
+        <span class="text-white ms-5" style="cursor: pointer;" onclick="bukaModal()" data-aos="zoom-out" data-aos-delay="400">
+          Lihat lainnya <i class="bi bi-arrow-right"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <!-- end budaya -->
+
+  <!-- Light Box -->
+  <!-- Modal -->
+  <div class="modalku bg-black bg-opacity-75" id="modals">
+    <span class="close cursor" onclick="tutupModal()">&times;</span>
+    <div class="modal-content ">
+      <section id="main-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/Anyanpa.jpg" alt="" class="img-fluid rounded">
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#about-us">Galery</a>
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/Badik.jpg" alt="" class="img-fluid rounded">
             </li>
-            <li class="nav-item mx-2">
-                <a class="nav-link active" href="#about-us">About Us</a>
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/MaBadong.jpg" alt="" class="img-fluid rounded">
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link active" href="#contact">Contact</a>
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/Mandala.jpg" alt="" class="img-fluid rounded">
             </li>
-            <li class="nav-item ms-2">
-              <a class="nav-link active waves-effect waves-light" id="theme-changer">
-                  <i class="bi bi-cloud-moon" id="icon"></i>
-                  <span>Dark</span>
-              </a>
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/Pokko.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/Sulawesi.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/Sulawesi.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/Tongkongan.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="./assets/img/toraja.jpg" alt="" class="img-fluid rounded">
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
-    <!-- end navbar -->
+      </section>
+      
+      <section
+        id="thumbnail-carousel"
+        class="splide"
+        aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel."
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/Anyanpa.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/Badik.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/MaBadong.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/Mandala.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/Pokko.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/Sulawesi.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/Sulawesi.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/Tongkongan.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="./assets/img/toraja.jpg" alt="" class="img-fluid">
+          </ul>
+        </div>
+      </section>      
+    </div>
+  </div>
+  <!-- end of light box -->
 
+  <!-- this button will visivle if documen scolled down -->
+  <button onclick="topFunction()" id="go-top" title="Go to top" class="bg-info">
+    <i class="bi bi-arrow-up-circle"></i>
+  </button>
 
-    <!-- home -->
-    <div class="container" id="home">
-      <div class="row align-items-center justify-content-center" >
-        <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" >
-          <h2>SULAWESI</h2>
-          <p class="fw-light text-md-center" style="font-weight: lighter;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quas assumenda sapiente pariatur molestiae eum iste. Corrupti, impedit officiis voluptas iste non sunt delectus culpa totam perspiciatis in molestiae unde eos, optio aut corporis deleniti a? Eveniet deleniti velit, quibusdam nemo sunt id vitae quo placeat cupiditate hic. Tempore voluptatem dolorem quidem fugit, rerum repudiandae id reiciendis illo animi adipisci?</p>
-          <a href="#provinsi" id="cta" class="btn btn-primary rounded p-3 mt-2">Jelajah sekarang!</a>
-        </div>      
+  <!-- container content list -->
+  <div class="container my-5 vh-auto" >
+    <div class="text-center pt-5">
+      <h2 class="fw-bold"  data-aos="fade-up" data-aos-dalay="200">KONTEN</h2>
+      <p class="pb-5 article text-center" data-aos="fade-up" data-aos-dalay="350">Beberapa content unggulan kami</p>
+    </div>
+    <div class="row align-content-center pt-4">
+      <div class="col-10 mx-auto">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 mb-2" data-aos="zoom-in-up" data-aos-dalay="500">
+            <a href="#budaya" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/budaya.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
+                  </div>
+                  <div class="col">
+                    <h5 class="fw-bold text-start">BUDAYA</h5>
+                    <p  class="text-start">Beberapa budaya yang kami angkat</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 mb-2"  >
+            <a href="#geografi" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="600">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/geografi.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
+                  </div>
+                  <div class="col ">
+                    <h5 class="fw-bold text-start">GEOGRAFI</h5>
+                    <p  class="text-start">Kondisi geografis pada provinsi</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6"  >
+            <a href="#sejarah" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="700">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/sejarah.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
+                  </div>
+                  <div class="col ">
+                    <h5 class="fw-bold text-start">SEJARAH</h5>
+                    <p  class="text-start">Sejarah lahirnya atau terciptanya</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6"  >
+            <a href="#landmark" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="800">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/landmark.png" class="ms-4 me-0" width="150px" height="150px" alt="" srcset="">
+                  </div>
+                  <div class="col ">
+                    <h5 class="fw-bold text-start">LANDMARK</h5>
+                    <p  class="text-start">Landmark atau markah pada provinsi</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- end home -->
-
-    <!-- this button will visivle if documen scolled down -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top" class="bg-info">
-      <i class="bi bi-arrow-up-circle"></i>
-    </button>
-    
-    
-    
-
-    <!-- about us -->
-    <div class="container mt-15" id="about-us">
-      <h2 style="margin-top: 50px; margin-bottom: 80px; font-weight: bold; text-align: center">About Us</h2>
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-6">
-          <p>Kami dengan senang hati menerima timbal balik guna meningkatkan kualitas konten kami</p>
-        </div>
+  </div>
+  
+  <div class="p-4 text-white main-content" style="background-color: #475284;">  
+    <!-- sejarah -->
+    <div class="container mt-4 mb-5 px-lg-5" id="sejarah">
+      <h2 class="fw-bold">SEJARAH</h2>
+      <div class="img-main text-center">
+        <img src="./assets/img/toraja.jpg" alt="toraja" class="img-fluid rounded">
       </div>
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-6">
-          <p>Apakah artikel ini membantu?</p>
-          <div class="reaction">
-            <a onclick="handleEmoji(this)" class="btn btn-secondary">
-              <i class="bi bi-emoji-frown-fill text-info"></i>
-            </a>
-            <a onclick="handleEmoji(this)" class="btn btn-secondary">
-              <i class="bi bi-emoji-neutral-fill text-info"></i>
-            </a>
-            <a onclick="handleEmoji(this)" class="btn btn-secondary" >
-              <i class="bi bi-emoji-smile-fill text-info"></i>
-            </a>
+
+      <div class="article-main mt-4">
+        <p class="article">
+          Sekitar 30.000 tahun silam pulau ini telah dihuni oleh manusia. Penemuan tertua ditemukan di gua-gua dekat bukit kapur dekat Maros, sekitar 30 km sebelah timur laut dan Makassar sebagai ibu kota Provinsi Sulawesi Selatan. Kemungkinan lapisan budaya yang tua berupa alat batu Pebble dan flake telah dikumpulkan dari teras sungai di lembah Walanae, di antara Soppeng dan Sengkang, termasuk tulang-tulang babi raksasa dan gajah-gajah yang telah punah.
+          <br><br>
+          Selama masa kemasan perdagangan rempah-rempah, pada abad ke-15 sampai ke-19, Sulawesi Selatan berperan sebagai pintu gerbang ke kepulauan Maluku, tanah penghasil rempah. Kerajaan Gowa dan Bone yang perkasa memainkan peranan penting di dalam sejarah Kawasan Timur Indonesia di masa Ialu.
+          Pada sekitar abad ke-14 di Sulawesi Selatan terdapat sejumlah kerajaan kecil, dua kerajaan yang menonjol ketika itu adalah Kerajaan Gowa yang berada di sekitar Makassar dan Kerajaan Bugis yang berada di Bone. Pada tahun 1530, Kerajaan Gowa mulai mengembangkan diri, dan pada pertengahan abad ke-16 Gowa menjadi pusat perdagangan terpenting di wilayah timur Indonesia. Pada tahun 1605, Raja Gowa memeluk Agama Islam serta menjadikan Gowa sebagai Kerajaan Islam, dan antara tahun 1608 dan 1611, Kerajaan Gowa menyerang dan menaklukkan Kerajaan Bone sehingga Islam dapat tersebar ke seluruh wilayah Makassar dan Bugis.
+          Perusahaan dagang Belanda atau yang lebih dikenal dengan nama VOC (Vereenigde Oost-Indische Compagnie) yang datang ke wilayah ini pada abad ke-15 melihat Kerajaan Gowa sebagai hambatan terhadap keinginan VOC untuk menguasai perdagangan rempah-rempah di daerah ini. VOC kemudian bersekutu dengan seorang pangeran Bugis bernama Arung Palakka yang hidup dalam pengasingan setelah jatuhnya Bugis di bawah kekuasaan Gowa.
+          <br><br>
+          Belanda kemudian mensponsori Palakka kembali ke Bone, sekaligus menghidupkan perlawanan masyarakat Bone dan Sopeng untuk melawan kekuasaan Gowa. Setelah berperang selama setahun, Kerajaan Gowa berhasil dikalahkan. Dan Raja Gowa, Sultan Hasanuddin dipaksa untuk menandatangani Perjanjian Bungaya yang sangat mengurangi kekuasaan Gowa. Selanjutnya Bone di bawah Palakka menjadi penguasa di Sulawesi Selatan.
+          Persaingan antara Kerajaan Bone dengan pemimpin Bugis lainnya mewarnai sejarah Sulawesi Selatan. Ratu Bone sempat muncul memimpin perlawanan menentang Belanda yang saat itu sibuk menghadapi Perang Napoleon di daratan Eropa. Namun setelah usainya Perang Napoleon, Belanda kembali ke Sulawesi Selatan dan membasmi pemberontakan Ratu Bone. Namun perlawanan masyarakat Makassar dan Bugis terus berlanjut menentang kekuasaan kolonial hingga tahun 1905-1906. Pada tahun 1905, Belanda juga berhasil menaklukkan Tana Toraja, perlawanan di daerah ini terus berlanjut hingga awal tahun 1930-an.
+          <br><br>
+          Sebelum Proklamasi Kemerdekaan RI, Sulawesi Selatan, terdiri atas sejumlah wilayah kerajaan yang berdiri sendiri dan mendiami empat etnis yaitu: Bugis, Makassar, Mandar, dan Toraja.
+          Ada tiga kerajaan besar yang berpengaruh luas yaitu Luwu, Gowa, dan Bone, yang pada abad ke XVI dan XVII mencapai kejayaannya dan telah melakukan hubungan dagang serta persahabatan dengan bangsa Eropa, India, China, Melayu, dan Arab.
+          Setelah kemerdekaan, dikeluarkan UU Nomor 21 Tahun 1950 di mana Sulawesi Selatan menjadi provinsi Administratif Sulawesi dan selanjutnya pada tahun 1960 menjadi daerah otonomi Sulawesi Selatan dan Tenggara berdasarkan UU Nomor 47 Tahun 1960. Pemisahan Sulawesi Selatan dari daerah otonomi Sulawesi Selatan dan Tenggara ditetapkan dengan UU Nomor 13 Tahun 1964, sehingga menjadi daerah otonomi Sulawesi Selatan.
+        </p>
+      </div>
+    </div>
+    <!-- end of sejarah -->
+
+    <!-- geografi -->
+    <div class="container mt-4 mb-5 px-lg-5" id="geografi">
+      <h2 class="fw-bold">GEOGRAFIS</h2>
+      <div class="img-main text-center">
+        <img src="./assets/img/Geografis.png" alt="geografis sulawesi" class="img-fluid rounded">
+      </div>
+
+      <div class="article-main mt-4">
+        <p class="article">
+          Sulawesi Selatan terletak di jazirah selatan Pulau Sulawesi. Provinsi yang beribukota di Makassar ini secara administratif, sebelah utara berbatasan dengan Provinsi Sulawesi Barat dan Sulawesi Tengah. Di sebelah barat berbatasan dengan Teluk Bone dan di sebelah selatan dengan Laut Flores.
+          Pada peta Provinsi Sulawesi Selatan terletak antara 0 derajat 12'-8 derajat Lintang Selatan dan 116 derajat 48'-122 derajat 36′ Bujur Timur.
+          <br><br>
+          Secara geografis Sulsel terletak pada posisi yang sangat strategis, karena berada pada persimpangan jalur lalu lintas penumpang, perdagangan barang dan jasa dari kawasan barat Indonesia (KBI) ke kawasan timur Indonesia (KTI). Oleh karena itu, kawasan ini seringkali juga disebut pintu gerbang Kawasan Timur Indonesia.
+          Wilayah ini juga mencakup pesisir dan pulau, dataran rendah dan dataran tinggi, dengan 67 aliran sungai dan tiga danau. Terdapat gunung Bawakaraeng di selatan, serta gunung Lompobattang dan Rante Mario di Utara. Pada bagian tengah, membentang bukit karst sepanjang Maros dan Pangkep.
+          Kabupaten Luwu Utara merupakan kabupaten terluas dengan luas 7.502,58 kilometer persegi atau 16,06 persen dari luas Sulsel. Sementara itu, Kota Pare-Pare merupakan kabupaten dengan luas wilayah terkecil dengan luas 99,33 km persegi atau hanya 0,21 persen dari luas Sulsel.
+          <br><br>
+          Provinsi yang ditetapkan berdasarkan Undang-Undang Nomor 13 Tahun 1964 ini mempunyai luas kurang lebih 46.717,48 km persegi atau 4.1% dari total wilayah Indonesia.
+          Sebelumnya, beberapa kabupaten dari Provinsi Sulawesi Selatan, yaitu: Polewali Mandar, Mamasa, Mamuju, Mamuju Utara, dan Majene dikembangkan/dimekarkan menjadi provinsi baru, Provinsi Sulawesi Barat karena ditunjang potensi sumber daya alamnya.
+        </p>
+      </div>
+    </div>
+    <!-- end of geografi -->
+
+    <!-- landmark -->
+    <div class="container mt-4 mb-5 px-lg-5" id="landmark">
+      <h2 class="fw-bold">LANDMARK</h2>
+      <div class="img-main text-center">
+        <img src="./assets/img/Mandala.jpg" alt="landmark mandala" class="img-fluid rounded">
+      </div>
+
+      <div class="article-main mt-4">
+        <p class="article">
+          Monumen Mandala dahulu merupakan Sekolah guru (kweekschool) didirikan sebagai sekolah lanjutan resmi untuk menjadi guru di zaman Kolonial Belanda dibangun pada tahun 1876, seiring waktu di tahun 1946 menjadi Hoofdkwartier van de Koninklijke Marine atau Markas Angkatan Laut Kerajaan Belanda. Di era Orde Lama, sebagai Markas Komando Mandala dibentuk oleh Soekarno pada tanggal 2 Januari 1962 dalam rangka operasi Pembebasan Irian Barat yang terletak di Hospitaalweg (kini Jl. Jenderal Soedirman).Di era Orde Baru, sebagai Markas Komando Wilayah Pertahanan (Kowilhan IV/Sulawesi dan Kowilhan III/Sulawesi-Kalimantan), kemudian menjadi markas Kepolisian Daerah Sulawesi Selatan dan Tenggara (Polda Sulselra). dan pada tahun 1993, bangunan lamanya dirobohkan untuk dijadikan monumen. Peletakkan batu pertama kali dilakukan oleh Menko Polkam saat itu yakni Soesilo Soedarman di tanggal 11 Januari 1994. Hingga selesai pada tanggal 19 Desember 1995 monumen ini diresmikan oleh Presiden Soeharto secara langsung pada masa itu.
+          <br><br>
+          Masalah Irian Barat sebagai pangkal sengketa antara Indonesia dan Belanda secara resmi baru timbul pada akhir tahun 1949. Pada masa itu justru sedang dilakukan usaha-usaha yang giat untuk mencarikan jalan ke luar melalui perundingan guna memecahkan sengketa politik antara kedua belah pihak, dengan perantaraan badan internasional - Perserikatan Bangsa-Bangsa. Monumen Mandala dibangun pada tahun 1994 dan selesai pada tanggal 19 Desember 1995 untuk mengenang jasa pahlawan dalam membebaskan Irian Barat dari tangan para penjajah sekaligus hadiah atas jasa mantan Presiden Indonesia yang ke-2 yaitu Soeharto. Mantan presiden kedua Indonesia itu juga merupakan Panglima Komando Mandala yang berperan penting dalam mengatur strategi untuk membebaskan Irian Barat. Seperti diketahui, kendati sudah memproklamirkan kemerdekaan hampir 20 tahun namun Belanda masih menguasai wilayah Irian Barat. Sejak operasi pembebasan irian Barat berhasil, Irian Barat pun kembali ke pangkuan ibu pertiwi.
+        </p>
+      </div>
+    </div>
+  <!-- end of landmark -->
+  </div>
+
+  <!-- list budaya -->
+  <div class="container my-5">
+    <h2 class="fw-bold mb-4 px-5" id="budaya">Budaya Jawa Tengah</h2>
+    <hr>
+    <div class="container my-5 vh-100 overflow-auto" id="list-budaya-dekstop">
+      <div class="row  m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Senjata Badik</h3>
+          <p class="article pt-4 text-justify">
+            Pada masa lalu, persoalan antar pria Bugis atau Makassar diselesaikan secara adat menggunakan badik dan selembar sarung: “Sigajang Laleng Lipa”, dua pria baku tikam dalam sarung. Dua pria saling adu kemampuan menggunakan badik dan harus memiliki ilmu kebal. Yang berhasil keluar dari sarung dalam keadaan selamat akan menjadi pemenangnya. dalam mempertahankan harga diri, dan melindungi dirinya.
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/Badik.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
           </div>
         </div>
       </div>
-      <div class="row mx-5 disable" id="container-feedback">
-        <form >
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+      <div class="row  m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Baju Adat Pokko</h3>
+          <p class="article pt-4 text-justify">
+            Warna dari Baju Pokko berupa kuning, merah, dan putih. Warna ini lah, yang menjadi ciri khas dari Baju Pokko Sulawesi Selatan. Baju Pokko ini, umumnya akan dikenakan bersamaan dengan berbagai perhiasan  berbagai manik. Manik – manik akan dikenakan pada dada, ditambah dengan gelang dan ikat kepala maupun ikat pinggang yang disebut dengan kandure.
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/Pokko.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
           </div>
-          <div class="mb-3">
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder" style="height: 100px"></textarea>
-              <label for="feedback-placeholder">Comments</label>
+        </div>
+      </div>
+      <div class="row  m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Coto Makassar</h3>
+          <p class="article pt-4 text-justify">
+            Coto Makassar sendiri hadir ketika Islam masuk pertama kali di Sulawesi Selatan pada 1500 masehi lalu. Tepatnya di sebuah daerah di antara perbatasan Kabupaten Takalar dan Gowa di Sulsel. Di sana terdapat kerajaan kecil yang bernama Bajeng. Di kerajaan itu ada seorang juru masak yang sering dipanggil Toak yang sangat suka berkreasi dengan berbagai jenis masakan. Kala itu, belum ada daging sapi, hanya terdapat daging Kerbau. Jadi setiap harinya raja-raja diberi sajian daging tersebut.
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/coto makassar.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
+          </div>
+        </div>
+      </div>
+      <div class="row  m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Rumah Tongkongan</h3>
+          <p class="article pt-4 text-justify">
+            Tongkonan berarti "duduk", "belasungkawa". Catatan sejarah lain mengatakan Tongkonan adalah tempat duduk dan berkumpulnya para leluhur. Dikisahkan, dahulu para bangsawan berkumpul dan duduk dalam Tongkonan untuk berdiskusi. Tongkonan juga menjadi tempat pusat pemerintah, kekuasaan adat dan pusat budaya masyarakat suku Toraja.
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/Tongkongan.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
+          </div>
+        </div>
+      </div>
+      <div class="row  mx-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">Suku Toraja</h3>
+          <p class="article pt-4 text-justify">
+            Disebutkan juga bahwa masyarakat yang mendiami Tana Toraja ini adalah hasil percampuran dari penduduk lokal yang memang tinggal di dataran tinggi Sulawesi Selatan dengan para imigran dari Teluk Tongkin-Yunnan, Cina Selatan. Mereka berlabuh di sekitar hulu sungai, yakni daerah Enrekang, kemudian membangun permukiman.
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/toraja.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-5 vh-100 overflow-auto d-none" id="list-budaya-mobile">
+      <div class="row d-flex flex-column justify-content-center">
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/Badik.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Senjata Badik</h5>
+              <p class="card-text">Pada masa lalu, persoalan antar pria Bugis atau Makassar diselesaikan secara adat menggunakan badik dan selembar sarung: “Sigajang Laleng Lipa”, dua pria baku tikam dalam sarung. Dua pria saling adu kemampuan menggunakan badik dan harus memiliki ilmu kebal. Yang berhasil keluar dari sarung dalam keadaan selamat akan menjadi pemenangnya.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
             </div>
           </div>
-          <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
-        </form>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/Pokko.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Baju Adat Pokko</h5>
+              <p class="card-text">Warna dari Baju Pokko berupa kuning, merah, dan putih. Warna ini lah, yang menjadi ciri khas dari Baju Pokko Sulawesi Selatan. Baju Pokko ini, umumnya akan dikenakan bersamaan dengan berbagai perhiasan berbagai manik.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/coto makassar.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Coto Makkasar</h5>
+              <p class="card-text">Coto Makassar sendiri hadir ketika Islam masuk pertama kali di Sulawesi Selatan pada 1500 masehi lalu. Tepatnya di sebuah daerah di antara perbatasan Kabupaten Takalar dan Gowa di Sulsel.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/Tongkongan.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Rumah Adat Tongkongan</h5>
+              <p class="card-text">Tongkonan berarti "duduk", "belasungkawa". Catatan sejarah lain mengatakan Tongkonan adalah tempat duduk dan berkumpulnya para leluhur. Dikisahkan, dahulu para bangsawan berkumpul dan duduk dalam Tongkonan untuk berdiskusi.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/toraja.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Suku Toraja</h5>
+              <p class="card-text">Disebutkan juga bahwa masyarakat yang mendiami Tana Toraja ini adalah hasil percampuran dari penduduk lokal yang memang tinggal di dataran tinggi Sulawesi Selatan dengan para imigran dari Teluk Tongkin-Yunnan, Cina Selatan.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/MaBadong.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tarian Ma'Badong</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/Sutra.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tenun Sutra</h5>
+              <p class="card-text">Dalam ritual Ma' Badong terdapat beberapa makna yang diantaranya solidaritas dan makna religius. Masyarakat Toraja percaya akan adanya Tuhan sebagai pemberi kehidupan.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/Anyanpa.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Upacara Annyampa'Sanro</h5>
+              <p class="card-text">rang Makassar, Bugis, dan Toraja mengenal upacara yang berhubungan dengan daur hidup dan yang umum. Misalnya, pada masa kehamilan orang Makassar mengenal ritual adat yang dinamakan dengan annyampa’ sanro (mencari dukun bersalin) dan a’bayu minnya’ (pada usia kandungan tujuh bulan). Begitu pula orang Bugis mengenal makkatenni sanro, mappanre to mangideng, dan maccera wettang yang prinsipnya sama dengan yang diselenggarakan orang Makassar.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+  <!-- end of list budaya -->
 
-    <div class="container" id="footer">
-      <div class="row">
-        <img src=".. " class="img-thumbnail" alt="...">
-        <br>
-        <p>@2022 Pusataka Budaya, All Right Reserved</p>
+  <!-- about us -->
+  <div class="container" id="about-us">
+    <div class="row justify-content-center my-5 pt-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-5">
+          <div class="card card-content">
+            <div class="card-body">
+              <p>Apakah artikel ini membantu?</p>
+              <div class="reaction mb-2">
+                <a onclick="handleEmoji(this)">
+                  😒
+                </a>
+                <a onclick="handleEmoji(this)">
+                  😑
+                </a>
+                <a onclick="handleEmoji(this)">
+                  🙂
+                </a>
+                <a onclick="handleEmoji(this)">
+                  😀
+                </a>
+              </div>
+              <div class="text-center" id="container-feedback">
+                <form class="">
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control form" id="name" aria-describedby="nameHelp">
+                      <label for="name">Full Name</label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control form" placeholder="Leave a feedback here" id="feedback-placeholder"
+                        style="height: 100px"></textarea>
+                      <label for="feedback-placeholder">Comments</label>
+                    </div>
+                  </div>
+                  <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-5">
+          <div class="card mb-2 card-content">
+            <div class="card-body">
+              <h5>Contact Us</h5>
+              <p>Hubungi kami sekarang!</p>
+              <div id="container-feedback">
+                <form class="">
+                  <div class="mb-3">
+                    <div class="form">
+                      <label for="name">Full Name</label>
+                      <input type="text" class="form-control form" id="name" aria-describedby="nameHelp">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form">
+                      <label for="email">Email Address</label>
+                      <input type="email" class="form-control form" id="email" aria-describedby="email">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control form" placeholder="Leave a feedback here" id="feedback-placeholder"
+                        style="height: 100px"></textarea>
+                      <label for="feedback-placeholder">Comments</label>
+                    </div>
+                  </div>
+                  <a onclick="handleFeedback()" class="btn btn-primary shadow-lg" id="send-feedback">Submit</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js" integrity="sha256-qtSu/7zFd1zx2GaGN7yAuWyIXuxC7IVrfSpncRDxUII=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="../assets/js/script.js"></script>
-    <script>
-      AOS.init();
-      // var splide = new Splide( '.splide', {
-      //   type   : 'loop',
-      //   perPage: 3,
-      //   perMove: 1,
-      // } );
+  
+  <footer class="mt-auto text-white fw-bold" style="background-color: #475284;">
+    <div class="p-5 container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
+          <img src="./assets/img/logo-light.png" alt="logo pustaka budaya" width="100px">
+          <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
+        </div>
+        <div class="col-lg-4 mb-4">
+        </div>
+        <div class="col-lg-4 mb-4 mx-auto">
+          <h5>Navigasi</h5>
+          <p><a href="./" class="text-decoration-none">Home</a></p>
+          <p><a href="#" class="text-decoration-none">Provinsi</a></p>
+          <p><a href="../../index.html#tentangkami" class="text-decoration-none">About us</a></p>
+          <p><a href="#" class="text-decoration-none">Contact</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark p-2 text-white d-flex justify-content-around">
+      <p class="fw-lighter ">Build with ❤️ using 
+        <a href="https://getbootstrap.com/" class="text-white">
+          Bootstrap
+        </a>
+      </p>
+    </div>
+  </footer>
+      
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="../assets/splide-4.0.7/dist/js/splide.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+      <script src="./assets/js/script.js"></script>
+      <script>
+        AOS.init();
+        document.addEventListener( 'DOMContentLoaded', () => {
+          
+        const btnSearch = document.getElementById('btn-search');
+          try {
+            let main = new Splide( '#main-carousel', {
+              type      : 'fade',
+              rewind    : true,
+              pagination: false,
+              arrows    : true,
+            } );
 
-      // splide.mount();
-    </script>
-  </body>
+            let thumbnails = new Splide( '#thumbnail-carousel', {
+              fixedWidth  : 100,
+              fixedHeight : 60,
+              gap         : 10,
+              rewind      : true,
+              pagination  : false,
+              isNavigation: true,
+              breakpoints : {
+                600: {
+                  fixedWidth : 60,
+                  fixedHeight: 44,
+                },
+              },
+            } );
+
+            main.sync( thumbnails );
+            main.mount();
+            thumbnails.mount();
+          } catch (error) {
+            console.log(error.message)
+          }
+
+          // search modal
+          btnSearch.addEventListener('click', () =>{
+            $('.navbar-toggler').click()
+            $("#search-modal").modal('show');
+            $('.search-result').empty();
+            document.querySelector("#search-container").value = ''
+          })
+
+
+          $('#search-modal').on('click', () =>{
+            document.querySelector("#search-container").addEventListener('input', (e) =>{
+              let searchValue = e.target.value.toLowerCase();
+              let paragrafContainer = document.querySelectorAll('p');
+              
+              
+              document.querySelector('input').addEventListener('keypress', (e) => {
+                if(e.key == 'Enter'){
+                  // reset result container if used before
+                  $('.search-result').empty();
+
+                  let i = 0;
+                  paragrafContainer.forEach(p =>{
+                    p.innerHTML.split(' ').forEach(el => {
+                      if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
+                        let searchId = `searchid-${i}`
+                        p.parentElement.parentElement.setAttribute('id', searchId);
+
+                        let content = p.innerHTML
+                        if(content.length > 40){
+                          content = content.slice(0 , 40)
+                        }
+                        $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a></span>`)
+                        $('.search-result').append('<hr>')
+                        i++;
+                      }
+                    });
+                  })
+
+                }
+              })
+
+            }, true)
+          })
+
+          const closeModal = () => {
+            $("#search-modal").modal('hide');
+          }
+
+          window.onkeydown = keydown;
+
+          function keydown(e){
+            if (!e) 
+            e = event;
+            if (e.ctrlKey && e.keyCode==75){ //CTRL+K
+              e.preventDefault();
+              $("#search-modal").modal('show');
+              setTimeout(() => {
+                  $('#search-container').focus();
+              }, 500);
+            }
+          }
+
+          const bukaModal = () => {
+            document.getElementById("modals").style.display = "block";
+            document.querySelector('nav').classList.toggle('d-none')
+            document.querySelector('#go-top').classList.toggle('d-none')
+          }
+
+          const tutupModal = () => {
+            document.getElementById("modals").style.display = "none";
+            document.querySelector('nav').classList.toggle('d-none')
+            document.querySelector('#go-top').classList.toggle('d-none')
+          }
+          
+        })
+      </script>
+</body>
+
 </html>

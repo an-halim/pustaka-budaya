@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0dcaf0" />
-  <link rel="shortcut icon" href="./assets/img/logo-light.png" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0dcaf0">  
+  <link rel="shortcut icon" href="./assets/img/logo-light.png" type="image/x-icon">
   <title>Pustaka Budaya</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css"
-    integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../assets/splide-4.0.7/dist/css/splide.min.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+    integrity="sha256-6YrKt7vMU9e4bwtlblASqhvvEt4/0JEQJ/zyWOFKnaM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/splide-4.0.7/dist/css/splide.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body class="bg-white">
@@ -900,14 +900,95 @@
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="../assets/splide-4.0.7/dist/js/splide.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-  </script>
-  <script src="./assets/js/script.js"></script>
-  <script>
-    AOS.init();
-  </script>
+      <script src="../assets/splide-4.0.7/dist/js/splide.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+      <script src="./assets/js/script.js"></script>
+      <script>
+        AOS.init();
+        document.addEventListener( 'DOMContentLoaded', () => {
+          
+          try {
+            let main = new Splide( '#main-carousel', {
+              type      : 'fade',
+              rewind    : true,
+              pagination: false,
+              arrows    : true,
+            } );
+
+            let thumbnails = new Splide( '#thumbnail-carousel', {
+              fixedWidth  : 100,
+              fixedHeight : 60,
+              gap         : 10,
+              rewind      : true,
+              pagination  : false,
+              isNavigation: true,
+              breakpoints : {
+                600: {
+                  fixedWidth : 60,
+                  fixedHeight: 44,
+                },
+              },
+            } );
+
+            main.sync( thumbnails );
+            main.mount();
+            thumbnails.mount();
+          } catch (error) {
+            console.log(error.message)
+          }
+
+          const btnSearch = document.getElementById('btn-search');
+
+          // search modal
+          btnSearch.addEventListener('click', () =>{
+            $('.navbar-toggler').click()
+            $("#search-modal").modal('show');
+            $('.search-result').empty();
+            document.querySelector("#search-container").value = ''
+          })
+
+
+          $('#search-modal').on('click', () =>{
+            document.querySelector("#search-container").addEventListener('input', (e) =>{
+              let searchValue = e.target.value.toLowerCase();
+              let paragrafContainer = document.querySelectorAll('p');
+              
+              
+              document.querySelector('input').addEventListener('keypress', (e) => {
+                if(e.key == 'Enter'){
+                  // reset result container if used before
+                  $('.search-result').empty();
+
+                  let i = 0;
+                  paragrafContainer.forEach(p =>{
+                    p.innerHTML.split(' ').forEach(el => {
+                      if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
+                        let searchId = `searchid-${i}`
+                        p.parentElement.parentElement.setAttribute('id', searchId);
+
+                        let content = p.innerHTML
+                        if(content.length > 40){
+                          content = content.slice(0 , 40)
+                        }
+                        $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a></span>`)
+                        $('.search-result').append('<hr>')
+                        i++;
+                      }
+                    });
+                  })
+
+                }
+              })
+
+            }, true)
+          })
+
+          
+          
+        })
+      </script>
 </body>
 
 </html>

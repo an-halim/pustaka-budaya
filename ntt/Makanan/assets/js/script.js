@@ -134,7 +134,7 @@ const handleEmoji = (event) => {
 
 // go top
 const scrollFunction = () => {
-  const goTOp = document.getElementById("go-top");
+  const goTOp = document.getElementById("myBtn");
   
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
     goTOp.style.display = "block";
@@ -152,11 +152,11 @@ const topFunction = () => {
 
 document.querySelector('.main-img').addEventListener('mouseover', () => {
   document.querySelector('.share-to').classList.remove('disable')
+  setTimeout(() => {
+    document.querySelector('.share-to').classList.add('disable')
+  }, 5000)
 })
 
-document.querySelector('.main-img').addEventListener('mouseleave', () => {
-  document.querySelector('.share-to').classList.add('disable')
-})
 
 $(document).ready(function(){
   // preloader

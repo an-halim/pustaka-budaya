@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="bg-white">
   <!-- preloader -->
   <div class="preloader">
     <div class="loading">
@@ -50,16 +50,16 @@
               Budaya
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdown">
-              <li><a class="dropdown-item" href="./rumah-adat">Rumah Adat</a></li>
-              <li><a class="dropdown-item" href="./pakaian-adat/">Pakaian Adat</a></li>
-              <li><a class="dropdown-item" href="./tari-kecak/">Tari Kecak</a></li>
-              <li><a class="dropdown-item" href="./rindik/">Rindik</a></li>
               <li><a class="dropdown-item" href="./bahasa-daerah/">Bahasa Daerah</a></li>
-              <li><a class="dropdown-item" href="./kapurusa/">Kapurasa</a></li>
-              <li><a class="dropdown-item" href="./perang-pandan/">Perang Pandan</a></li>
-              <li><a class="dropdown-item" href="./nyepi/">Nyepi</a></li>
-              <li><a class="dropdown-item" href="./nama-khas/">Nama Khas Bali</a></li>
+              <li><a class="dropdown-item" href="./kapurusa/">Kapurusa</a></li>
               <li><a class="dropdown-item" href="./lagu-daerah/">Lagu Daerah</a></li>
+              <li><a class="dropdown-item" href="./nama-khas/">Nama Khas</a></li>
+              <li><a class="dropdown-item" href="./nyepi/">Nyepu</a></li>
+              <li><a class="dropdown-item" href="./pakaian-adat/">Pakaian Adat</a></li>
+              <li><a class="dropdown-item" href="./perang-pandan/">Perang Pandan</a></li>
+              <li><a class="dropdown-item" href="./rindik/">Rindik</a></li>
+              <li><a class="dropdown-item" href="./rumah-adat/">Rumah Adat</a></li>
+              <li><a class="dropdown-item" href="./tari-kecak/">Tari Kecak</a></li>
             </ul>
           </li>
           <li class="nav-item mx-2">
@@ -112,10 +112,10 @@
   <!-- home -->
   <div class="container vh-100" id="home" >
     <div class="row align-items-center justify-content-center">
-      <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center">
-        <h3 class="fw-semibold">JAWA TENGAH</h3>
+      <div class="col-md-6 position-absolute top-50 start-50 translate-middle text-center" data-aos="fade-up">
+        <h3 class="fw-semibold">Bali</h3>
         <p>
-          Jawa Tengah adalah sebuah provinsi Indonesia yang terletak di bagian tengah Pulau Jawa. Ibu kotanya adalah Semarang. Provinsi ini berbatasan dengan Provinsi Jawa Barat di sebelah barat, Samudra Hindia dan Daerah Istimewa Yogyakarta di sebelah selatan, Jawa Timur di sebelah timur, dan Laut Jawa di sebelah
+          Bali dikenal dengan sebutan Pulau Dewata. Terletak di antara Pulau Jawa dan Pulau Lombok. Bali sebelumnya merupakan bagian dari Provinsi Sunda Kecil bersama dengan Lombok, Sumbawa, Sumba, Flores, dan Timor. Pada tahun 1958 Bali resmi menjadi provinsi sendiri dengan ibukota Singaraja. Kemudian pada tahun 1960 berpindah ke Denpasar. Provinsi Bali terdiri dari Pulau Bali dan pulau-pulau kecil di sekitarnya antara lain Nusa Penida, Nusa Lembongan, Nusa Ceningan, dan Pulau Serangan. Secara keseluruhan Bali memiliki sekitar 85 pulau, termasuk yang tidak berpenghuni.
         </p>
         <a href="#galery" class="btn btn-lg btn-secondary fw-bold border-white bg-primary">Jelajah Sekarang!</a>
       </div>
@@ -124,24 +124,33 @@
   <!-- end home -->
 
   <!-- budaya -->
-  <div class="container-fluid vh-100" style="background-color: #475284;">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 col-md-8 col-sm-8">
-        <div class="text-center vh-100" id="galery">
-          <h1 class="my-4 text-white">Galery</h1>
-
+  <div class="container-fluid vh-100 py-5" id="galery" style="background-color: #475284;">
+    <div class="row justify-content-center align-content-center" >
+      <div class="col-lg-8 col-md-8 col-sm-8 mx-5">
+        <h1 class="my-4 text-white text-center fw-semibold py-5" >Galery</h1>
+        <div class="row py-4 mx-5">
+          <div class="col" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="400">
+            <img src="../assets/img/rumah-adat.png" alt="rumah-adat" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 300px">
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="450">
+            <img src="../assets/img/pakaian-adat.jpg" alt="pakaian-adat" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 3 00px">
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="500">
+            <img src="../assets/img/perang-pandan.jpg" alt="perang-pandan" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 3 00px">
+          </div>
+          <div class="col hide-mobile" onclick="bukaModal()" style="cursor: pointer;" data-aos="fade-up" data-aos-delay="550">
+            <img src="../assets/img/tari-kecak.jpg" alt="tari-kecak" class="img-fluid rounded" style="height: 400px; object-fit:cover; width: 300px">
+          </div>
         </div>
+        <span class="text-white ms-5" style="cursor: pointer;" onclick="bukaModal()" data-aos="zoom-out" data-aos-delay="400">
+          Lihat lainnya <i class="bi bi-arrow-right"></i>
+        </span>
       </div>
     </div>
-    <button type="button" class="btn btn-primary" onclick="bukaModal()">
-      Test it
-    </button>
   </div>
   <!-- end budaya -->
 
   <!-- Light Box -->
-  <!-- Button trigger modal -->
-
   <!-- Modal -->
   <div class="modalku bg-black bg-opacity-75" id="modals">
     <span class="close cursor" onclick="tutupModal()">&times;</span>
@@ -150,13 +159,34 @@
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide main__splide_image">
-              <img src="../assets/img/hanacaraka.jpg" alt="" class="img-fluid rounded">
+              <img src="../assets/img/bahasa-daerah.jpg" alt="" class="img-fluid rounded">
             </li>
             <li class="splide__slide main__splide_image">
-              <img src="../assets/img/batik.jpg" alt="" class="img-fluid rounded">
+              <img src="../assets/img/kapurusa.jpg" alt="" class="img-fluid rounded">
             </li>
             <li class="splide__slide main__splide_image">
-              <img src="../assets/img/joglo.jpg" alt="" class="img-fluid rounded">
+              <img src="../assets/img/lagu-daerah.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/nama-khas.png" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/nyepi.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/pakaian-adat.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/perang-pandan.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/rindik.jpg" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/rumah-adat.png" alt="" class="img-fluid rounded">
+            </li>
+            <li class="splide__slide main__splide_image">
+              <img src="../assets/img/tari-kecak.jpg" alt="" class="img-fluid rounded">
             </li>
           </ul>
         </div>
@@ -170,14 +200,31 @@
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide splide__thumbnail">
-              <img src="../assets/img/hanacaraka.jpg" alt="" class="img-fluid">
+              <img src="../assets/img/bahasa-daerah.jpg" alt="" class="img-fluid">
             </li>
             <li class="splide__slide splide__thumbnail">
-              <img src="../assets/img/batik.jpg" alt="" class="img-fluid">
+              <img src="../assets/img/kapurusa.jpg" alt="" class="img-fluid">
             </li>
             <li class="splide__slide splide__thumbnail">
-              <img src="../assets/img/joglo.jpg" alt="" class="img-fluid">
+              <img src="../assets/img/lagu-daerah.jpg" alt="" class="img-fluid">
             </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/nama-khas.png" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/nyepi.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/pakaian-adat.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/perang-pandan.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/rindik.jpg" alt="" class="img-fluid">
+            </li>
+            <li class="splide__slide splide__thumbnail">
+              <img src="../assets/img/rumah-adat.png" alt="" class="img-fluid">
           </ul>
         </div>
       </section>      
@@ -191,72 +238,321 @@
   </button>
 
   <!-- container content list -->
-  <div class="container mt-5" >
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <a href="./budaya/" class="text-decoration-none text-black">
-          <div class="card mb-2 card-content" style="height: 10rem;">
-            <div class="card-body bg-info rounded">
-            </div>
-            <h5 class="bg-white p-2">Budaya</h5>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-6">
-        <a href="#" class="text-decoration-none text-black">
-          <div class="card mb-2 card-content" style="height: 10rem;">
-            <div class="card-body bg-info rounded">
-            </div>
-            <h5 class="bg-white p-2">Geografi</h5>
-          </div>
-        </a>
-      </div>
+  <div class="container my-5 vh-auto" >
+    <div class="text-center pt-5">
+      <h2 class="fw-bold"  data-aos="fade-up" data-aos-dalay="200">KONTEN</h2>
+      <p class="pb-5 article text-center" data-aos="fade-up" data-aos-dalay="350">Beberapa content unggulan kami</p>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <a href="#" class="text-decoration-none text-black">
-          <div class="card mb-2 card-content" style="height: 10rem;">
-            <div class="card-body bg-info rounded">
-            </div>
-            <h5 class="bg-white p-2">Sejarah</h5>
+    <div class="row align-content-center pt-4">
+      <div class="col-10 mx-auto">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 mb-2" data-aos="zoom-in-up" data-aos-dalay="500">
+            <a href="#budaya" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/budaya.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
+                  </div>
+                  <div class="col">
+                    <h5 class="fw-bold text-start">BUDAYA</h5>
+                    <p  class="text-start">Beberapa budaya yang kami angkat</p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-      <div class="col-lg-6">
-        <a href="#" class="text-decoration-none text-black">
-          <div class="card mb-2 card-content" style="height: 10rem;">
-            <div class="card-body bg-info rounded">
-            </div>
-            <h5 class="bg-white p-2">Landmark</h5>
+          <div class="col-lg-6 mb-2"  >
+            <a href="#geografi" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="600">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/geografi.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
+                  </div>
+                  <div class="col ">
+                    <h5 class="fw-bold text-start">GEOGRAFI</h5>
+                    <p  class="text-start">Kondisi geografis pada provinsi</p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- budaya -->
-  <div class="container mt-5 vh-100">
-    <h2 class="fw-bold mb-4">Budaya Jawa Tengah</h2>
-    <div class="container my-5">
-      <div class="row">
-        <div class="col col-lg-12">
-          <h3 class="fw-bold">BOROBUDUR</h3>
-          <p class="fw-semibold py-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam dolores assumenda maxime repudiandae similique aspernatur, reiciendis illo nobis delectus doloribus architecto sit obcaecati ad ipsa nulla perferendis amet nesciunt accusamus eveniet quaerat itaque, modi accusantium. Quibusdam velit veritatis est?
-          </p>
-          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
-          <div class="bg text-end">
-            <img src="./assets/img/borobudur.jpg" alt="" class="text-end">
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6"  >
+            <a href="#sejarah" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="700">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/sejarah.png" class="ms-4 me-0" width="150px" height="150px"  alt="" srcset="">
+                  </div>
+                  <div class="col ">
+                    <h5 class="fw-bold text-start">SEJARAH</h5>
+                    <p  class="text-start">Sejarah lahirnya atau terciptanya</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6"  >
+            <a href="#landmark" class="text-decoration-none text-black">
+              <div class="card shadow-sm mb-2 card-content text-center" data-aos="zoom-in-up" data-aos-dalay="800">
+                <div class="row p-4">
+                  <div class="col">
+                    <img src="../assets/img/landmark.png" class="ms-4 me-0" width="150px" height="150px" alt="" srcset="">
+                  </div>
+                  <div class="col ">
+                    <h5 class="fw-bold text-start">LANDMARK</h5>
+                    <p  class="text-start">Landmark atau markah pada provinsi</p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- end of budaya -->
+  
+  <div class="p-4 text-white main-content" style="background-color: #475284;">  
+    <!-- sejarah -->
+    <div class="container mt-4 mb-5 px-lg-5" id="sejarah">
+      <h2 class="fw-bold">SEJARAH</h2>
+      <div class="img-main text-center">
+        <img src="../assets/img/borobudur.jpg" alt="borobudur" class="img-fluid rounded">
+      </div>
+
+      <div class="article-main mt-4">
+        <p class="article">
+          Bali telah dihuni oleh bangsa Austronesia sekitar tahun 2000 sebelum Masehi yang bermigrasi dan berasal dari Taiwan melalui Maritime Asia Tenggara. Budaya dan bahasa dari Orang Bali demikian erat kaitannya dengan orang-orang dari kepulauan Indonesia, Malaysia, Filipina, dan Oseania. Alat-alat batu yang berasal dari saat itu telah ditemukan di dekat desa Cekik di sebelah barat pulau Bali.
+          Pada masa Bali kuno, terdapat sembilan sekte Hindu yaitu Pasupata, Bhairawa, Siwa Shidanta, Waisnawa, Bodha, Brahma, Resi, Sora dan Ganapatya. Setiap sekte menghormati dewa tertentu sebagai Ketuhanan pribadinya. Budaya Bali sangat dipengaruhi oleh budaya India, Cina, dan khususnya Hindu, mulai sekitar abad 1 Masehi.
+          Nama Bali Dwipa (“pulau Bali”) telah ditemukan dari berbagai prasasti, termasuk pilar prasasti Blanjong yang ditulis oleh Sri Kesari Warmadewa pada tahun 914 Masehi yang menyebutkan “Walidwipa”.
+          Pada masa itu sistem irigasi Subak yang kompleks sudah dikembangkan untuk menanam padi. Beberapa tradisi keagamaan dan budaya masih ada sampai saat ini dan dapat ditelusuri kembali pada masa itu. Kerajaan Hindu Majapahit (1293-1520 Masehi) di Jawa Timur mendirikan sebuah koloni di Bali pada tahun 1343. Ketika masa kejayaan sudah menurun, ada eksodus besar-besaran dari intelektual, seniman, pendeta, dan musisi dari Jawa ke Bali pada abad ke-15. </p>
+      </div>
+    </div>
+    <!-- end of sejarah -->
+
+    <!-- geografi -->
+    <div class="container mt-4 mb-5 px-lg-5" id="geografi">
+      <h2 class="fw-bold">GEOGRAFIS</h2>
+      <div class="img-main text-center">
+        <img src="../assets/img/peta prov. jateng.jpg" alt="borobudur" class="img-fluid rounded">
+      </div>
+
+      <div class="article-main mt-4">
+        <p class="article">
+          Relief
+
+          Menurut tingkat kemiringan lahan di Jawa Tengah, 38% lahan memiliki kemiringan 0–2%, 31% lahan memiliki kemiringan 2–15%, 19% lahan memiliki kemiringan 15–40%, dan sisanya 12% lahan memiliki kemiringan lebih dari 40%.
+          Kawasan pantai utara Jawa Tengah memiliki dataran rendah yang sempit. Di kawasan Brebes selebar 40 km dari pantai, dan di Semarang hanya selebar 4 km. Dataran ini bersambung dengan depresi Semarang-Rembang di timur. Gunung Muria pada akhir Zaman Es (sekitar 10.000 tahun SM) merupakan pulau terpisah dari Jawa, yang akhirnya menyatu karena terjadi endapan aluvial dari sungai-sungai yang mengalir. Kota Demak semasa Kesultanan Demak (abad ke-16 Masehi) berada di tepi laut dan menjadi tempat berlabuhnya kapal. Proses sedimentasi ini sampai sekarang masih berlangsung di pantai Semarang.
+          Di selatan kawasan tersebut terdapat Pegunungan Kapur Utara dan Pegunungan Kendeng, yakni pegunungan kapur yang membentang dari sebelah timur Semarang mulai dari ujung barat daya Kota Pati kemudian ke timur hingga perbatasan Lamongan dan Bojonegoro (Jawa Timur).
+          Rangkaian utama pegunungan di Jawa Tengah adalah Pegunungan Serayu Utara dan Serayu Selatan. Rangkaian Pegunungan Serayu Utara membentuk rantai pegunungan yang menghubungkan rangkaian Bogor di Jawa Barat dengan Pegunungan Kendeng di timur. Lebar rangkaian pegunungan ini sekitar 30–50 km; di ujung baratnya terdapat Gunung Slamet dan bagian timur merupakan Dataran Tinggi Dieng dengan puncak-puncaknya Gunung Parahu dan Gunung Ungaran. Antara rangkaian Pegunungan Serayu Utara dan Pegunungan Serayu Selatan dipisahkan oleh Depresi Serayu yang membentang dari Majenang (Kabupaten Cilacap), Purwokerto, hingga Wonosobo. Sebelah timur depresi ini terdapat gunung berapi Sindoro dan Sumbing, dan sebelah timurnya lagi (kawasan Magelang dan Temanggung ) merupakan lanjutan depresi yang membatasi Gunung Merapi dan Gunung Merbabu.
+          Pegunungan Serayu Selatan merupakan bagian dari Cekungan Jawa Tengah Selatan yang terletak di bagian selatan provinsi Jawa Tengah. Mandala ini merupakan geoantiklin yang membentang dari barat ke timur sepanjang 100 kilometer dan terbagi menjadi dua bagian yang dipisahkan oleh lembah Jatilawang yaitu bagian barat dan timur. Bagian barat dibentuk oleh Gunung Kabanaran (360 m) dan bisa dideskripsikan mempunyai elevasi yang sama dengan Zona Depresi Bandung di Jawa Barat ataupun sebagai elemen struktural baru di Jawa Tengah. Bagian ini dipisahkan dari Zona Bogor oleh Depresi Majenang.
+          Bagian timur dibangun oleh antiklin Ajibarang (narrow anticline) yang dipotong oleh aliran Sungai Serayu. Pada timur Banyumas, antiklin tersebut berkembang menjadi antiklinorium dengan lebar mencapai 30 km pada daerah Lukulo (selatan Banjarnegara-Midangan 1043 m) atau sering disebut tinggian Kebumen (Kebumen High). Pada bagian paling ujung timur Mandala Pegunungan Serayu Selatan dibentuk oleh kubah Pegunungan Kulonprogo (1022 m), yang terletak di antara Purworejo dan Sungai Progo.
+        </p>
+      </div>
+    </div>
+    <!-- end of geografi -->
+
+    <!-- landmark -->
+    <div class="container mt-4 mb-5 px-lg-5" id="landmark">
+      <h2 class="fw-bold">LANDMARK</h2>
+      <div class="img-main text-center">
+        <img src="../assets/img/borobudur.jpg" alt="borobudur" class="img-fluid rounded">
+      </div>
+
+      <div class="article-main mt-4">
+        <p class="article">
+          Bagi Kalimantan Selatan, tanggal 1 Januari 1957 benar-benar merupakan momentum penting dalam sejarahnya, mengingat pada tanggal itu Kalimantan Selatan resmi menjadi Provinsi yang berdiri sendiri di Pulau Kalimantan, bersama-sama dengan Provinsi Kalimantan Timur dan Provinsi Kalimantan Barat. Sebelumnya ketiga Provinsi tersebut berada dalam satu Provinsi, yaitu Provinsi Kalimantan. 
+          Sebelum menjadi Provinsi yang berdiri sendiri, sesungguhnya Kalimantan Selatan sudah merupakan daerah yang paling menonjol di Pulau Kalimantan, khususnya Kota Banjarmasin yang merupakan pusat kegiatan politik, ekonomi/perdagangan, dan pemerintahan, baik semasa penjajahan maupun pada awal kemerdekaan.
+          Perkembangan kehidupan pemerintahan dan kenegaraan di daerah Kalimantan Selatan sampai dengan permulaan abad 17 masih sangat kabur karena kurangnya data sejarah. Adanya Hikayat Raja-Raja Banjar dan Hikayat Kotawaringin tidak cukup memberikan gambaran yang pasti mengenai keberadaan Kerajaan-kerajaan tersebut.
+          Namun demikian berdasarkan kedua hikayat tersebut dapat diketahui bahwa pada abad 17 salah satu tokoh yaitu Pangeran Samudera (cucu Maharaja Sukarama) dengan dibantu para Patih bangkit menentang kekuasaan pedalaman Nagara Daha dan menjadikan Bajarmasin di pinggir Sungai Kwin sebagai pusat pemerintahannya (daerah ini disebut Kampung Kraton).
+          Pemberontakan Pangeran Samudera tersebut merupakan pembuka jaman baru dalam sejarah Kalimantan Selatan sekaligus menjadi titik balik dimulainya periode Islam dan berakhirnya jaman Hindu.  Sebab dialah yang menjadi cikal bakal Islam Banjar dan pendiri Kerajaan Banjar.
+          Dalam perkembangan sejarah berikutnya pada Tahun 1859 seorang Bangsawan Banjar yaitu Pangeran Antasari mengerahkan rakyat Kalimantan Selatan untuk melakukan perlawanan terhadap kaum kolonialisme Belanda meskipun akhirnya pada Tahun 1905 perlawanan-perlawanan berhasil ditumpas oleh Belanda.
+          Kelancaran hubungan dengan Pulau Jawa turut mempengaruhi perkembangan di Kalimantan Selatan. Bertumbuhnya pergerakan-pergerakan kebangsaan di Pulau Jawa dengan cepat menyebar kedaerah Kalimantan Selatan, hal ini tercermin dengan dibentuknya wadah-wadah perjuangan pada Tahun 1912 di Banjarmasin seperti berdirinya Cabang-cabang Sarikat Islam di seluruh Kalimantan Selatan. Seiring dengan itu para pemuda Kalimantan terdorong membentuk Organisasi Kepemudaan yaitu Pemuda Marabahan, Barabai dan lain-lain, yang kemudian pada Tahun 1929 terbentuk Persatuan Pemuda Borneo.
+          Organisasi-organisasi perjuangan tersebut merupakan wadah untuk menyebarluaskan kesadaran kebangsaan melawan penjajahan Kolonial Belanda.
+          Pada periode pasca Proklamasi Kemerdekaan merupakan momentum yang paling heroik dalam sejarah Kalimantan Selatan, dimana pada tanggal 16 Oktober 1945 dibentuk Badan Perjuangan yang paling radikal yaitu Badan Pemuda Republik Indonesia Kalimantan (BPRIK) yang dipimpin oleh Hadhariyah M. dan A. Ruslan, namun dalam perjalanan selanjutnya gerakan perjuangan ini mengalami hambatan, terutama dengan disepakatinya perjanjian Linggarjati pada tanggal 15 Nopember 1945. Berdasarkan perjanjian ini ruang gerak pemerintah Republik Indonesia menjadi terbatas hanya pada kawasan Pulau Jawa, Madura dan Sumatera sehingga organisasi-organisasi perjuangan di Kalimantan Selatan kehilangan kontak dengan Jakarta, kendati akhirnya pada tahun 1950 menyusul pembubaran Negara Indonesia Timur yang dibentuk oleh kaum kolonial Belanda, maka Kalimantan Selatan kembali menjadi bagian yang tidak terpisahkan dari Republik Indonesia sampai saat ini.
+        </p>
+      </div>
+    </div>
+  <!-- end of landmark -->
+  </div>
+
+  <!-- list budaya -->
+  <div class="container my-5">
+    <h2 class="fw-bold mb-4 px-5" id="budaya">Budaya Jawa Tengah</h2>
+    <hr>
+    <div class="container my-5 vh-100 overflow-auto" id="list-budaya-dekstop">
+      <div class="row  m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">BOROBUDUR</h3>
+          <p class="article pt-4 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam dolores assumenda maxime repudiandae similique aspernatur, reiciendis illo nobis delectus doloribus architecto sit obcaecati ad ipsa nulla perferendis amet nesciunt accusamus eveniet quaerat itaque, modi accusantium. Quibusdam velit veritatis est?
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/borobudur.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
+          </div>
+        </div>
+      </div>
+      <div class="row  m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">BOROBUDUR</h3>
+          <p class="article pt-4 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam dolores assumenda maxime repudiandae similique aspernatur, reiciendis illo nobis delectus doloribus architecto sit obcaecati ad ipsa nulla perferendis amet nesciunt accusamus eveniet quaerat itaque, modi accusantium. Quibusdam velit veritatis est?
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/borobudur.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
+          </div>
+        </div>
+      </div>
+      <div class="row  m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">BOROBUDUR</h3>
+          <p class="article pt-4 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam dolores assumenda maxime repudiandae similique aspernatur, reiciendis illo nobis delectus doloribus architecto sit obcaecati ad ipsa nulla perferendis amet nesciunt accusamus eveniet quaerat itaque, modi accusantium. Quibusdam velit veritatis est?
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/borobudur.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
+          </div>
+        </div>
+      </div>
+      <div class="row  m-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">BOROBUDUR</h3>
+          <p class="article pt-4 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam dolores assumenda maxime repudiandae similique aspernatur, reiciendis illo nobis delectus doloribus architecto sit obcaecati ad ipsa nulla perferendis amet nesciunt accusamus eveniet quaerat itaque, modi accusantium. Quibusdam velit veritatis est?
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/borobudur.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
+          </div>
+        </div>
+      </div>
+      <div class="row  mx-5">
+        <div class="col col-lg-6">
+          <h3 class="fw-bold">BOROBUDUR</h3>
+          <p class="article pt-4 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam dolores assumenda maxime repudiandae similique aspernatur, reiciendis illo nobis delectus doloribus architecto sit obcaecati ad ipsa nulla perferendis amet nesciunt accusamus eveniet quaerat itaque, modi accusantium. Quibusdam velit veritatis est?
+          </p>
+          <a href="#" class="btn btn-primary">Lihat selengkapnya</a>
+        </div>
+        <div class="col col-lg-6">
+          <div class="text-end">
+            <img src="./assets/img/borobudur.jpg" alt="" class="img-fluid rounded" style="width: 50%; height: 50%;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-5 vh-100 overflow-auto d-none" id="list-budaya-mobile">
+      <div class="row d-flex flex-column justify-content-center">
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 px-5 mb-4">
+          <div class="card">
+            <img src="./assets/img/borobudur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Borobudur</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary btn-outline-light">Lihat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of list budaya -->
 
   <!-- about us -->
   <div class="container" id="about-us">
-    <div class="row justify-content-center my-5">
+    <div class="row justify-content-center my-5 pt-5">
       <div class="row justify-content-center">
         <div class="col-lg-6 mb-5">
           <div class="card card-content">
@@ -280,13 +576,13 @@
                 <form class="">
                   <div class="mb-3">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                      <input type="text" class="form-control form" id="name" aria-describedby="nameHelp">
                       <label for="name">Full Name</label>
                     </div>
                   </div>
                   <div class="mb-3">
                     <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                      <textarea class="form-control form" placeholder="Leave a feedback here" id="feedback-placeholder"
                         style="height: 100px"></textarea>
                       <label for="feedback-placeholder">Comments</label>
                     </div>
@@ -307,18 +603,18 @@
                   <div class="mb-3">
                     <div class="form">
                       <label for="name">Full Name</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                      <input type="text" class="form-control form" id="name" aria-describedby="nameHelp">
                     </div>
                   </div>
                   <div class="mb-3">
                     <div class="form">
                       <label for="email">Email Address</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="email">
+                      <input type="email" class="form-control form" id="email" aria-describedby="email">
                     </div>
                   </div>
                   <div class="mb-3">
                     <div class="form-floating">
-                      <textarea class="form-control" placeholder="Leave a feedback here" id="feedback-placeholder"
+                      <textarea class="form-control form" placeholder="Leave a feedback here" id="feedback-placeholder"
                         style="height: 100px"></textarea>
                       <label for="feedback-placeholder">Comments</label>
                     </div>
@@ -336,15 +632,18 @@
   
   <footer class="mt-auto text-white fw-bold" style="background-color: #475284;">
     <div class="p-5 container">
-      <div class="row">
-        <div class="col-lg-6 mb-4 text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
           <img src="./assets/img/logo-light.png" alt="logo pustaka budaya" width="100px">
           <p>@ 2022 Pustaka Budaya, All rights reserved.</p>
         </div>
-        <div class="col-lg-6 mb-4 text-center">
+        <div class="col-lg-4 mb-4">
+        </div>
+        <div class="col-lg-4 mb-4 mx-auto">
+          <h5>Navigasi</h5>
           <p><a href="./" class="text-decoration-none">Home</a></p>
           <p><a href="#" class="text-decoration-none">Provinsi</a></p>
-          <p><a href="#" class="text-decoration-none">About us</a></p>
+          <p><a href="../../index.html#tentangkami" class="text-decoration-none">About us</a></p>
           <p><a href="#" class="text-decoration-none">Contact</a></p>
         </div>
       </div>
@@ -353,7 +652,7 @@
       <p class="fw-lighter ">Build with ❤️ using 
         <a href="https://getbootstrap.com/" class="text-white">
           Bootstrap
-        </a>.
+        </a>
       </p>
     </div>
   </footer>
@@ -369,112 +668,85 @@
         AOS.init();
         document.addEventListener( 'DOMContentLoaded', () => {
           
-          const btnSearch = document.getElementById('btn-search');
-            try {
-              let main = new Splide( '#main-carousel', {
-                type      : 'fade',
-                rewind    : true,
-                pagination: false,
-                arrows    : true,
-              } );
-  
-              let thumbnails = new Splide( '#thumbnail-carousel', {
-                fixedWidth  : 100,
-                fixedHeight : 60,
-                gap         : 10,
-                rewind      : true,
-                pagination  : false,
-                isNavigation: true,
-                breakpoints : {
-                  600: {
-                    fixedWidth : 60,
-                    fixedHeight: 44,
-                  },
+          try {
+            let main = new Splide( '#main-carousel', {
+              type      : 'fade',
+              rewind    : true,
+              pagination: false,
+              arrows    : true,
+            } );
+
+            let thumbnails = new Splide( '#thumbnail-carousel', {
+              fixedWidth  : 100,
+              fixedHeight : 60,
+              gap         : 10,
+              rewind      : true,
+              pagination  : false,
+              isNavigation: true,
+              breakpoints : {
+                600: {
+                  fixedWidth : 60,
+                  fixedHeight: 44,
                 },
-              } );
-  
-              main.sync( thumbnails );
-              main.mount();
-              thumbnails.mount();
-            } catch (error) {
-              console.log(error.message)
-            }
-  
-            // search modal
-            btnSearch.addEventListener('click', () =>{
-              $('.navbar-toggler').click()
-              $("#search-modal").modal('show');
-              $('.search-result').empty();
-              document.querySelector("#search-container").value = ''
-            })
-  
-  
-            $('#search-modal').on('click', () =>{
-              document.querySelector("#search-container").addEventListener('input', (e) =>{
-                let searchValue = e.target.value.toLowerCase();
-                let paragrafContainer = document.querySelectorAll('p');
-                
-                
-                document.querySelector('input').addEventListener('keypress', (e) => {
-                  if(e.key == 'Enter'){
-                    // reset result container if used before
-                    $('.search-result').empty();
-  
-                    let i = 0;
-                    paragrafContainer.forEach(p =>{
-                      p.innerHTML.split(' ').forEach(el => {
-                        if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
-                          let searchId = `searchid-${i}`
-                          p.parentElement.parentElement.setAttribute('id', searchId);
-  
-                          let content = p.innerHTML
-                          if(content.length > 40){
-                            content = content.slice(0 , 40)
-                          }
-                          $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a></span>`)
-                          $('.search-result').append('<hr>')
-                          i++;
-                        }
-                      });
-                    })
-  
-                  }
-                })
-  
-              }, true)
-            })
-  
-            const closeModal = () => {
-              $("#search-modal").modal('hide');
-            }
-  
-            window.onkeydown = keydown;
-  
-            function keydown(e){
-              if (!e) 
-              e = event;
-              if (e.ctrlKey && e.keyCode==75){ //CTRL+K
-                e.preventDefault();
-                $("#search-modal").modal('show');
-                setTimeout(() => {
-                    $('#search-container').focus();
-                }, 500);
-              }
-            }
-  
-            const bukaModal = () => {
-              document.getElementById("modals").style.display = "block";
-              document.querySelector('nav').classList.toggle('d-none')
-              document.querySelector('#go-top').classList.toggle('d-none')
-            }
-  
-            const tutupModal = () => {
-              document.getElementById("modals").style.display = "none";
-              document.querySelector('nav').classList.toggle('d-none')
-              document.querySelector('#go-top').classList.toggle('d-none')
-            }
-            
+              },
+            } );
+
+            main.sync( thumbnails );
+            main.mount();
+            thumbnails.mount();
+          } catch (error) {
+            console.log(error.message)
+          }
+
+          const btnSearch = document.getElementById('btn-search');
+
+          // search modal
+          btnSearch.addEventListener('click', () =>{
+            $('.navbar-toggler').click()
+            $("#search-modal").modal('show');
+            $('.search-result').empty();
+            document.querySelector("#search-container").value = ''
           })
+
+
+          $('#search-modal').on('click', () =>{
+            document.querySelector("#search-container").addEventListener('input', (e) =>{
+              let searchValue = e.target.value.toLowerCase();
+              let paragrafContainer = document.querySelectorAll('p');
+              
+              
+              document.querySelector('input').addEventListener('keypress', (e) => {
+                if(e.key == 'Enter'){
+                  // reset result container if used before
+                  $('.search-result').empty();
+
+                  let i = 0;
+                  paragrafContainer.forEach(p =>{
+                    p.innerHTML.split(' ').forEach(el => {
+                      if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
+                        let searchId = `searchid-${i}`
+                        p.parentElement.parentElement.setAttribute('id', searchId);
+
+                        let content = p.innerHTML
+                        if(content.length > 40){
+                          content = content.slice(0 , 40)
+                        }
+                        $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a></span>`)
+                        $('.search-result').append('<hr>')
+                        i++;
+                      }
+                    });
+                  })
+
+                }
+              })
+
+            }, true)
+          })
+
+          
+          
+        })
       </script>
 </body>
 

@@ -6,20 +6,15 @@ window.addEventListener('load', () =>{
     let state = localStorage.getItem('theme');
     let body = document.body;
     let nav = document.querySelector('nav')
-    let headColor = document.querySelector("head > meta:nth-child(4)");    
-    let logoDark = document.querySelector('.logo-dark')
-    let logoLight = document.querySelector('.logo-light')
-    
-    let form = document.querySelector('form')
+    let headColor = document.querySelector("head > meta:nth-child(4)");  
+
     if(state == 'dark'){
         body.classList.toggle("dark-mode");
         nav.classList.toggle("dark-mode")
         nav.classList.toggle("navbar-dark")
-        form.classList.toggle("dark-mode")
-        logoDark.classList.add('d-none')
-        logoLight.classList.remove('d-none')
         headColor.content = '#1d1d1d'
         themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+        $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
     }
 })
 
@@ -29,32 +24,30 @@ mobileNav.addEventListener('click', () => {
   navContainer.classList.toggle('bg-transparent')
 })
 
+
 themeBtn.addEventListener('click', () => {
     let headColor = document.querySelector("head > meta:nth-child(4)");
     let state = localStorage.getItem('theme');
     let body = document.body;
     let nav = document.querySelector('nav')
-    let logoDark = document.querySelector('.logo-dark')
-    let logoLight = document.querySelector('.logo-light')
-    // let form = document.querySelector('form')
+    let isDarkMode = $('link[href="./assets/css/darkmode.css"]');
+    
     if(state == 'dark'){
-        logoDark.classList.remove('d-none')
-        logoLight.classList.add('d-none')
         localStorage.removeItem('theme');
         themeBtn.innerHTML = '<img src="./assets/img/night-mode.png" class="img-darkmode" alt="dark mode">'
         headColor.content = '#0dcaf0'
-      }else{
-      logoDark.classList.add('d-none')
-      logoLight.classList.remove('d-none')
-        localStorage.setItem('theme', 'dark');
-        themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
-        headColor.content = '#1d1d1d'
+        isDarkMode.remove();
+    }else{
+      localStorage.setItem('theme', 'dark');
+      themeBtn.innerHTML = '<img src="./assets/img/brightness.png" class="img-darkmode" alt="ligth mode">'
+      headColor.content = '#1d1d1d'
+      $('head').append('<link rel="stylesheet" href="./assets/css/darkmode.css">');
     }
     body.classList.toggle("dark-mode");
     nav.classList.toggle("dark-mode");
     nav.classList.toggle("navbar-dark");
-    // form.classList.toggle("dark-mode")
 })
+
 
 // function scroll bar
 function scrollProgressBar() {
@@ -104,6 +97,12 @@ const handleFeedback = () => {
 }
 
 const handleEmoji = (event) => {
+  let emojies = document.querySelectorAll('#ic-reaction');
+
+  emojies.forEach((e) => {
+    e.innerHTML !== event.innerHTML ? e.style.filter = 'grayscale(100%)' : e.style.filter = 'grayscale(0%)'
+    e.innerHTML === event.innerHTML ? e.style.fontSize = 'x-large' : e.style.fontSize = 'large' 
+  })
   
   switch(event.innerHTML.trim()){
     case '😒':
@@ -124,7 +123,7 @@ const handleEmoji = (event) => {
 
   console.log(choosedEmoji)
   let containerFeedback = document.getElementById('container-feedback');
-  containerFeedback.classList.toggle('disable')
+  containerFeedback.classList.toggle('d-none')
 }
 
 const scrollFunction = () => {
@@ -136,10 +135,38 @@ const scrollFunction = () => {
     goTOp.style.display = "none";
 }
 
-// When the user scrolls down 20px from the top of the document, show the button
+const closeModal = () => {
+  $("#search-modal").modal('hide');
+}
+
+window.onkeydown = keydown;
+
+function keydown(e){
+  if (!e) 
+  e = event;
+  if (e.ctrlKey && e.keyCode==75){ //CTRL+K
+    e.preventDefault();
+    $("#search-modal").modal('show');
+    setTimeout(() => {
+        $('#search-container').focus();
+    }, 500);
+  }
+}
+
+const bukaModal = () => {
+  document.getElementById("modals").style.display = "block";
+  document.querySelector('nav').classList.toggle('d-none')
+  document.querySelector('#go-top').classList.toggle('d-none')
+}
+
+const tutupModal = () => {
+  document.getElementById("modals").style.display = "none";
+  document.querySelector('nav').classList.toggle('d-none')
+  document.querySelector('#go-top').classList.toggle('d-none')
+}
+
 window.onscroll = scrollFunction
 
-// When the user clicks on the button, scroll to the top of the document
 const topFunction = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;

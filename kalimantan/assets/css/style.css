@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 :root{
-    --main-color: rgb(229 231 235);;
-    --dark-mode-color: #1d1d1d;
+  --main-color: rgb(241 245 249);
+  --dark-mode-color: rgb(15 23 42);
+  --dark-mode-sec: rgb(30 41 59);
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -111,8 +113,9 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
 }
 
 .card-content:hover {
-  box-shadow: rgb(163, 163, 163) 5px 5px 5px 5px;
-  transform: scale(1.05)
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  transform: scale(1.05);
+  transition: transform 0.4s ease-in-out;
 }
 
 /* preloader */
@@ -219,6 +222,14 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
   
   .hide-mobile {
     display: none;
+  }
+
+  #list-budaya-dekstop {
+    display: none;
+  }
+
+  #list-budaya-mobile {
+    display: block !important;
   }
 }
 

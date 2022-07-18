@@ -134,7 +134,7 @@ const handleEmoji = (event) => {
 
 // go top
 const scrollFunction = () => {
-  const goTOp = document.getElementById("myBtn");
+  const goTOp = document.getElementById("go-top");
   
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
     goTOp.style.display = "block";

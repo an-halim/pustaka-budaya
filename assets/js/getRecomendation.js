@@ -178,7 +178,7 @@ let contentList = [
         {
           articelPath: "/ntt/Hewan",
           tittle: "Hewan Endemik Komodo",
-          articlePhoto: "/assets/img/komodo.jpg",
+          articlePhoto: "/assets/img/Komodo.jpg",
         },
         {
           articelPath: "/ntt/Lagu",

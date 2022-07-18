@@ -224,42 +224,42 @@ let contentList = [
         articles : [
             {
                 articelPath: '/sulawesi/badik',
-                tittle: 'Senjata badik',
+                tittle: 'SENJATA BADIK',
                 articlePhoto: '/assets/img/Badik.jpg'
             },
             {
                 articelPath: '/sulawesi/baju-pokko',
-                tittle: 'Aksara Jfsdawa',
+                tittle: 'BAJU POKKO',
                 articlePhoto: '/assets/img/Pokko.jpg'
             },
             {
                 articelPath: '/sulawesi/coto-makassar',
-                tittle: 'Aksara Jarewwa',
+                tittle: 'COTO MAKASAR',
                 articlePhoto: '/assets/img/coto makassar.jpg'
             },
             {
                 articelPath: '/sulawesi/rumah-tongkongan',
-                tittle: 'Aksara Jtawa',
+                tittle: 'RUMAH TONGKONAN',
                 articlePhoto: '/assets/img/Tongkongan.jpg'
             },
             {
                 articelPath: '/sulawesi/suku-toraja',
-                tittle: 'Aksara rJawa',
+                tittle: 'SUKU TORAJA',
                 articlePhoto: '/assets/img/toraja.jpg'
             },
             {
                 articelPath: '/sulawesi/tari-mabadong',
-                tittle: 'Aksara Jawqa',
+                tittle: 'TARI MABADONG',
                 articlePhoto: '/assets/img/MaBadong.jpg'
             },
             {
                 articelPath: '/sulawesi/tenun-sutra',
-                tittle: 'Aksara Jaeqwa',
+                tittle: 'TENUN SUTRA',
                 articlePhoto: '/assets/img/Sutra.jpg'
             },
             {
                 articelPath: '/sulawesi/upacara-annyampa',
-                tittle: 'Aksara Jaeqwa',
+                tittle: 'UPACARA ANNYAMPA',
                 articlePhoto: '/assets/img/Anyanpa.jpg'
             },
         ]

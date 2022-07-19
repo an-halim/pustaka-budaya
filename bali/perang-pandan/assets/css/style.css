@@ -45,7 +45,7 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
     transform-origin: center;
 }
 
-#myBtn {
+#go-top {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -60,7 +60,7 @@ li.fromLeft:after{  transform-origin:  0% 50%; }
   border-radius: 4px;
 }
 
-#myBtn:hover {
+#go-top:hover {
   background-color: #555;
 }
 

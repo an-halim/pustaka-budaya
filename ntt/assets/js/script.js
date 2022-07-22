@@ -135,8 +135,9 @@ const scrollFunction = () => {
     goTOp.style.display = "none";
 }
 
-const closeModal = () => {
+const closeModal = (e) => {
   $("#search-modal").modal('hide');
+  document.querySelector(`#${e.href.split('#')[1]}`).classList.add('mark')
 }
 
 window.onkeydown = keydown;

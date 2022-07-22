@@ -798,22 +798,19 @@
                   // reset result container if used before
                   $('.search-result').empty();
 
-                  let i = 0;
+                  let randomId = Math.floor(Math.random() * paragrafContainer.length);
                   paragrafContainer.forEach(p =>{
-                    p.innerHTML.split(' ').forEach(el => {
-                      if(el.toLowerCase() == searchValue && !p.classList.contains('d-none')){
-                        let searchId = `searchid-${i}`
-                        p.parentElement.parentElement.setAttribute('id', searchId);
+                    if(p.innerHTML.toLowerCase().search(searchValue) >= 0 && !p.classList.contains('d-none')){
+                        let searchId = `searchid-${randomId}`
+                        p.setAttribute('id', searchId);
 
                         let content = p.innerHTML
                         if(content.length > 40){
                           content = content.slice(0 , 40)
                         }
-                        $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal()" href="#${searchId}">Lihat</a></span>`)
+                        $('.search-result').append(`<p>${content}....</p><span><a class="btn btn-primary btn-see" onclick="closeModal(this)" href="#${searchId}">Lihat</a></span>`)
                         $('.search-result').append('<hr>')
-                        i++;
                       }
-                    });
                   })
 
                 }
